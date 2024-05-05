@@ -1,19 +1,18 @@
+import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:musika/screens/musika/addsongs.dart';
-import 'package:musika/screens/musika/viewlyrics.dart';
+import 'package:musika/screens/guitar/addsongs.dart';
+import 'package:musika/screens/guitar/viewlyrics.dart';
 
-
-class MySongsScreen extends StatefulWidget {
-  const MySongsScreen({Key? key}) : super(key: key);
+class GuitarScreen extends StatefulWidget {
+  const GuitarScreen({Key? key}) : super(key: key);
 
   @override
-  State<MySongsScreen> createState() => _MySongsScreenState();
+  State<GuitarScreen> createState() => _GuitarScreenState();
 }
 
-class _MySongsScreenState extends State<MySongsScreen> {
+class _GuitarScreenState extends State<GuitarScreen> {
   int _selectedIndex = 0;
   final _formKey = GlobalKey<FormState>();
   bool _isSearching = false;
@@ -31,6 +30,7 @@ class _MySongsScreenState extends State<MySongsScreen> {
       }
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -38,7 +38,7 @@ class _MySongsScreenState extends State<MySongsScreen> {
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 179, 145, 24),
-          automaticallyImplyLeading: false,
+          automaticallyImplyLeading: false, // Disable default back button
           title: _isSearching
               ? TextField(
                   controller: titleController,
@@ -55,7 +55,12 @@ class _MySongsScreenState extends State<MySongsScreen> {
                   style: GoogleFonts.alice(
                       fontWeight: FontWeight.w700, fontSize: 22),
                 ),
-          
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back), // Add back button icon
+            onPressed: () {
+              Navigator.of(context).pop(); // Pop the current screen
+            },
+          ),
           actions: [
             IconButton(
               onPressed: _toggleSearch,

@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'chords.dart';
 
-import 'mysongs.dart';
 
 class AddSongs extends StatefulWidget {
   const AddSongs({Key? key}) : super(key: key);
@@ -269,7 +267,7 @@ class _AddSongsState extends State<AddSongs> {
         backgroundColor: Color.fromARGB(255, 179, 145, 24),
         automaticallyImplyLeading: false,
         title: Text(
-          'SongFret',
+          'Musika',
           style: GoogleFonts.alice(fontWeight: FontWeight.w700, fontSize: 22),
         ),
         centerTitle: true,

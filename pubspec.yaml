@@ -35,14 +35,15 @@ dependencies:
   firebase_core: ^2.30.1
   flutter:
     sdk: flutter
-  flutter_easyloading: ^3.0.5
-  gap: ^3.0.1
-  google_fonts: ^6.2.1
-  quickalert: ^1.1.0
   flutter_chord: ^0.1.2
   flutter_chord_mod: ^0.0.46
+  flutter_easyloading: ^3.0.5
   flutter_guitar_tabs: ^0.0.8
   flutter_spinkit: ^5.2.0
+  gap: ^3.0.1
+  get: ^4.6.6
+  google_fonts: ^6.2.1
+  quickalert: ^1.1.0
 
 dev_dependencies:
   flutter_lints: ^3.0.0
@@ -59,8 +60,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
+    - assets/musics/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

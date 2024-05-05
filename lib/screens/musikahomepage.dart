@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:musika/screens/auth/login.dart';
-import 'package:musika/screens/musika/mysongs.dart';
+import 'package:musika/screens/instruments_screen.dart';
+import 'package:musika/screens/guitar/mysongs.dart';
 
 class MusikaScreen extends StatefulWidget {
   const MusikaScreen({Key? key, required this.userId}) : super(key: key);
@@ -14,7 +15,7 @@ class _MusikaScreenState extends State<MusikaScreen> {
    int _selectedIndex = 0;
     static List<Widget> _widgetOptions = <Widget>[
     Text('Home Page'),
-    MySongsScreen(),
+    InstrumentScreen(),
     Text('Profile Page'),
   ];
    void _onItemTapped(int index) {
