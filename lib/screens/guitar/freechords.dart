@@ -1,19 +1,16 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_guitar_tabs/flutter_guitar_tabs.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:musika/screens/auth/login.dart';
+import 'package:flutter_guitar_tabs/flutter_guitar_tabs.dart';
 import 'package:musika/screens/guitar/mysongs.dart';
-import 'package:musika/screens/musikahomepage.dart';
 
-class Chords extends StatefulWidget {
-  const Chords({super.key});
+class FreeChords extends StatefulWidget {
+  const FreeChords({super.key});
 
   @override
-  State<Chords> createState() => _ChordsState();
+  State<FreeChords> createState() => _FreeChordsState();
 }
 
-class _ChordsState extends State<Chords> {
+class _FreeChordsState extends State<FreeChords> {
   int _selectedIndex = 0;
 
   final List<String> chordTitles = [
@@ -83,9 +80,118 @@ class _ChordsState extends State<Chords> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-
+        drawer: Drawer(
+          width: 230,
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.brown.shade500,
+                  Color.fromARGB(255, 220, 194, 145),
+                  Color.fromARGB(255, 220, 194, 145),
+                  Color.fromARGB(255, 220, 194, 145),
+                  Color.fromARGB(255, 216, 194, 145),
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+            ),
+            child: Container(
+              width: 200,
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(bottom: 20),
+                    padding: EdgeInsets.all(0),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/logo.png',
+                          width: 900,
+                          height: 150,
+                          fit: BoxFit.fill,
+                        ),
+                      ],
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.list_rounded,
+                    ),
+                    title: Text(
+                      'Songs list',
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontSize: 18,
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => GuitarScreen(),
+                        ),
+                      );
+                    },
+                  ),
+                  // ListTile(
+                  //   leading: Icon(
+                  //     Icons.favorite,
+                  //   ),
+                  //   title: Text(
+                  //     'Favorite songs',
+                  //     style: TextStyle(
+                  //       fontWeight: FontWeight.normal,
+                  //       fontSize: 18,
+                  //     ),
+                  //   ),
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => FreeFavorites(),
+                  //       ),
+                  //     );
+                  //   },
+                  // ),
+                  ListTile(
+                    leading: Icon(Icons.library_music, color: Colors.black),
+                    title: Text(
+                      'Chords',
+                      style: TextStyle(
+                        fontWeight: _selectedIndex == 0
+                            ? FontWeight.bold
+                            : FontWeight.normal,
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                    ),
+                    tileColor: _selectedIndex == 0 ? Colors.black : null,
+                    onTap: () {
+                      setState(() {
+                        _selectedIndex = 0;
+                      });
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FreeChords(),
+                        ),
+                      );
+                    },
+                  ),
+                  SizedBox(
+                    height: 300,
+                  ),
+                  Divider(
+                    color: Colors.brown,
+                  ),
+                
+                ],
+              ),
+            ),
+          ),
+        ),
         appBar: AppBar(
-          centerTitle: true,
           backgroundColor: Color.fromARGB(255, 179, 145, 24),
           automaticallyImplyLeading: false,
           title: Text(
@@ -119,12 +225,8 @@ class _ChordsState extends State<Chords> {
                         itemBuilder: (BuildContext context, int index) {
                           final chordTitle = chordTitles[index];
                           return ListTile(
-                            title: Text(
-                              chordTitle,
-                              style: TextStyle(
-                                fontSize: 22,
-                              ),
-                            ),
+                            title: Text(chordTitle,
+                                style: TextStyle(fontSize: 22)),
                             onTap: () => _onChordSelected(context, chordTitle),
                           );
                         },

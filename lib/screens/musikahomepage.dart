@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:musika/screens/auth/login.dart';
 import 'package:musika/screens/instruments_screen.dart';
-import 'package:musika/screens/guitar/mysongs.dart';
 
 class MusikaScreen extends StatefulWidget {
   const MusikaScreen({Key? key, required this.userId}) : super(key: key);

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:musika/screens/drum/mysongs.dart';
 import 'package:musika/screens/electric_guitar/mysongs.dart';
+import 'package:musika/screens/guitar/mainscreen.dart';
 import 'package:musika/screens/guitar/mysongs.dart';
 import 'package:musika/screens/piano/mysongs.dart';
 
@@ -19,11 +20,10 @@ class InstrumentScreen extends StatelessWidget {
           children: List.generate(4, (index) {
             return GestureDetector(
               onTap: () {
-                
                 switch (index) {
                   case 0:
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => GuitarScreen()),
+                      MaterialPageRoute(builder: (_) => MainScreenGuitar()),
                     );
                     break;
                   case 1:
@@ -48,6 +48,8 @@ class InstrumentScreen extends StatelessWidget {
               },
               child: SquareCard(
                 label: _getCardLabel(index),
+                color: _getCardColor(index),
+                icon: _getCardIcon(index),
               ),
             );
           }),
@@ -70,24 +72,67 @@ class InstrumentScreen extends StatelessWidget {
         return '';
     }
   }
+
+  Color _getCardColor(int index) {
+    switch (index) {
+      case 0:
+        return Colors.blue;
+      case 1:
+        return Colors.green;
+      case 2:
+        return Colors.orange;
+      case 3:
+        return Colors.red;
+      default:
+        return Colors.grey;
+    }
+  }
+
+  IconData _getCardIcon(int index) {
+    switch (index) {
+      case 0:
+        return Icons.music_note;
+      case 1:
+        return Icons.keyboard;
+      case 2:
+        return Icons.keyboard;
+      case 3:
+        return Icons.music_note;
+      default:
+        return Icons.error;
+    }
+  }
 }
 
 class SquareCard extends StatelessWidget {
   final String label;
+  final Color color;
+  final IconData icon;
 
-  const SquareCard({Key? key, required this.label}) : super(key: key);
+  const SquareCard({Key? key, required this.label, required this.color, required this.icon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.blue,
+      color: color,
       child: Center(
-        child: Text(
-          label,
-          style: TextStyle(
-            fontSize: 24,
-            color: Colors.white,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              icon,
+              size: 48,
+              color: Colors.white,
+            ),
+            SizedBox(height: 10),
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
       ),
     );

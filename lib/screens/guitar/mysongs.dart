@@ -38,7 +38,7 @@ class _GuitarScreenState extends State<GuitarScreen> {
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 179, 145, 24),
-          automaticallyImplyLeading: false, // Disable default back button
+          automaticallyImplyLeading: false, 
           title: _isSearching
               ? TextField(
                   controller: titleController,
@@ -56,9 +56,9 @@ class _GuitarScreenState extends State<GuitarScreen> {
                       fontWeight: FontWeight.w700, fontSize: 22),
                 ),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back), // Add back button icon
+            icon: Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.of(context).pop(); // Pop the current screen
+              Navigator.of(context).pop();
             },
           ),
           actions: [
