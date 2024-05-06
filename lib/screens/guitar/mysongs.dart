@@ -98,7 +98,7 @@ class _GuitarScreenState extends State<GuitarScreen> {
                             .collection('songsList')
                             .where('user',
                                 isEqualTo:
-                                    FirebaseAuth.instance.currentUser?.uid)
+                                    FirebaseAuth.instance.currentUser?.uid).where('type', isEqualTo: 'guitar')
                             .snapshots(),
                         builder: (context, snapshot) {
                           if (snapshot.connectionState ==

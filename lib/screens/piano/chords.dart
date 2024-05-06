@@ -1,28 +1,35 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_guitar_tabs/flutter_guitar_tabs.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:musika/screens/auth/login.dart';
-import 'package:musika/screens/guitar/mysongs.dart';
-import 'package:musika/screens/musikahomepage.dart';
 
-class Chords extends StatefulWidget {
-  const Chords({super.key});
+
+class PianoChords extends StatefulWidget {
+  const PianoChords({super.key});
 
   @override
-  State<Chords> createState() => _ChordsState();
+  State<PianoChords> createState() => _PianoChordsState();
 }
 
-class _ChordsState extends State<Chords> {
+class _PianoChordsState extends State<PianoChords> {
   int _selectedIndex = 0;
 
   final List<String> chordTitles = [
     'C',
+    'C#',
+    'Db',
     'D',
+    'D#',
+    'Eb',
     'E',
     'F',
+    'F#',
+    'Gb',
     'G',
+    'G#',
+    'Ab',
     'A',
+    'A#',
+    'Bb',
     'B',
   ];
 
@@ -34,42 +41,121 @@ class _ChordsState extends State<Chords> {
           builder: (context) => CChordsList(chordTitle: chordTitle),
         ),
       );
-    } else if (chordTitle == 'D') {
+    } else if (chordTitle == 'C#') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => DChordsList(chordTitle: chordTitle),
         ),
       );
-    } else if (chordTitle == 'E') {
+    } else if (chordTitle == 'Db') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => EChordsList(chordTitle: chordTitle),
         ),
       );
-    } else if (chordTitle == 'F') {
+    } else if (chordTitle == 'D') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => FChordsList(chordTitle: chordTitle),
         ),
       );
-    } else if (chordTitle == 'G') {
+    } else if (chordTitle == 'D#') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => GChordsList(chordTitle: chordTitle),
         ),
       );
-    } else if (chordTitle == 'A') {
+    } else if (chordTitle == 'Eb') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => AChordsList(chordTitle: chordTitle),
         ),
       );
-    } else if (chordTitle == 'B') {
+    } else if (chordTitle == 'E') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BChordsList(chordTitle: chordTitle),
+        ),
+      );
+    }
+    else if (chordTitle == 'F') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BChordsList(chordTitle: chordTitle),
+        ),
+      );
+    }
+    else if (chordTitle == 'F#') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BChordsList(chordTitle: chordTitle),
+        ),
+      );
+    }
+    else if (chordTitle == 'Gb') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BChordsList(chordTitle: chordTitle),
+        ),
+      );
+    }
+    else if (chordTitle == 'G') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BChordsList(chordTitle: chordTitle),
+        ),
+      );
+    }
+    else if (chordTitle == 'G#') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BChordsList(chordTitle: chordTitle),
+        ),
+      );
+    }
+    else if (chordTitle == 'Ab') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BChordsList(chordTitle: chordTitle),
+        ),
+      );
+    }
+    else if (chordTitle == 'A') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BChordsList(chordTitle: chordTitle),
+        ),
+      );
+    }
+    else if (chordTitle == 'A#') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BChordsList(chordTitle: chordTitle),
+        ),
+      );
+    }
+    else if (chordTitle == 'Bb') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BChordsList(chordTitle: chordTitle),
+        ),
+      );
+    }else if (chordTitle == 'B') {
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -145,36 +231,34 @@ class CChordsList extends StatelessWidget {
   CChordsList({required this.chordTitle});
 
   final List<String> chordTypesC = [
-    'C Major (C)',
-    'C Minor (Cm)',
+   'C',
+    'Cm',
     'C7',
-    'Cmaj7',
     'Cm7',
+    'Cmaj7',
+    'CmM7',
     'C6',
-    'C9',
-    'Cadd9',
-    'C5 (Power chord)',
-    'Csus2',
-    'Csus4',
-    'Cdim',
-    'Caugmented (C+)',
-    'C7sus4',
-    'Cmaj9',
-    'Cm9',
-    'Cmaj6',
     'Cm6',
-    'C7b5',
-    'Cm7b5',
-    'Cadd11',
-    'Cadd4',
-    'Cmaj13',
-    'Cm11',
-    'Cmaj7#11',
-    'C9b5',
+    'C6/9',
+    'C5',
+    'C9',
+    'Cm9',
+    'Cmaj9',
+    'C11',
+    'Cm11', 
+    'Cmaj11',
     'C13',
-    'C7b9',
-    'C7#9',
-    'Cmaj7b5'
+    'Cm13',
+    'Cmaj13',
+    'Cadd',
+    'C7-5',
+    'C7+5',
+    'Csus',
+    'Cdim', 
+    'Cdim7',
+    'Cm7b5', 
+    'Caug', 
+    'Caug7', 
   ];
 
   @override

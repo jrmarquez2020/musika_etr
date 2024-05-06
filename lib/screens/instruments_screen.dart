@@ -3,6 +3,7 @@ import 'package:musika/screens/drum/mysongs.dart';
 import 'package:musika/screens/electric_guitar/mysongs.dart';
 import 'package:musika/screens/guitar/mainscreen.dart';
 import 'package:musika/screens/guitar/mysongs.dart';
+import 'package:musika/screens/piano/mainscreen.dart';
 import 'package:musika/screens/piano/mysongs.dart';
 
 class InstrumentScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class InstrumentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Instruments'),
+        title: Text('Musika Instruments'),
       ),
       body: Center(
         child: GridView.count(
@@ -29,7 +30,7 @@ class InstrumentScreen extends StatelessWidget {
                   case 1:
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (_) => PianoScreen()),
+                      MaterialPageRoute(builder: (_) => MainScreenPiano()),
                     );
                     break;
                   case 2:

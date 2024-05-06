@@ -1,16 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:musika/screens/guitar/chords.dart';
-import 'package:musika/screens/guitar/mysongs.dart';
+import 'package:musika/screens/piano/mysongs.dart';
 
-class MainScreenGuitar extends StatelessWidget {
-  const MainScreenGuitar({super.key});
+class MainScreenPiano extends StatelessWidget {
+  const MainScreenPiano({super.key});
 
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
         appBar: AppBar(
-          title: Text('Guitar'),
+          title: Text('Piano'),
         ),
         body: Center(
           child: Column(
@@ -20,7 +19,7 @@ class MainScreenGuitar extends StatelessWidget {
                 title: 'My Songs',
                 icon: Icons.my_library_music_outlined ,
                 onTap: () {
-                  Navigator.push(context, CupertinoPageRoute(builder: (_)=> GuitarScreen()));
+                  Navigator.push(context, CupertinoPageRoute(builder: (_)=> PianoScreen()));
                 },
               ),
               SizedBox(height: 20),
@@ -28,7 +27,7 @@ class MainScreenGuitar extends StatelessWidget {
                 title: 'Chords',
                 icon: Icons.music_note,
                 onTap: () {
-                Navigator.push(context, CupertinoPageRoute(builder: (_)=> Chords()));
+                Navigator.push(context, CupertinoPageRoute(builder: (_)=> PianoScreen()));
                 },
               ),
               SizedBox(height: 20),
@@ -36,7 +35,7 @@ class MainScreenGuitar extends StatelessWidget {
                 title: 'Settings',
                 icon: Icons.settings,
                 onTap: () {
-                 Navigator.push(context, CupertinoPageRoute(builder: (_)=> GuitarScreen()));
+                 Navigator.push(context, CupertinoPageRoute(builder: (_)=> PianoScreen()));
                 },
               ),
               SizedBox(height: 20),
@@ -44,7 +43,7 @@ class MainScreenGuitar extends StatelessWidget {
                 title: 'Profile',
                 icon: Icons.account_circle,
                 onTap: () {
-                  Navigator.push(context, CupertinoPageRoute(builder: (_)=> GuitarScreen()));
+                  Navigator.push(context, CupertinoPageRoute(builder: (_)=> PianoScreen()));
                 },
               ),
             ],
