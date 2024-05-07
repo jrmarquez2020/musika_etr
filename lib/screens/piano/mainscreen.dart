@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:musika/screens/piano/chords.dart';
 import 'package:musika/screens/piano/mysongs.dart';
 
 class MainScreenPiano extends StatelessWidget {
@@ -27,7 +28,7 @@ class MainScreenPiano extends StatelessWidget {
                 title: 'Chords',
                 icon: Icons.music_note,
                 onTap: () {
-                Navigator.push(context, CupertinoPageRoute(builder: (_)=> PianoScreen()));
+                Navigator.push(context, CupertinoPageRoute(builder: (_)=> PianoChords()));
                 },
               ),
               SizedBox(height: 20),
