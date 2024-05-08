@@ -33,6 +33,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.0"
+  chord:
+    dependency: "direct main"
+    description:
+      name: chord
+      sha256: c43fd3804b7dde7fb0999e8138ee8bb0801903d5364ba37c187780e9c3741c08
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1"
   clock:
     dependency: transitive
     description:

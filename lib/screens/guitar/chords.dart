@@ -1,10 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_guitar_tabs/flutter_guitar_tabs.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:musika/screens/auth/login.dart';
-import 'package:musika/screens/guitar/mysongs.dart';
-import 'package:musika/screens/musikahomepage.dart';
 
 class Chords extends StatefulWidget {
   const Chords({super.key});
