@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:musika/screens/guitar/viewlyrics.dart';
 import 'package:musika/screens/piano/addsongs.dart';
+import 'package:musika/screens/piano/viewylyrics.dart';
 
 class PianoScreen extends StatefulWidget {
   const PianoScreen({Key? key}) : super(key: key);
@@ -51,7 +51,7 @@ class _PianoScreenState extends State<PianoScreen> {
                   onChanged: (value) {},
                 )
               : Text(
-                  'My Songs',
+                  'Piano',
                   style: GoogleFonts.alice(
                       fontWeight: FontWeight.w700, fontSize: 22),
                 ),
@@ -119,7 +119,7 @@ class _PianoScreenState extends State<PianoScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => ViewLyrics(
+                                      builder: (context) => PianoViewLyrics(
                                         id: id,
                                       ),
                                     ),

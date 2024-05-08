@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:musika/screens/guitar/chords.dart';
 import 'package:musika/screens/guitar/mysongs.dart';
+import 'package:musika/screens/guitar/songlibrary.dart';
 
 class MainScreenGuitar extends StatelessWidget {
   const MainScreenGuitar({super.key});
@@ -33,10 +34,10 @@ class MainScreenGuitar extends StatelessWidget {
               ),
               SizedBox(height: 20),
               NavigationCard(
-                title: 'Settings',
+                title: 'Songlist',
                 icon: Icons.settings,
                 onTap: () {
-                 Navigator.push(context, CupertinoPageRoute(builder: (_)=> GuitarScreen()));
+                 Navigator.push(context, CupertinoPageRoute(builder: (_)=> SongListScreen()));
                 },
               ),
               SizedBox(height: 20),

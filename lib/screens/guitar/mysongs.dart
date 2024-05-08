@@ -51,7 +51,7 @@ class _GuitarScreenState extends State<GuitarScreen> {
                   onChanged: (value) {},
                 )
               : Text(
-                  'My Songs',
+                  'Guitar',
                   style: GoogleFonts.alice(
                       fontWeight: FontWeight.w700, fontSize: 22),
                 ),

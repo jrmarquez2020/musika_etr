@@ -1386,142 +1386,142 @@ class DsharpChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'D#') {
       chordUI = DSharpChordUI(
         chordName: 'D# Major',
-        imagePath: 'path_to_D_Sharp_Major_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat.png',
       );
     } else if (chordType == 'D#m') {
       chordUI = DSharpChordUI(
         chordName: 'D# Minor',
-        imagePath: 'path_to_D_Sharp_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m.png',
       );
     } else if (chordType == 'D#7') {
       chordUI = DSharpChordUI(
         chordName: 'D#7',
-        imagePath: 'path_to_D_Sharp_7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_7.png',
       );
     } else if (chordType == 'D#m7') {
       chordUI = DSharpChordUI(
         chordName: 'D#m7',
-        imagePath: 'path_to_D_Sharp_m7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m7.png',
       );
     } else if (chordType == 'D#maj7') {
       chordUI = DSharpChordUI(
         chordName: 'D#maj7',
-        imagePath: 'path_to_D_Sharp_maj7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_maj7.png',
       );
     } else if (chordType == 'D#mM7') {
       chordUI = DSharpChordUI(
         chordName: 'D#mM7',
-        imagePath: 'path_to_D_Sharp_mM7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_minmaj7.png',
       );
     } else if (chordType == 'D#6') {
       chordUI = DSharpChordUI(
         chordName: 'D#6',
-        imagePath: 'path_to_D_Sharp_6_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_6.png',
       );
     } else if (chordType == 'D#m6') {
       chordUI = DSharpChordUI(
         chordName: 'D#m6',
-        imagePath: 'path_to_D_Sharp_m6_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m6.png',
       );
     } else if (chordType == 'D#6/9') {
       chordUI = DSharpChordUI(
         chordName: 'D#6/9',
-        imagePath: 'path_to_D_Sharp_6_9_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_6_9.png',
       );
     } else if (chordType == 'D#5') {
       chordUI = DSharpChordUI(
         chordName: 'D#5',
-        imagePath: 'path_to_D_Sharp_5_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_5.png',
       );
     } else if (chordType == 'D#9') {
       chordUI = DSharpChordUI(
         chordName: 'D#9',
-        imagePath: 'path_to_D_Sharp_9_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_9.png',
       );
     } else if (chordType == 'D#m9') {
       chordUI = DSharpChordUI(
         chordName: 'D#m9',
-        imagePath: 'path_to_D_Sharp_m9_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m9.png',
       );
     } else if (chordType == 'D#maj9') {
       chordUI = DSharpChordUI(
         chordName: 'D#maj9',
-        imagePath: 'path_to_D_Sharp_maj9_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_maj9.png',
       );
     } else if (chordType == 'D#11') {
       chordUI = DSharpChordUI(
         chordName: 'D#11',
-        imagePath: 'path_to_D_Sharp_11_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_11.png',
       );
     } else if (chordType == 'D#m11') {
       chordUI = DSharpChordUI(
         chordName: 'D#m11',
-        imagePath: 'path_to_D_Sharp_m11_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m11.png',
       );
     } else if (chordType == 'D#maj11') {
       chordUI = DSharpChordUI(
         chordName: 'D#maj11',
-        imagePath: 'path_to_D_Sharp_maj11_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_maj11.png',
       );
     } else if (chordType == 'D#13') {
       chordUI = DSharpChordUI(
         chordName: 'D#13',
-        imagePath: 'path_to_D_Sharp_13_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_13.png',
       );
     } else if (chordType == 'D#m13') {
       chordUI = DSharpChordUI(
         chordName: 'D#m13',
-        imagePath: 'path_to_D_Sharp_m13_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m13.png',
       );
     } else if (chordType == 'D#maj13') {
       chordUI = DSharpChordUI(
         chordName: 'D#maj13',
-        imagePath: 'path_to_D_Sharp_maj13_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_maj13.png',
       );
     } else if (chordType == 'D#add') {
       chordUI = DSharpChordUI(
         chordName: 'D#add',
-        imagePath: 'path_to_D_Sharp_add_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_add9.png',
       );
     } else if (chordType == 'D#7-5') {
       chordUI = DSharpChordUI(
         chordName: 'D#7-5',
-        imagePath: 'path_to_D_Sharp_7_5_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_7minus5.png',
       );
     } else if (chordType == 'D#7+5') {
       chordUI = DSharpChordUI(
         chordName: 'D#7+5',
-        imagePath: 'path_to_D_Sharp_7_5_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_7plus5.png',
       );
     } else if (chordType == 'D#sus') {
       chordUI = DSharpChordUI(
         chordName: 'D#sus',
-        imagePath: 'path_to_D_Sharp_sus_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_sus4.png',
       );
     } else if (chordType == 'D#dim') {
       chordUI = DSharpChordUI(
         chordName: 'D#dim',
-        imagePath: 'path_to_D_Sharp_dim_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_dim.png',
       );
     } else if (chordType == 'D#dim7') {
       chordUI = DSharpChordUI(
         chordName: 'D#dim7',
-        imagePath: 'path_to_D_Sharp_dim7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_dim7.png',
       );
     } else if (chordType == 'D#m7b5') {
       chordUI = DSharpChordUI(
         chordName: 'D#m7b5',
-        imagePath: 'path_to_D_Sharp_m7b5_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m7b5.png',
       );
     } else if (chordType == 'D#aug') {
       chordUI = DSharpChordUI(
         chordName: 'D#aug',
-        imagePath: 'path_to_D_Sharp_aug_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_aug.png',
       );
     } else if (chordType == 'D#aug7') {
       chordUI = DSharpChordUI(
         chordName: 'D#aug7',
-        imagePath: 'path_to_D_Sharp_aug7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_aug7.png',
       );
     } 
 
@@ -1559,7 +1559,7 @@ class DSharpChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -1659,142 +1659,142 @@ class EbChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'Eb') {
       chordUI = EbChordUI(
         chordName: 'Eb Major',
-        imagePath: 'path_to_Eb_Major_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat.png',
       );
     } else if (chordType == 'Ebm') {
       chordUI = EbChordUI(
         chordName: 'Eb Minor',
-        imagePath: 'path_to_Eb_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m.png',
       );
     } else if (chordType == 'Eb7') {
       chordUI = EbChordUI(
         chordName: 'Eb7',
-        imagePath: 'path_to_Eb7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_7.png',
       );
     } else if (chordType == 'Ebm7') {
       chordUI = EbChordUI(
         chordName: 'Ebm7',
-        imagePath: 'path_to_Ebm7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m7.png',
       );
     } else if (chordType == 'Ebmaj7') {
       chordUI = EbChordUI(
         chordName: 'Ebmaj7',
-        imagePath: 'path_to_Ebmaj7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_maj7.png',
       );
     } else if (chordType == 'EbmM7') {
       chordUI = EbChordUI(
         chordName: 'EbmM7',
-        imagePath: 'path_to_EbmM7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_minmaj7.png',
       );
     } else if (chordType == 'Eb6') {
       chordUI = EbChordUI(
         chordName: 'Eb6',
-        imagePath: 'path_to_Eb6_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_6.png',
       );
     } else if (chordType == 'Ebm6') {
       chordUI = EbChordUI(
         chordName: 'Ebm6',
-        imagePath: 'path_to_Ebm6_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m6.png',
       );
     } else if (chordType == 'Eb6/9') {
       chordUI = EbChordUI(
         chordName: 'Eb6/9',
-        imagePath: 'path_to_Eb6_9_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_6_9.png',
       );
     } else if (chordType == 'Eb5') {
       chordUI = EbChordUI(
         chordName: 'Eb5',
-        imagePath: 'path_to_Eb5_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_5.png',
       );
     } else if (chordType == 'Eb9') {
       chordUI = EbChordUI(
         chordName: 'Eb9',
-        imagePath: 'path_to_Eb9_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_9.png',
       );
     } else if (chordType == 'Ebm9') {
       chordUI = EbChordUI(
         chordName: 'Ebm9',
-        imagePath: 'path_to_Ebm9_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m9.png',
       );
     } else if (chordType == 'Ebmaj9') {
       chordUI = EbChordUI(
         chordName: 'Ebmaj9',
-        imagePath: 'path_to_Ebmaj9_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_maj9.png',
       );
     } else if (chordType == 'Eb11') {
       chordUI = EbChordUI(
         chordName: 'Eb11',
-        imagePath: 'path_to_Eb11_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_11.png',
       );
     } else if (chordType == 'Ebm11') {
       chordUI = EbChordUI(
         chordName: 'Ebm11',
-        imagePath: 'path_to_Ebm11_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m11.png',
       );
     } else if (chordType == 'Ebmaj11') {
       chordUI = EbChordUI(
         chordName: 'Ebmaj11',
-        imagePath: 'path_to_Ebmaj11_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_maj11.png',
       );
     } else if (chordType == 'Eb13') {
       chordUI = EbChordUI(
         chordName: 'Eb13',
-        imagePath: 'path_to_Eb13_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_13.png',
       );
     } else if (chordType == 'Ebm13') {
       chordUI = EbChordUI(
         chordName: 'Ebm13',
-        imagePath: 'path_to_Ebm13_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m13.png',
       );
     } else if (chordType == 'Ebmaj13') {
       chordUI = EbChordUI(
         chordName: 'Ebmaj13',
-        imagePath: 'path_to_Ebmaj13_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_maj13.png',
       );
     } else if (chordType == 'Ebadd') {
       chordUI = EbChordUI(
         chordName: 'Ebadd',
-        imagePath: 'path_to_Ebadd_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_add9.png',
       );
     } else if (chordType == 'Eb7-5') {
       chordUI = EbChordUI(
         chordName: 'Eb7-5',
-        imagePath: 'path_to_Eb7_5_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_7minus5.png',
       );
     } else if (chordType == 'Eb7+5') {
       chordUI = EbChordUI(
         chordName: 'Eb7+5',
-        imagePath: 'path_to_Eb7_5_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_7plus5.png',
       );
     } else if (chordType == 'Ebsus') {
       chordUI = EbChordUI(
         chordName: 'Ebsus',
-        imagePath: 'path_to_Ebsus_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_sus4.png',
       );
     } else if (chordType == 'Ebdim') {
       chordUI = EbChordUI(
         chordName: 'Ebdim',
-        imagePath: 'path_to_Ebdim_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_dim.png',
       );
     } else if (chordType == 'Ebdim7') {
       chordUI = EbChordUI(
         chordName: 'Ebdim7',
-        imagePath: 'path_to_Ebdim7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_dim7.png',
       );
     } else if (chordType == 'Ebm7b5') {
       chordUI = EbChordUI(
         chordName: 'Ebm7b5',
-        imagePath: 'path_to_Ebm7b5_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_m7b5.png',
       );
     } else if (chordType == 'Ebaug') {
       chordUI = EbChordUI(
         chordName: 'Ebaug',
-        imagePath: 'path_to_Ebaug_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_aug.png',
       );
     } else if (chordType == 'Ebaug7') {
       chordUI = EbChordUI(
         chordName: 'Ebaug7',
-        imagePath: 'path_to_Ebaug7_image',
+        imagePath: 'https://www.pianochord.org/images/e_flat_aug7.png',
       );
     }
 
@@ -1832,7 +1832,7 @@ class EbChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -1932,142 +1932,142 @@ class EChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'E') {
       chordUI = EChordUI(
         chordName: 'E Major',
-        imagePath: 'path_to_E_Major_image',
+        imagePath: 'https://www.pianochord.org/images/e.png',
       );
     } else if (chordType == 'Em') {
       chordUI = EChordUI(
         chordName: 'E Minor',
-        imagePath: 'path_to_E_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/em.png',
       );
     } else if (chordType == 'E7') {
       chordUI = EChordUI(
         chordName: 'E7',
-        imagePath: 'path_to_E7_image',
+        imagePath: 'https://www.pianochord.org/images/e7.png',
       );
     } else if (chordType == 'Em7') {
       chordUI = EChordUI(
         chordName: 'Em7',
-        imagePath: 'path_to_Em7_image',
+        imagePath: 'https://www.pianochord.org/images/em7.png',
       );
     } else if (chordType == 'Emaj7') {
       chordUI = EChordUI(
         chordName: 'Emaj7',
-        imagePath: 'path_to_Emaj7_image',
+        imagePath: 'https://www.pianochord.org/images/emaj7.png',
       );
     } else if (chordType == 'EmM7') {
       chordUI = EChordUI(
         chordName: 'EmM7',
-        imagePath: 'path_to_EmM7_image',
+        imagePath: 'https://www.pianochord.org/images/eminmaj7.png',
       );
     } else if (chordType == 'E6') {
       chordUI = EChordUI(
         chordName: 'E6',
-        imagePath: 'path_to_E6_image',
+        imagePath: 'https://www.pianochord.org/images/e6.png',
       );
     } else if (chordType == 'Em6') {
       chordUI = EChordUI(
         chordName: 'Em6',
-        imagePath: 'path_to_Em6_image',
+        imagePath: 'https://www.pianochord.org/images/em6.png',
       );
     } else if (chordType == 'E6/9') {
       chordUI = EChordUI(
         chordName: 'E6/9',
-        imagePath: 'path_to_E6_9_image',
+        imagePath: 'https://www.pianochord.org/images/e6_9.png',
       );
     } else if (chordType == 'E5') {
       chordUI = EChordUI(
         chordName: 'E5',
-        imagePath: 'path_to_E5_image',
+        imagePath: 'https://www.pianochord.org/images/e5.png',
       );
     } else if (chordType == 'E9') {
       chordUI = EChordUI(
         chordName: 'E9',
-        imagePath: 'path_to_E9_image',
+        imagePath: 'https://www.pianochord.org/images/e9.png',
       );
     } else if (chordType == 'Em9') {
       chordUI = EChordUI(
         chordName: 'Em9',
-        imagePath: 'path_to_Em9_image',
+        imagePath: 'https://www.pianochord.org/images/em9.png',
       );
     } else if (chordType == 'Emaj9') {
       chordUI = EChordUI(
         chordName: 'Emaj9',
-        imagePath: 'path_to_Emaj9_image',
+        imagePath: 'https://www.pianochord.org/images/emaj9.png',
       );
     } else if (chordType == 'E11') {
       chordUI = EChordUI(
         chordName: 'E11',
-        imagePath: 'path_to_E11_image',
+        imagePath: 'https://www.pianochord.org/images/e11.png',
       );
     } else if (chordType == 'Em11') {
       chordUI = EChordUI(
         chordName: 'Em11',
-        imagePath: 'path_to_Em11_image',
+        imagePath: 'https://www.pianochord.org/images/em11.png',
       );
     } else if (chordType == 'Emaj11') {
       chordUI = EChordUI(
         chordName: 'Emaj11',
-        imagePath: 'path_to_Emaj11_image',
+        imagePath: 'https://www.pianochord.org/images/emaj11.png',
       );
     } else if (chordType == 'E13') {
       chordUI = EChordUI(
         chordName: 'E13',
-        imagePath: 'path_to_E13_image',
+        imagePath: 'https://www.pianochord.org/images/e13.png',
       );
     } else if (chordType == 'Em13') {
       chordUI = EChordUI(
         chordName: 'Em13',
-        imagePath: 'path_to_Em13_image',
+        imagePath: 'https://www.pianochord.org/images/em13.png',
       );
     } else if (chordType == 'Emaj13') {
       chordUI = EChordUI(
         chordName: 'Emaj13',
-        imagePath: 'path_to_Emaj13_image',
+        imagePath: 'https://www.pianochord.org/images/emaj13.png',
       );
     } else if (chordType == 'Eadd') {
       chordUI = EChordUI(
         chordName: 'Eadd',
-        imagePath: 'path_to_Eadd_image',
+        imagePath: 'https://www.pianochord.org/images/eadd9.png',
       );
     } else if (chordType == 'E7-5') {
       chordUI = EChordUI(
         chordName: 'E7-5',
-        imagePath: 'path_to_E7_5_image',
+        imagePath: 'https://www.pianochord.org/images/e7minus5.png',
       );
     } else if (chordType == 'E7+5') {
       chordUI = EChordUI(
         chordName: 'E7+5',
-        imagePath: 'path_to_E7_5_image',
+        imagePath: 'https://www.pianochord.org/images/e7plus5.png',
       );
     } else if (chordType == 'Esus') {
       chordUI = EChordUI(
         chordName: 'Esus',
-        imagePath: 'path_to_Esus_image',
+        imagePath: 'https://www.pianochord.org/images/esus4.png',
       );
     } else if (chordType == 'Edim') {
       chordUI = EChordUI(
         chordName: 'Edim',
-        imagePath: 'path_to_Edim_image',
+        imagePath: 'https://www.pianochord.org/images/edim.png',
       );
     } else if (chordType == 'Edim7') {
       chordUI = EChordUI(
         chordName: 'Edim7',
-        imagePath: 'path_to_Edim7_image',
+        imagePath: 'https://www.pianochord.org/images/edim7.png',
       );
     } else if (chordType == 'Em7b5') {
       chordUI = EChordUI(
         chordName: 'Em7b5',
-        imagePath: 'path_to_Em7b5_image',
+        imagePath: 'https://www.pianochord.org/images/em7b5.png',
       );
     } else if (chordType == 'Eaug') {
       chordUI = EChordUI(
         chordName: 'Eaug',
-        imagePath: 'path_to_Eaug_image',
+        imagePath: 'https://www.pianochord.org/images/eaug.png',
       );
     } else if (chordType == 'Eaug7') {
       chordUI = EChordUI(
         chordName: 'Eaug7',
-        imagePath: 'path_to_Eaug7_image',
+        imagePath: 'https://www.pianochord.org/images/eaug7.png',
       );
     }
 
@@ -2105,7 +2105,7 @@ class EChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -2205,142 +2205,142 @@ class FChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'F') {
       chordUI = FChordUI(
         chordName: 'F Major',
-        imagePath: 'path_to_F_Major_image',
+        imagePath: 'https://www.pianochord.org/images/f.png',
       );
     } else if (chordType == 'Fm') {
       chordUI = FChordUI(
         chordName: 'F Minor',
-        imagePath: 'path_to_F_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/fm.png',
       );
     } else if (chordType == 'F7') {
       chordUI = FChordUI(
         chordName: 'F7',
-        imagePath: 'path_to_F7_image',
+        imagePath: 'https://www.pianochord.org/images/f7.png',
       );
     } else if (chordType == 'Fm7') {
       chordUI = FChordUI(
         chordName: 'Fm7',
-        imagePath: 'path_to_Fm7_image',
+        imagePath: 'https://www.pianochord.org/images/fm7.png',
       );
     } else if (chordType == 'Fmaj7') {
       chordUI = FChordUI(
         chordName: 'Fmaj7',
-        imagePath: 'path_to_Fmaj7_image',
+        imagePath: 'https://www.pianochord.org/images/fminmaj7.png',
       );
     } else if (chordType == 'FmM7') {
       chordUI = FChordUI(
         chordName: 'FmM7',
-        imagePath: 'path_to_FmM7_image',
+        imagePath: 'https://www.pianochord.org/images/fminmaj7.png',
       );
     } else if (chordType == 'F6') {
       chordUI = FChordUI(
         chordName: 'F6',
-        imagePath: 'path_to_F6_image',
+        imagePath: 'https://www.pianochord.org/images/f6.png',
       );
     } else if (chordType == 'Fm6') {
       chordUI = FChordUI(
         chordName: 'Fm6',
-        imagePath: 'path_to_Fm6_image',
+        imagePath: 'https://www.pianochord.org/images/fm6.png',
       );
     } else if (chordType == 'F6/9') {
       chordUI = FChordUI(
         chordName: 'F6/9',
-        imagePath: 'path_to_F6_9_image',
+        imagePath: 'https://www.pianochord.org/images/f6_9.png',
       );
     } else if (chordType == 'F5') {
       chordUI = FChordUI(
         chordName: 'F5',
-        imagePath: 'path_to_F5_image',
+        imagePath: 'https://www.pianochord.org/images/f5.png',
       );
     } else if (chordType == 'F9') {
       chordUI = FChordUI(
         chordName: 'F9',
-        imagePath: 'path_to_F9_image',
+        imagePath: 'https://www.pianochord.org/images/f9.png',
       );
     } else if (chordType == 'Fm9') {
       chordUI = FChordUI(
         chordName: 'Fm9',
-        imagePath: 'path_to_Fm9_image',
+        imagePath: 'https://www.pianochord.org/images/fm9.png',
       );
     } else if (chordType == 'Fmaj9') {
       chordUI = FChordUI(
         chordName: 'Fmaj9',
-        imagePath: 'path_to_Fmaj9_image',
+        imagePath: 'https://www.pianochord.org/images/fmaj9.png',
       );
     } else if (chordType == 'F11') {
       chordUI = FChordUI(
         chordName: 'F11',
-        imagePath: 'path_to_F11_image',
+        imagePath: 'https://www.pianochord.org/images/f11.png',
       );
     } else if (chordType == 'Fm11') {
       chordUI = FChordUI(
         chordName: 'Fm11',
-        imagePath: 'path_to_Fm11_image',
+        imagePath: 'https://www.pianochord.org/images/fm11.png',
       );
     } else if (chordType == 'Fmaj11') {
       chordUI = FChordUI(
         chordName: 'Fmaj11',
-        imagePath: 'path_to_Fmaj11_image',
+        imagePath: 'https://www.pianochord.org/images/fmaj11.png',
       );
     } else if (chordType == 'F13') {
       chordUI = FChordUI(
         chordName: 'F13',
-        imagePath: 'path_to_F13_image',
+        imagePath: 'https://www.pianochord.org/images/f13.png',
       );
     } else if (chordType == 'Fm13') {
       chordUI = FChordUI(
         chordName: 'Fm13',
-        imagePath: 'path_to_Fm13_image',
+        imagePath: 'https://www.pianochord.org/images/fm13.png',
       );
     } else if (chordType == 'Fmaj13') {
       chordUI = FChordUI(
         chordName: 'Fmaj13',
-        imagePath: 'path_to_Fmaj13_image',
+        imagePath: 'https://www.pianochord.org/images/fmaj13.png',
       );
     } else if (chordType == 'Fadd') {
       chordUI = FChordUI(
         chordName: 'Fadd',
-        imagePath: 'path_to_Fadd_image',
+        imagePath: 'https://www.pianochord.org/images/fadd9.png',
       );
     } else if (chordType == 'F7-5') {
       chordUI = FChordUI(
         chordName: 'F7-5',
-        imagePath: 'path_to_F7_5_image',
+        imagePath: 'https://www.pianochord.org/images/f7minus5.png',
       );
     } else if (chordType == 'F7+5') {
       chordUI = FChordUI(
         chordName: 'F7+5',
-        imagePath: 'path_to_F7_5_image',
+        imagePath: 'https://www.pianochord.org/images/f7plus5.png',
       );
     } else if (chordType == 'Fsus') {
       chordUI = FChordUI(
         chordName: 'Fsus',
-        imagePath: 'path_to_Fsus_image',
+        imagePath: 'https://www.pianochord.org/images/fsus4.png',
       );
     } else if (chordType == 'Fdim') {
       chordUI = FChordUI(
         chordName: 'Fdim',
-        imagePath: 'path_to_Fdim_image',
+        imagePath: 'https://www.pianochord.org/images/fdim.png',
       );
     } else if (chordType == 'Fdim7') {
       chordUI = FChordUI(
         chordName: 'Fdim7',
-        imagePath: 'path_to_Fdim7_image',
+        imagePath: 'https://www.pianochord.org/images/fdim7.png',
       );
     } else if (chordType == 'Fm7b5') {
       chordUI = FChordUI(
         chordName: 'Fm7b5',
-        imagePath: 'path_to_Fm7b5_image',
+        imagePath: 'https://www.pianochord.org/images/fm7b5.png',
       );
     } else if (chordType == 'Faug') {
       chordUI = FChordUI(
         chordName: 'Faug',
-        imagePath: 'path_to_Faug_image',
+        imagePath: 'https://www.pianochord.org/images/faug.png',
       );
     } else if (chordType == 'Faug7') {
       chordUI = FChordUI(
         chordName: 'Faug7',
-        imagePath: 'path_to_Faug7_image',
+        imagePath: 'https://www.pianochord.org/images/faug7.png',
       );
     }
 
@@ -2378,7 +2378,7 @@ class FChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -2478,142 +2478,142 @@ class FsharpChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'F#') {
       chordUI = FSharpChordUI(
         chordName: 'F# Major',
-        imagePath: 'path_to_Fsharp_Major_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat.png',
       );
     } else if (chordType == 'F#m') {
       chordUI = FSharpChordUI(
         chordName: 'F# Minor',
-        imagePath: 'path_to_Fsharp_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m.png',
       );
     } else if (chordType == 'F#7') {
       chordUI = FSharpChordUI(
         chordName: 'F#7',
-        imagePath: 'path_to_Fsharp_7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_7.png',
       );
     } else if (chordType == 'F#m7') {
       chordUI = FSharpChordUI(
         chordName: 'F#m7',
-        imagePath: 'path_to_Fsharp_m7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m7.png',
       );
     } else if (chordType == 'F#maj7') {
       chordUI = FSharpChordUI(
         chordName: 'F#maj7',
-        imagePath: 'path_to_Fsharp_maj7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_maj7.png',
       );
     } else if (chordType == 'F#mM7') {
       chordUI = FSharpChordUI(
         chordName: 'F#mM7',
-        imagePath: 'path_to_Fsharp_mM7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_minmaj7.png',
       );
     } else if (chordType == 'F#6') {
       chordUI = FSharpChordUI(
         chordName: 'F#6',
-        imagePath: 'path_to_Fsharp_6_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_6.png',
       );
     } else if (chordType == 'F#m6') {
       chordUI = FSharpChordUI(
         chordName: 'F#m6',
-        imagePath: 'path_to_Fsharp_m6_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m6.png',
       );
     } else if (chordType == 'F#6/9') {
       chordUI = FSharpChordUI(
         chordName: 'F#6/9',
-        imagePath: 'path_to_Fsharp_6_9_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_6_9.png',
       );
     } else if (chordType == 'F#5') {
       chordUI = FSharpChordUI(
         chordName: 'F#5',
-        imagePath: 'path_to_Fsharp_5_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_5.png',
       );
     } else if (chordType == 'F#9') {
       chordUI = FSharpChordUI(
         chordName: 'F#9',
-        imagePath: 'path_to_Fsharp_9_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_9.png',
       );
     } else if (chordType == 'F#m9') {
       chordUI = FSharpChordUI(
         chordName: 'F#m9',
-        imagePath: 'path_to_Fsharp_m9_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m9.png',
       );
     } else if (chordType == 'F#maj9') {
       chordUI = FSharpChordUI(
         chordName: 'F#maj9',
-        imagePath: 'path_to_Fsharp_maj9_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_maj9.png',
       );
     } else if (chordType == 'F#11') {
       chordUI = FSharpChordUI(
         chordName: 'F#11',
-        imagePath: 'path_to_Fsharp_11_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_11.png',
       );
     } else if (chordType == 'F#m11') {
       chordUI = FSharpChordUI(
         chordName: 'F#m11',
-        imagePath: 'path_to_Fsharp_m11_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m11.png',
       );
     } else if (chordType == 'F#maj11') {
       chordUI = FSharpChordUI(
         chordName: 'F#maj11',
-        imagePath: 'path_to_Fsharp_maj11_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_maj11.png',
       );
     } else if (chordType == 'F#13') {
       chordUI = FSharpChordUI(
         chordName: 'F#13',
-        imagePath: 'path_to_Fsharp_13_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_13.png',
       );
     } else if (chordType == 'F#m13') {
       chordUI = FSharpChordUI(
         chordName: 'F#m13',
-        imagePath: 'path_to_Fsharp_m13_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m13.png',
       );
     } else if (chordType == 'F#maj13') {
       chordUI = FSharpChordUI(
         chordName: 'F#maj13',
-        imagePath: 'path_to_Fsharp_maj13_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_add9.png',
       );
     } else if (chordType == 'F#add') {
       chordUI = FSharpChordUI(
         chordName: 'F#add',
-        imagePath: 'path_to_Fsharp_add_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_7minus5.png',
       );
     } else if (chordType == 'F#7-5') {
       chordUI = FSharpChordUI(
         chordName: 'F#7-5',
-        imagePath: 'path_to_Fsharp_7_5_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_7plus5.png',
       );
     } else if (chordType == 'F#7+5') {
       chordUI = FSharpChordUI(
         chordName: 'F#7+5',
-        imagePath: 'path_to_Fsharp_7_5_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_7plus5.png',
       );
     } else if (chordType == 'F#sus') {
       chordUI = FSharpChordUI(
         chordName: 'F#sus',
-        imagePath: 'path_to_Fsharp_sus_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_sus4.png',
       );
     } else if (chordType == 'F#dim') {
       chordUI = FSharpChordUI(
         chordName: 'F#dim',
-        imagePath: 'path_to_Fsharp_dim_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_dim.png',
       );
     } else if (chordType == 'F#dim7') {
       chordUI = FSharpChordUI(
         chordName: 'F#dim7',
-        imagePath: 'path_to_Fsharp_dim7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_dim7.png',
       );
     } else if (chordType == 'F#m7b5') {
       chordUI = FSharpChordUI(
         chordName: 'F#m7b5',
-        imagePath: 'path_to_Fsharp_m7b5_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m7b5.png',
       );
     } else if (chordType == 'F#aug') {
       chordUI = FSharpChordUI(
         chordName: 'F#aug',
-        imagePath: 'path_to_Fsharp_aug_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_aug.png',
       );
     } else if (chordType == 'F#aug7') {
       chordUI = FSharpChordUI(
         chordName: 'F#aug7',
-        imagePath: 'path_to_Fsharp_aug7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_aug7.png',
       );
     } 
 
@@ -2651,7 +2651,7 @@ class FSharpChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -2751,142 +2751,142 @@ class GbChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'Gb') {
       chordUI = GbChordUI(
         chordName: 'Gb Major',
-        imagePath: 'path_to_Gb_Major_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat.png',
       );
     } else if (chordType == 'Gbm') {
       chordUI = GbChordUI(
         chordName: 'Gb Minor',
-        imagePath: 'path_to_Gb_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m.png',
       );
     } else if (chordType == 'Gb7') {
       chordUI = GbChordUI(
         chordName: 'Gb7',
-        imagePath: 'path_to_Gb7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_7.png',
       );
     } else if (chordType == 'Gbm7') {
       chordUI = GbChordUI(
         chordName: 'Gbm7',
-        imagePath: 'path_to_Gbm7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m7.png',
       );
     } else if (chordType == 'Gbmaj7') {
       chordUI = GbChordUI(
         chordName: 'Gbmaj7',
-        imagePath: 'path_to_Gbmaj7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_maj7.png',
       );
     } else if (chordType == 'GbmM7') {
       chordUI = GbChordUI(
         chordName: 'GbmM7',
-        imagePath: 'path_to_GbmM7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_minmaj7.png',
       );
     } else if (chordType == 'Gb6') {
       chordUI = GbChordUI(
         chordName: 'Gb6',
-        imagePath: 'path_to_Gb6_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_6.png',
       );
     } else if (chordType == 'Gbm6') {
       chordUI = GbChordUI(
         chordName: 'Gbm6',
-        imagePath: 'path_to_Gbm6_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m6.png',
       );
     } else if (chordType == 'Gb6/9') {
       chordUI = GbChordUI(
         chordName: 'Gb6/9',
-        imagePath: 'path_to_Gb6_9_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_6_9.png',
       );
     } else if (chordType == 'Gb5') {
       chordUI = GbChordUI(
         chordName: 'Gb5',
-        imagePath: 'path_to_Gb5_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_5.png',
       );
     } else if (chordType == 'Gb9') {
       chordUI = GbChordUI(
         chordName: 'Gb9',
-        imagePath: 'path_to_Gb9_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_9.png',
       );
     } else if (chordType == 'Gbm9') {
       chordUI = GbChordUI(
         chordName: 'Gbm9',
-        imagePath: 'path_to_Gbm9_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m9.png',
       );
     } else if (chordType == 'Gbmaj9') {
       chordUI = GbChordUI(
         chordName: 'Gbmaj9',
-        imagePath: 'path_to_Gbmaj9_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_maj9.png',
       );
     } else if (chordType == 'Gb11') {
       chordUI = GbChordUI(
         chordName: 'Gb11',
-        imagePath: 'path_to_Gb11_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_11.png',
       );
     } else if (chordType == 'Gbm11') {
       chordUI = GbChordUI(
         chordName: 'Gbm11',
-        imagePath: 'path_to_Gbm11_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m11.png',
       );
     } else if (chordType == 'Gbmaj11') {
       chordUI = GbChordUI(
         chordName: 'Gbmaj11',
-        imagePath: 'path_to_Gbmaj11_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_maj11.png',
       );
     } else if (chordType == 'Gb13') {
       chordUI = GbChordUI(
         chordName: 'Gb13',
-        imagePath: 'path_to_Gb13_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_13.png',
       );
     } else if (chordType == 'Gbm13') {
       chordUI = GbChordUI(
         chordName: 'Gbm13',
-        imagePath: 'path_to_Gbm13_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_maj13.png',
       );
     } else if (chordType == 'Gbmaj13') {
       chordUI = GbChordUI(
         chordName: 'Gbmaj13',
-        imagePath: 'path_to_Gbmaj13_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_add9.png',
       );
     } else if (chordType == 'Gbadd') {
       chordUI = GbChordUI(
         chordName: 'Gbadd',
-        imagePath: 'path_to_Gbadd_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_7minus5.png',
       );
     } else if (chordType == 'Gb7-5') {
       chordUI = GbChordUI(
         chordName: 'Gb7-5',
-        imagePath: 'path_to_Gb7_5_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_7minus5.png',
       );
     } else if (chordType == 'Gb7+5') {
       chordUI = GbChordUI(
         chordName: 'Gb7+5',
-        imagePath: 'path_to_Gb7_5_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_7plus5.png',
       );
     } else if (chordType == 'Gbsus') {
       chordUI = GbChordUI(
         chordName: 'Gbsus',
-        imagePath: 'path_to_Gbsus_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_sus4.png',
       );
     } else if (chordType == 'Gbdim') {
       chordUI = GbChordUI(
         chordName: 'Gbdim',
-        imagePath: 'path_to_Gbdim_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_dim.png',
       );
     } else if (chordType == 'Gbdim7') {
       chordUI = GbChordUI(
         chordName: 'Gbdim7',
-        imagePath: 'path_to_Gbdim7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_dim7.png',
       );
     } else if (chordType == 'Gbm7b5') {
       chordUI = GbChordUI(
         chordName: 'Gbm7b5',
-        imagePath: 'path_to_Gbm7b5_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_m7b5.png',
       );
     } else if (chordType == 'Gbaug') {
       chordUI = GbChordUI(
         chordName: 'Gbaug',
-        imagePath: 'path_to_Gbaug_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_aug.png',
       );
     } else if (chordType == 'Gbaug7') {
       chordUI = GbChordUI(
         chordName: 'Gbaug7',
-        imagePath: 'path_to_Gbaug7_image',
+        imagePath: 'https://www.pianochord.org/images/g_flat_aug7.png',
       );
     } 
 
@@ -2924,7 +2924,7 @@ class GbChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -3023,142 +3023,142 @@ class GChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'G') {
       chordUI = GChordUI(
         chordName: 'G Major',
-        imagePath: 'path_to_G_Major_image',
+        imagePath: 'https://www.pianochord.org/images/g.png',
       );
     } else if (chordType == 'Gm') {
       chordUI = GChordUI(
         chordName: 'G Minor',
-        imagePath: 'path_to_G_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/gm.png',
       );
     } else if (chordType == 'G7') {
       chordUI = GChordUI(
         chordName: 'G7',
-        imagePath: 'path_to_G7_image',
+        imagePath: 'https://www.pianochord.org/images/g7.png',
       );
     } else if (chordType == 'Gm7') {
       chordUI = GChordUI(
         chordName: 'Gm7',
-        imagePath: 'path_to_Gm7_image',
+        imagePath: 'https://www.pianochord.org/images/gm7.png',
       );
     } else if (chordType == 'Gmaj7') {
       chordUI = GChordUI(
         chordName: 'Gmaj7',
-        imagePath: 'path_to_Gmaj7_image',
+        imagePath: 'https://www.pianochord.org/images/gmaj7.png',
       );
     } else if (chordType == 'GmM7') {
       chordUI = GChordUI(
         chordName: 'GmM7',
-        imagePath: 'path_to_GmM7_image',
+        imagePath: 'https://www.pianochord.org/images/gminmaj7.png',
       );
     } else if (chordType == 'G6') {
       chordUI = GChordUI(
         chordName: 'G6',
-        imagePath: 'path_to_G6_image',
+        imagePath: 'https://www.pianochord.org/images/g6.png',
       );
     } else if (chordType == 'Gm6') {
       chordUI = GChordUI(
         chordName: 'Gm6',
-        imagePath: 'path_to_Gm6_image',
+        imagePath: 'https://www.pianochord.org/images/gm6.png',
       );
     } else if (chordType == 'G6/9') {
       chordUI = GChordUI(
         chordName: 'G6/9',
-        imagePath: 'path_to_G6_9_image',
+        imagePath: 'https://www.pianochord.org/images/g6_9.png',
       );
     } else if (chordType == 'G5') {
       chordUI = GChordUI(
         chordName: 'G5',
-        imagePath: 'path_to_G5_image',
+        imagePath: 'https://www.pianochord.org/images/g5.png',
       );
     } else if (chordType == 'G9') {
       chordUI = GChordUI(
         chordName: 'G9',
-        imagePath: 'path_to_G9_image',
+        imagePath: 'https://www.pianochord.org/images/g9.png',
       );
     } else if (chordType == 'Gm9') {
       chordUI = GChordUI(
         chordName: 'Gm9',
-        imagePath: 'path_to_Gm9_image',
+        imagePath: 'https://www.pianochord.org/images/gm9.png',
       );
     } else if (chordType == 'Gmaj9') {
       chordUI = GChordUI(
         chordName: 'Gmaj9',
-        imagePath: 'path_to_Gmaj9_image',
+        imagePath: 'https://www.pianochord.org/images/gmaj9.png',
       );
     } else if (chordType == 'G11') {
       chordUI = GChordUI(
         chordName: 'G11',
-        imagePath: 'path_to_G11_image',
+        imagePath: 'https://www.pianochord.org/images/g11.png',
       );
     } else if (chordType == 'Gm11') {
       chordUI = GChordUI(
         chordName: 'Gm11',
-        imagePath: 'path_to_Gm11_image',
+        imagePath: 'https://www.pianochord.org/images/gm11.png',
       );
     } else if (chordType == 'Gmaj11') {
       chordUI = GChordUI(
         chordName: 'Gmaj11',
-        imagePath: 'path_to_Gmaj11_image',
+        imagePath: 'https://www.pianochord.org/images/gmaj11.png',
       );
     } else if (chordType == 'G13') {
       chordUI = GChordUI(
         chordName: 'G13',
-        imagePath: 'path_to_G13_image',
+        imagePath: 'https://www.pianochord.org/images/g13.pnghttps://www.pianochord.org/images/g13.png',
       );
     } else if (chordType == 'Gm13') {
       chordUI = GChordUI(
         chordName: 'Gm13',
-        imagePath: 'path_to_Gm13_image',
+        imagePath: 'https://www.pianochord.org/images/gm13.png',
       );
     } else if (chordType == 'Gmaj13') {
       chordUI = GChordUI(
         chordName: 'Gmaj13',
-        imagePath: 'path_to_Gmaj13_image',
+        imagePath: 'https://www.pianochord.org/images/gmaj13.png',
       );
     } else if (chordType == 'Gadd') {
       chordUI = GChordUI(
         chordName: 'Gadd',
-        imagePath: 'path_to_Gadd_image',
+        imagePath: 'https://www.pianochord.org/images/gadd9.png',
       );
     } else if (chordType == 'G7-5') {
       chordUI = GChordUI(
         chordName: 'G7-5',
-        imagePath: 'path_to_G7_5_image',
+        imagePath: 'https://www.pianochord.org/images/g7minus5.png  ',
       );
     } else if (chordType == 'G7+5') {
       chordUI = GChordUI(
         chordName: 'G7+5',
-        imagePath: 'path_to_G7_5_image',
+        imagePath: 'https://www.pianochord.org/images/g7plus5.png',
       );
     } else if (chordType == 'Gsus') {
       chordUI = GChordUI(
         chordName: 'Gsus',
-        imagePath: 'path_to_Gsus_image',
+        imagePath: 'https://www.pianochord.org/images/gsus4.png',
       );
     } else if (chordType == 'Gdim') {
       chordUI = GChordUI(
         chordName: 'Gdim',
-        imagePath: 'path_to_Gdim_image',
+        imagePath: 'https://www.pianochord.org/images/gdim.png',
       );
     } else if (chordType == 'Gdim7') {
       chordUI = GChordUI(
         chordName: 'Gdim7',
-        imagePath: 'path_to_Gdim7_image',
+        imagePath: 'https://www.pianochord.org/images/gdim7.png',
       );
     } else if (chordType == 'Gm7b5') {
       chordUI = GChordUI(
         chordName: 'Gm7b5',
-        imagePath: 'path_to_Gm7b5_image',
+        imagePath: 'https://www.pianochord.org/images/gm7b5.png',
       );
     } else if (chordType == 'Gaug') {
       chordUI = GChordUI(
         chordName: 'Gaug',
-        imagePath: 'path_to_Gaug_image',
+        imagePath: 'https://www.pianochord.org/images/gaug.png',
       );
     } else if (chordType == 'Gaug7') {
       chordUI = GChordUI(
         chordName: 'Gaug7',
-        imagePath: 'path_to_Gaug7_image',
+        imagePath: 'https://www.pianochord.org/images/gaug7.png',
       );
     } 
 
@@ -3196,7 +3196,7 @@ class GChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -3295,142 +3295,142 @@ class GsharpChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'G#') {
       chordUI = GSharpChordUI(
         chordName: 'G# Major',
-        imagePath: 'path_to_G_Sharp_Major_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat.png',
       );
     } else if (chordType == 'G#m') {
       chordUI = GSharpChordUI(
         chordName: 'G# Minor',
-        imagePath: 'path_to_G_Sharp_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat.png',
       );
     } else if (chordType == 'G#7') {
       chordUI = GSharpChordUI(
         chordName: 'G#7',
-        imagePath: 'path_to_G_Sharp_7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_7.png',
       );
     } else if (chordType == 'G#m7') {
       chordUI = GSharpChordUI(
         chordName: 'G#m7',
-        imagePath: 'path_to_G_Sharp_m7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m7.png',
       );
     } else if (chordType == 'G#maj7') {
       chordUI = GSharpChordUI(
         chordName: 'G#maj7',
-        imagePath: 'path_to_G_Sharp_maj7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_maj7.png',
       );
     } else if (chordType == 'G#mM7') {
       chordUI = GSharpChordUI(
         chordName: 'G#mM7',
-        imagePath: 'path_to_G_Sharp_mM7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_minmaj7.png',
       );
     } else if (chordType == 'G#6') {
       chordUI = GSharpChordUI(
         chordName: 'G#6',
-        imagePath: 'path_to_G_Sharp_6_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_6.png',
       );
     } else if (chordType == 'G#m6') {
       chordUI = GSharpChordUI(
         chordName: 'G#m6',
-        imagePath: 'path_to_G_Sharp_m6_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m6.png',
       );
     } else if (chordType == 'G#6/9') {
       chordUI = GSharpChordUI(
         chordName: 'G#6/9',
-        imagePath: 'path_to_G_Sharp_6_9_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_6_9.png',
       );
     } else if (chordType == 'G#5') {
       chordUI = GSharpChordUI(
         chordName: 'G#5',
-        imagePath: 'path_to_G_Sharp_5_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_5.png',
       );
     } else if (chordType == 'G#9') {
       chordUI = GSharpChordUI(
         chordName: 'G#9',
-        imagePath: 'path_to_G_Sharp_9_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_9.png',
       );
     } else if (chordType == 'G#m9') {
       chordUI = GSharpChordUI(
         chordName: 'G#m9',
-        imagePath: 'path_to_G_Sharp_m9_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m9.png',
       );
     } else if (chordType == 'G#maj9') {
       chordUI = GSharpChordUI(
         chordName: 'G#maj9',
-        imagePath: 'path_to_G_Sharp_maj9_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_maj9.png',
       );
     } else if (chordType == 'G#11') {
       chordUI = GSharpChordUI(
         chordName: 'G#11',
-        imagePath: 'path_to_G_Sharp_11_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_11.png',
       );
     } else if (chordType == 'G#m11') {
       chordUI = GSharpChordUI(
         chordName: 'G#m11',
-        imagePath: 'path_to_G_Sharp_m11_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m11.png  ',
       );
     } else if (chordType == 'G#maj11') {
       chordUI = GSharpChordUI(
         chordName: 'G#maj11',
-        imagePath: 'path_to_G_Sharp_maj11_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_maj11.png',
       );
     } else if (chordType == 'G#13') {
       chordUI = GSharpChordUI(
         chordName: 'G#13',
-        imagePath: 'path_to_G_Sharp_13_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_13.png',
       );
     } else if (chordType == 'G#m13') {
       chordUI = GSharpChordUI(
         chordName: 'G#m13',
-        imagePath: 'path_to_G_Sharp_m13_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m13.png',
       );
     } else if (chordType == 'G#maj13') {
       chordUI = GSharpChordUI(
         chordName: 'G#maj13',
-        imagePath: 'path_to_G_Sharp_maj13_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_maj13.png',
       );
     } else if (chordType == 'G#add') {
       chordUI = GSharpChordUI(
         chordName: 'G#add',
-        imagePath: 'path_to_G_Sharp_add_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_add2.png',
       );
     } else if (chordType == 'G#7-5') {
       chordUI = GSharpChordUI(
         chordName: 'G#7-5',
-        imagePath: 'path_to_G_Sharp_7_5_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_7minus5.png',
       );
     } else if (chordType == 'G#7+5') {
       chordUI = GSharpChordUI(
         chordName: 'G#7+5',
-        imagePath: 'path_to_G_Sharp_7_5_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_7plus5.png',
       );
     } else if (chordType == 'G#sus') {
       chordUI = GSharpChordUI(
         chordName: 'G#sus',
-        imagePath: 'path_to_G_Sharp_sus_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_sus4.png',
       );
     } else if (chordType == 'G#dim') {
       chordUI = GSharpChordUI(
         chordName: 'G#dim',
-        imagePath: 'path_to_G_Sharp_dim_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_dim.png',
       );
     } else if (chordType == 'G#dim7') {
       chordUI = GSharpChordUI(
         chordName: 'G#dim7',
-        imagePath: 'path_to_G_Sharp_dim7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_dim7.png',
       );
     } else if (chordType == 'G#m7b5') {
       chordUI = GSharpChordUI(
         chordName: 'G#m7b5',
-        imagePath: 'path_to_G_Sharp_m7b5_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m7b5.png',
       );
     } else if (chordType == 'G#aug') {
       chordUI = GSharpChordUI(
         chordName: 'G#aug',
-        imagePath: 'path_to_G_Sharp_aug_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_aug.png',
       );
     } else if (chordType == 'G#aug7') {
       chordUI = GSharpChordUI(
         chordName: 'G#aug7',
-        imagePath: 'path_to_G_Sharp_aug7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_aug7.png',
       );
     } 
 
@@ -3468,7 +3468,7 @@ class GSharpChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -3567,142 +3567,142 @@ class AbChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'Ab') {
       chordUI = AbChordUI(
         chordName: 'Ab Major',
-        imagePath: 'path_to_Ab_Major_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat.png',
       );
     } else if (chordType == 'Abm') {
       chordUI = AbChordUI(
         chordName: 'Ab Minor',
-        imagePath: 'path_to_Ab_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m.png',
       );
     } else if (chordType == 'Ab7') {
       chordUI = AbChordUI(
         chordName: 'Ab7',
-        imagePath: 'path_to_Ab7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_7.png',
       );
     } else if (chordType == 'Abm7') {
       chordUI = AbChordUI(
         chordName: 'Abm7',
-        imagePath: 'path_to_Abm7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_7.png',
       );
     } else if (chordType == 'Abmaj7') {
       chordUI = AbChordUI(
         chordName: 'Abmaj7',
-        imagePath: 'path_to_Abmaj7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_maj7.png',
       );
     } else if (chordType == 'AbmM7') {
       chordUI = AbChordUI(
         chordName: 'AbmM7',
-        imagePath: 'path_to_AbmM7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_minmaj7.png',
       );
     } else if (chordType == 'Ab6') {
       chordUI = AbChordUI(
         chordName: 'Ab6',
-        imagePath: 'path_to_Ab6_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_6.png',
       );
     } else if (chordType == 'Abm6') {
       chordUI = AbChordUI(
         chordName: 'Abm6',
-        imagePath: 'path_to_Abm6_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m6.png',
       );
     } else if (chordType == 'Ab6/9') {
       chordUI = AbChordUI(
         chordName: 'Ab6/9',
-        imagePath: 'path_to_Ab6_9_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_6_9.png',
       );
     } else if (chordType == 'Ab5') {
       chordUI = AbChordUI(
         chordName: 'Ab5',
-        imagePath: 'path_to_Ab5_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_5.png',
       );
     } else if (chordType == 'Ab9') {
       chordUI = AbChordUI(
         chordName: 'Ab9',
-        imagePath: 'path_to_Ab9_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_9.png',
       );
     } else if (chordType == 'Abm9') {
       chordUI = AbChordUI(
         chordName: 'Abm9',
-        imagePath: 'path_to_Abm9_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m9.png',
       );
     } else if (chordType == 'Abmaj9') {
       chordUI = AbChordUI(
         chordName: 'Abmaj9',
-        imagePath: 'path_to_Abmaj9_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_maj9.png',
       );
     } else if (chordType == 'Ab11') {
       chordUI = AbChordUI(
         chordName: 'Ab11',
-        imagePath: 'path_to_Ab11_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_11.png',
       );
     } else if (chordType == 'Abm11') {
       chordUI = AbChordUI(
         chordName: 'Abm11',
-        imagePath: 'path_to_Abm11_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m11.png',
       );
     } else if (chordType == 'Abmaj11') {
       chordUI = AbChordUI(
         chordName: 'Abmaj11',
-        imagePath: 'path_to_Abmaj11_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_maj11.png',
       );
     } else if (chordType == 'Ab13') {
       chordUI = AbChordUI(
         chordName: 'Ab13',
-        imagePath: 'path_to_Ab13_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_13.png',
       );
     } else if (chordType == 'Abm13') {
       chordUI = AbChordUI(
         chordName: 'Abm13',
-        imagePath: 'path_to_Abm13_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m13.png',
       );
     } else if (chordType == 'Abmaj13') {
       chordUI = AbChordUI(
         chordName: 'Abmaj13',
-        imagePath: 'path_to_Abmaj13_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_maj13.png',
       );
     } else if (chordType == 'Abadd') {
       chordUI = AbChordUI(
         chordName: 'Abadd',
-        imagePath: 'path_to_Abadd_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_add9.png',
       );
     } else if (chordType == 'Ab7-5') {
       chordUI = AbChordUI(
         chordName: 'Ab7-5',
-        imagePath: 'path_to_Ab7_5_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_7minus5.png',
       );
     } else if (chordType == 'Ab7+5') {
       chordUI = AbChordUI(
         chordName: 'Ab7+5',
-        imagePath: 'path_to_Ab7_5_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_7plus5.png',
       );
     } else if (chordType == 'Absus') {
       chordUI = AbChordUI(
         chordName: 'Absus',
-        imagePath: 'path_to_Absus_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_sus4.png',
       );
     } else if (chordType == 'Abdim') {
       chordUI = AbChordUI(
         chordName: 'Abdim',
-        imagePath: 'path_to_Abdim_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_dim.png',
       );
     } else if (chordType == 'Abdim7') {
       chordUI = AbChordUI(
         chordName: 'Abdim7',
-        imagePath: 'path_to_Abdim7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_dim7.png',
       );
     } else if (chordType == 'Abm7b5') {
       chordUI = AbChordUI(
         chordName: 'Abm7b5',
-        imagePath: 'path_to_Abm7b5_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_m7b5.png',
       );
     } else if (chordType == 'Abaug') {
       chordUI = AbChordUI(
         chordName: 'Abaug',
-        imagePath: 'path_to_Abaug_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_aug.png',
       );
     } else if (chordType == 'Abaug7') {
       chordUI = AbChordUI(
         chordName: 'Abaug7',
-        imagePath: 'path_to_Abaug7_image',
+        imagePath: 'https://www.pianochord.org/images/a_flat_aug7.png',
       );
     } 
 
@@ -3740,7 +3740,7 @@ class AbChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -3839,142 +3839,142 @@ class AChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'A') {
       chordUI = AChordUI(
         chordName: 'A Major',
-        imagePath: 'path_to_A_Major_image',
+        imagePath: 'https://www.pianochord.org/images/a.png',
       );
     } else if (chordType == 'Am') {
       chordUI = AChordUI(
         chordName: 'A Minor',
-        imagePath: 'path_to_A_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/am.png',
       );
     } else if (chordType == 'A7') {
       chordUI = AChordUI(
         chordName: 'A7',
-        imagePath: 'path_to_A7_image',
+        imagePath: 'https://www.pianochord.org/images/a7.png',
       );
     } else if (chordType == 'Am7') {
       chordUI = AChordUI(
         chordName: 'Am7',
-        imagePath: 'path_to_Am7_image',
+        imagePath: 'https://www.pianochord.org/images/am7.png',
       );
     } else if (chordType == 'Amaj7') {
       chordUI = AChordUI(
         chordName: 'Amaj7',
-        imagePath: 'path_to_Amaj7_image',
+        imagePath: 'https://www.pianochord.org/images/amaj7.png',
       );
     } else if (chordType == 'AmM7') {
       chordUI = AChordUI(
         chordName: 'AmM7',
-        imagePath: 'path_to_AmM7_image',
+        imagePath: 'https://www.pianochord.org/images/aminmaj7.png',
       );
     } else if (chordType == 'A6') {
       chordUI = AChordUI(
         chordName: 'A6',
-        imagePath: 'path_to_A6_image',
+        imagePath: 'https://www.pianochord.org/images/a6.png',
       );
     } else if (chordType == 'Am6') {
       chordUI = AChordUI(
         chordName: 'Am6',
-        imagePath: 'path_to_Am6_image',
+        imagePath: 'https://www.pianochord.org/images/am6.png',
       );
     } else if (chordType == 'A6/9') {
       chordUI = AChordUI(
         chordName: 'A6/9',
-        imagePath: 'path_to_A6_9_image',
+        imagePath: 'https://www.pianochord.org/images/a6_9.png',
       );
     } else if (chordType == 'A5') {
       chordUI = AChordUI(
         chordName: 'A5',
-        imagePath: 'path_to_A5_image',
+        imagePath: 'https://www.pianochord.org/images/a5.png',
       );
     } else if (chordType == 'A9') {
       chordUI = AChordUI(
         chordName: 'A9',
-        imagePath: 'path_to_A9_image',
+        imagePath: 'https://www.pianochord.org/images/a9.png',
       );
     } else if (chordType == 'Am9') {
       chordUI = AChordUI(
         chordName: 'Am9',
-        imagePath: 'path_to_Am9_image',
+        imagePath: 'https://www.pianochord.org/images/am9.png',
       );
     } else if (chordType == 'Amaj9') {
       chordUI = AChordUI(
         chordName: 'Amaj9',
-        imagePath: 'path_to_Amaj9_image',
+        imagePath: 'https://www.pianochord.org/images/amaj9.png',
       );
     } else if (chordType == 'A11') {
       chordUI = AChordUI(
         chordName: 'A11',
-        imagePath: 'path_to_A11_image',
+        imagePath: 'https://www.pianochord.org/images/a11.png',
       );
     } else if (chordType == 'Am11') {
       chordUI = AChordUI(
         chordName: 'Am11',
-        imagePath: 'path_to_Am11_image',
+        imagePath: 'https://www.pianochord.org/images/am11.png',
       );
     } else if (chordType == 'Amaj11') {
       chordUI = AChordUI(
         chordName: 'Amaj11',
-        imagePath: 'path_to_Amaj11_image',
+        imagePath: 'https://www.pianochord.org/images/amaj11.png',
       );
     } else if (chordType == 'A13') {
       chordUI = AChordUI(
         chordName: 'A13',
-        imagePath: 'path_to_A13_image',
+        imagePath: 'https://www.pianochord.org/images/a13.png',
       );
     } else if (chordType == 'Am13') {
       chordUI = AChordUI(
         chordName: 'Am13',
-        imagePath: 'path_to_Am13_image',
+        imagePath: 'https://www.pianochord.org/images/am13.png',
       );
     } else if (chordType == 'Amaj13') {
       chordUI = AChordUI(
         chordName: 'Amaj13',
-        imagePath: 'path_to_Amaj13_image',
+        imagePath: 'https://www.pianochord.org/images/amaj13.png',
       );
     } else if (chordType == 'Aadd') {
       chordUI = AChordUI(
         chordName: 'Aadd',
-        imagePath: 'path_to_Aadd_image',
+        imagePath: 'https://www.pianochord.org/images/aadd9.png',
       );
     } else if (chordType == 'A7-5') {
       chordUI = AChordUI(
         chordName: 'A7-5',
-        imagePath: 'path_to_A7_5_image',
+        imagePath: 'https://www.pianochord.org/images/a7minus5.png',
       );
     } else if (chordType == 'A7+5') {
       chordUI = AChordUI(
         chordName: 'A7+5',
-        imagePath: 'path_to_A7_5_image',
+        imagePath: 'https://www.pianochord.org/images/a7plus5.png',
       );
     } else if (chordType == 'Asus') {
       chordUI = AChordUI(
         chordName: 'Asus',
-        imagePath: 'path_to_Asus_image',
+        imagePath: 'https://www.pianochord.org/images/asus4.png',
       );
     } else if (chordType == 'Adim') {
       chordUI = AChordUI(
         chordName: 'Adim',
-        imagePath: 'path_to_Adim_image',
+        imagePath: 'https://www.pianochord.org/images/adim.png',
       );
     } else if (chordType == 'Adim7') {
       chordUI = AChordUI(
         chordName: 'Adim7',
-        imagePath: 'path_to_Adim7_image',
+        imagePath: 'https://www.pianochord.org/images/adim7.png',
       );
     } else if (chordType == 'Am7b5') {
       chordUI = AChordUI(
         chordName: 'Am7b5',
-        imagePath: 'path_to_Am7b5_image',
+        imagePath: 'https://www.pianochord.org/images/am7b5.png',
       );
     } else if (chordType == 'Aaug') {
       chordUI = AChordUI(
         chordName: 'Aaug',
-        imagePath: 'path_to_Aaug_image',
+        imagePath: 'https://www.pianochord.org/images/aaug.png',
       );
     } else if (chordType == 'Aaug7') {
       chordUI = AChordUI(
         chordName: 'Aaug7',
-        imagePath: 'path_to_Aaug7_image',
+        imagePath: 'https://www.pianochord.org/images/aaug7.png',
       );
     } 
 
@@ -4012,7 +4012,7 @@ class AChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -4111,142 +4111,142 @@ class AsharpChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'A#') {
       chordUI = ASharpChordUI(
         chordName: 'A# Major',
-        imagePath: 'path_to_A#_Major_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat.png',
       );
     } else if (chordType == 'A#m') {
       chordUI = ASharpChordUI(
         chordName: 'A# Minor',
-        imagePath: 'path_to_A#_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m.png',
       );
     } else if (chordType == 'A#7') {
       chordUI = ASharpChordUI(
         chordName: 'A#7',
-        imagePath: 'path_to_A#7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_7.png',
       );
     } else if (chordType == 'A#m7') {
       chordUI = ASharpChordUI(
         chordName: 'A#m7',
-        imagePath: 'path_to_A#m7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m7.png',
       );
     } else if (chordType == 'A#maj7') {
       chordUI = ASharpChordUI(
         chordName: 'A#maj7',
-        imagePath: 'path_to_A#maj7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_maj7.png',
       );
     } else if (chordType == 'A#mM7') {
       chordUI = ASharpChordUI(
         chordName: 'A#mM7',
-        imagePath: 'path_to_A#mM7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_minmaj7.png',
       );
     } else if (chordType == 'A#6') {
       chordUI = ASharpChordUI(
         chordName: 'A#6',
-        imagePath: 'path_to_A#6_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_6.png',
       );
     } else if (chordType == 'A#m6') {
       chordUI = ASharpChordUI(
         chordName: 'A#m6',
-        imagePath: 'path_to_A#m6_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m6.png',
       );
     } else if (chordType == 'A#6/9') {
       chordUI = ASharpChordUI(
         chordName: 'A#6/9',
-        imagePath: 'path_to_A#6_9_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_6_9.png',
       );
     } else if (chordType == 'A#5') {
       chordUI = ASharpChordUI(
         chordName: 'A#5',
-        imagePath: 'path_to_A#5_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_5.png',
       );
     } else if (chordType == 'A#9') {
       chordUI = ASharpChordUI(
         chordName: 'A#9',
-        imagePath: 'path_to_A#9_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_9.png',
       );
     } else if (chordType == 'A#m9') {
       chordUI = ASharpChordUI(
         chordName: 'A#m9',
-        imagePath: 'path_to_A#m9_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m9.png',
       );
     } else if (chordType == 'A#maj9') {
       chordUI = ASharpChordUI(
         chordName: 'A#maj9',
-        imagePath: 'path_to_A#maj9_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_maj9.png',
       );
     } else if (chordType == 'A#11') {
       chordUI = ASharpChordUI(
         chordName: 'A#11',
-        imagePath: 'path_to_A#11_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_11.png',
       );
     } else if (chordType == 'A#m11') {
       chordUI = ASharpChordUI(
         chordName: 'A#m11',
-        imagePath: 'path_to_A#m11_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m11.png',
       );
     } else if (chordType == 'A#maj11') {
       chordUI = ASharpChordUI(
         chordName: 'A#maj11',
-        imagePath: 'path_to_A#maj11_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_13.png',
       );
     } else if (chordType == 'A#13') {
       chordUI = ASharpChordUI(
         chordName: 'A#13',
-        imagePath: 'path_to_A#13_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_13.png',
       );
     } else if (chordType == 'A#m13') {
       chordUI = ASharpChordUI(
         chordName: 'A#m13',
-        imagePath: 'path_to_A#m13_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m13.png',
       );
     } else if (chordType == 'A#maj13') {
       chordUI = ASharpChordUI(
         chordName: 'A#maj13',
-        imagePath: 'path_to_A#maj13_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_maj13.png',
       );
     } else if (chordType == 'A#add') {
       chordUI = ASharpChordUI(
         chordName: 'A#add',
-        imagePath: 'path_to_A#add_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_add2.png',
       );
     } else if (chordType == 'A#7-5') {
       chordUI = ASharpChordUI(
         chordName: 'A#7-5',
-        imagePath: 'path_to_A#7_5_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_7minus5.png',
       );
     } else if (chordType == 'A#7+5') {
       chordUI = ASharpChordUI(
         chordName: 'A#7+5',
-        imagePath: 'path_to_A#7_5_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_7plus5.png',
       );
     } else if (chordType == 'A#sus') {
       chordUI = ASharpChordUI(
         chordName: 'A#sus',
-        imagePath: 'path_to_A#sus_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_sus4.png',
       );
     } else if (chordType == 'A#dim') {
       chordUI = ASharpChordUI(
         chordName: 'A#dim',
-        imagePath: 'path_to_A#dim_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_dim.png',
       );
     } else if (chordType == 'A#dim7') {
       chordUI = ASharpChordUI(
         chordName: 'A#dim7',
-        imagePath: 'path_to_A#dim7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_dim7.png',
       );
     } else if (chordType == 'A#m7b5') {
       chordUI = ASharpChordUI(
         chordName: 'A#m7b5',
-        imagePath: 'path_to_A#m7b5_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m7b5.png',
       );
     } else if (chordType == 'A#aug') {
       chordUI = ASharpChordUI(
         chordName: 'A#aug',
-        imagePath: 'path_to_A#aug_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_aug.png',
       );
     } else if (chordType == 'A#aug7') {
       chordUI = ASharpChordUI(
         chordName: 'A#aug7',
-        imagePath: 'path_to_A#aug7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_aug7.png',
       );
     } 
 
@@ -4284,7 +4284,7 @@ class ASharpChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -4383,142 +4383,142 @@ class BbChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'Bb') {
       chordUI = BbChordUI(
         chordName: 'Bb Major',
-        imagePath: 'path_to_Bb_Major_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat.png',
       );
     } else if (chordType == 'Bbm') {
       chordUI = BbChordUI(
         chordName: 'Bb Minor',
-        imagePath: 'path_to_Bb_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m.png',
       );
     } else if (chordType == 'Bb7') {
       chordUI = BbChordUI(
         chordName: 'Bb7',
-        imagePath: 'path_to_Bb7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_7.png',
       );
     } else if (chordType == 'Bbm7') {
       chordUI = BbChordUI(
         chordName: 'Bbm7',
-        imagePath: 'path_to_Bbm7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m7.png',
       );
     } else if (chordType == 'Bbmaj7') {
       chordUI = BbChordUI(
         chordName: 'Bbmaj7',
-        imagePath: 'path_to_Bbmaj7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_maj7.png',
       );
     } else if (chordType == 'BbmM7') {
       chordUI = BbChordUI(
         chordName: 'BbmM7',
-        imagePath: 'path_to_BbmM7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_minmaj7.png  ',
       );
     } else if (chordType == 'Bb6') {
       chordUI = BbChordUI(
         chordName: 'Bb6',
-        imagePath: 'path_to_Bb6_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_6.png',
       );
     } else if (chordType == 'Bbm6') {
       chordUI = BbChordUI(
         chordName: 'Bbm6',
-        imagePath: 'path_to_Bbm6_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m6.png',
       );
     } else if (chordType == 'Bb6/9') {
       chordUI = BbChordUI(
         chordName: 'Bb6/9',
-        imagePath: 'path_to_Bb6_9_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_6_9.png',
       );
     } else if (chordType == 'Bb5') {
       chordUI = BbChordUI(
         chordName: 'Bb5',
-        imagePath: 'path_to_Bb5_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_5.png',
       );
     } else if (chordType == 'Bb9') {
       chordUI = BbChordUI(
         chordName: 'Bb9',
-        imagePath: 'path_to_Bb9_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_9.png',
       );
     } else if (chordType == 'Bbm9') {
       chordUI = BbChordUI(
         chordName: 'Bbm9',
-        imagePath: 'path_to_Bbm9_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m9.png',
       );
     } else if (chordType == 'Bbmaj9') {
       chordUI = BbChordUI(
         chordName: 'Bbmaj9',
-        imagePath: 'path_to_Bbmaj9_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_maj9.png',
       );
     } else if (chordType == 'Bb11') {
       chordUI = BbChordUI(
         chordName: 'Bb11',
-        imagePath: 'path_to_Bb11_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_11.png',
       );
     } else if (chordType == 'Bbm11') {
       chordUI = BbChordUI(
         chordName: 'Bbm11',
-        imagePath: 'path_to_Bbm11_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m11.png',
       );
     } else if (chordType == 'Bbmaj11') {
       chordUI = BbChordUI(
         chordName: 'Bbmaj11',
-        imagePath: 'path_to_Bbmaj11_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_maj11.png',
       );
     } else if (chordType == 'Bb13') {
       chordUI = BbChordUI(
         chordName: 'Bb13',
-        imagePath: 'path_to_Bb13_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_13.png',
       );
     } else if (chordType == 'Bbm13') {
       chordUI = BbChordUI(
         chordName: 'Bbm13',
-        imagePath: 'path_to_Bbm13_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m13.png',
       );
     } else if (chordType == 'Bbmaj13') {
       chordUI = BbChordUI(
         chordName: 'Bbmaj13',
-        imagePath: 'path_to_Bbmaj13_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_maj13.png',
       );
     } else if (chordType == 'Bbadd') {
       chordUI = BbChordUI(
         chordName: 'Bbadd',
-        imagePath: 'path_to_Bbadd_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_add2.png',
       );
     } else if (chordType == 'Bb7-5') {
       chordUI = BbChordUI(
         chordName: 'Bb7-5',
-        imagePath: 'path_to_Bb7_5_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_7minus5.png',
       );
     } else if (chordType == 'Bb7+5') {
       chordUI = BbChordUI(
         chordName: 'Bb7+5',
-        imagePath: 'path_to_Bb7_5_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_7plus5.png',
       );
     } else if (chordType == 'Bbsus') {
       chordUI = BbChordUI(
         chordName: 'Bbsus',
-        imagePath: 'path_to_Bbsus_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_sus4.png',
       );
     } else if (chordType == 'Bbdim') {
       chordUI = BbChordUI(
         chordName: 'Bbdim',
-        imagePath: 'path_to_Bbdim_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_dim.png',
       );
     } else if (chordType == 'Bbdim7') {
       chordUI = BbChordUI(
         chordName: 'Bbdim7',
-        imagePath: 'path_to_Bbdim7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_dim7.png',
       );
     } else if (chordType == 'Bbm7b5') {
       chordUI = BbChordUI(
         chordName: 'Bbm7b5',
-        imagePath: 'path_to_Bbm7b5_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_m7b5.png',
       );
     } else if (chordType == 'Bbaug') {
       chordUI = BbChordUI(
         chordName: 'Bbaug',
-        imagePath: 'path_to_Bbaug_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_aug.png',
       );
     } else if (chordType == 'Bbaug7') {
       chordUI = BbChordUI(
         chordName: 'Bbaug7',
-        imagePath: 'path_to_Bbaug7_image',
+        imagePath: 'https://www.pianochord.org/images/b_flat_aug7.png',
       );
     } 
 
@@ -4556,7 +4556,7 @@ class BbChordUI extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
            Gap(20),
-            Image.asset(
+            Image.network(
             imagePath,
            width: 200,
             height: 200,
@@ -4655,142 +4655,142 @@ class BChordTypeDetailsScreen extends StatelessWidget {
     if (chordType == 'B') {
       chordUI = BChordUI(
         chordName: 'B Major',
-        imagePath: 'path_to_B_Major_image',
+        imagePath: 'https://www.pianochord.org/images/b.png',
       );
     } else if (chordType == 'Bm') {
       chordUI = BChordUI(
         chordName: 'B Minor',
-        imagePath: 'path_to_B_Minor_image',
+        imagePath: 'https://www.pianochord.org/images/bm.png',
       );
     } else if (chordType == 'B7') {
       chordUI = BChordUI(
         chordName: 'B7',
-        imagePath: 'path_to_B7_image',
+        imagePath: 'https://www.pianochord.org/images/b7.png',
       );
     } else if (chordType == 'Bm7') {
       chordUI = BChordUI(
         chordName: 'Bm7',
-        imagePath: 'path_to_Bm7_image',
+        imagePath: 'https://www.pianochord.org/images/bmaj7.png',
       );
     } else if (chordType == 'Bmaj7') {
       chordUI = BChordUI(
         chordName: 'Bmaj7',
-        imagePath: 'path_to_Bmaj7_image',
+        imagePath: 'https://www.pianochord.org/images/bminmaj7.png',
       );
     } else if (chordType == 'BmM7') {
       chordUI = BChordUI(
         chordName: 'BmM7',
-        imagePath: 'path_to_BmM7_image',
+        imagePath: 'https://www.pianochord.org/images/b6.png',
       );
     } else if (chordType == 'B6') {
       chordUI = BChordUI(
         chordName: 'B6',
-        imagePath: 'path_to_B6_image',
+        imagePath: 'https://www.pianochord.org/images/b6.png',
       );
     } else if (chordType == 'Bm6') {
       chordUI = BChordUI(
         chordName: 'Bm6',
-        imagePath: 'path_to_Bm6_image',
+        imagePath: 'https://www.pianochord.org/images/bm6.png',
       );
     } else if (chordType == 'B6/9') {
       chordUI = BChordUI(
         chordName: 'B6/9',
-        imagePath: 'path_to_B6_9_image',
+        imagePath: 'https://www.pianochord.org/images/b6_9.png',
       );
     } else if (chordType == 'B5') {
       chordUI = BChordUI(
         chordName: 'B5',
-        imagePath: 'path_to_B5_image',
+        imagePath: 'https://www.pianochord.org/images/b5.png',
       );
     } else if (chordType == 'B9') {
       chordUI = BChordUI(
         chordName: 'B9',
-        imagePath: 'path_to_B9_image',
+        imagePath: 'https://www.pianochord.org/images/b9.png',
       );
     } else if (chordType == 'Bm9') {
       chordUI = BChordUI(
         chordName: 'Bm9',
-        imagePath: 'path_to_Bm9_image',
+        imagePath: 'https://www.pianochord.org/images/bm9.png',
       );
     } else if (chordType == 'Bmaj9') {
       chordUI = BChordUI(
         chordName: 'Bmaj9',
-        imagePath: 'path_to_Bmaj9_image',
+        imagePath: 'https://www.pianochord.org/images/bmaj9.png',
       );
     } else if (chordType == 'B11') {
       chordUI = BChordUI(
         chordName: 'B11',
-        imagePath: 'path_to_B11_image',
+        imagePath: 'https://www.pianochord.org/images/b11.png',
       );
     } else if (chordType == 'Bm11') {
       chordUI = BChordUI(
         chordName: 'Bm11',
-        imagePath: 'path_to_Bm11_image',
+        imagePath: 'https://www.pianochord.org/images/bm11.png  ',
       );
     } else if (chordType == 'Bmaj11') {
       chordUI = BChordUI(
         chordName: 'Bmaj11',
-        imagePath: 'path_to_Bmaj11_image',
+        imagePath: 'https://www.pianochord.org/images/bmaj11.png',
       );
     } else if (chordType == 'B13') {
       chordUI = BChordUI(
         chordName: 'B13',
-        imagePath: 'path_to_B13_image',
+        imagePath: 'https://www.pianochord.org/images/b13.png',
       );
     } else if (chordType == 'Bm13') {
       chordUI = BChordUI(
         chordName: 'Bm13',
-        imagePath: 'path_to_Bm13_image',
+        imagePath: 'https://www.pianochord.org/images/bm13.png',
       );
     } else if (chordType == 'Bmaj13') {
       chordUI = BChordUI(
         chordName: 'Bmaj13',
-        imagePath: 'path_to_Bmaj13_image',
+        imagePath: 'https://www.pianochord.org/images/badd9.png',
       );
     } else if (chordType == 'Badd') {
       chordUI = BChordUI(
         chordName: 'Badd',
-        imagePath: 'path_to_Badd_image',
+        imagePath: 'https://www.pianochord.org/images/badd9.png',
       );
     } else if (chordType == 'B7-5') {
       chordUI = BChordUI(
         chordName: 'B7-5',
-        imagePath: 'path_to_B7_5_image',
+        imagePath: 'https://www.pianochord.org/images/b7minus5.png',
       );
     } else if (chordType == 'B7+5') {
       chordUI = BChordUI(
         chordName: 'B7+5',
-        imagePath: 'path_to_B7_5_image',
+        imagePath: 'https://www.pianochord.org/images/b7plus5.png',
       );
     } else if (chordType == 'Bsus') {
       chordUI = BChordUI(
         chordName: 'Bsus',
-        imagePath: 'path_to_Bsus_image',
+        imagePath: 'https://www.pianochord.org/images/bsus4.png',
       );
     } else if (chordType == 'Bdim') {
       chordUI = BChordUI(
         chordName: 'Bdim',
-        imagePath: 'path_to_Bdim_image',
+        imagePath: 'https://www.pianochord.org/images/bdim.png',
       );
     } else if (chordType == 'Bdim7') {
       chordUI = BChordUI(
         chordName: 'Bdim7',
-        imagePath: 'path_to_Bdim7_image',
+        imagePath: 'https://www.pianochord.org/images/bdim7.png',
       );
     } else if (chordType == 'Bm7b5') {
       chordUI = BChordUI(
         chordName: 'Bm7b5',
-        imagePath: 'path_to_Bm7b5_image',
+        imagePath: 'https://www.pianochord.org/images/bm7b5.png',
       );
     } else if (chordType == 'Baug') {
       chordUI = BChordUI(
         chordName: 'Baug',
-        imagePath: 'path_to_Baug_image',
+        imagePath: 'https://www.pianochord.org/images/baug.png',
       );
     } else if (chordType == 'Baug7') {
       chordUI = BChordUI(
         chordName: 'Baug7',
-        imagePath: 'path_to_Baug7_image',
+        imagePath: 'https://www.pianochord.org/images/baug7.png',
       );
     }
 
