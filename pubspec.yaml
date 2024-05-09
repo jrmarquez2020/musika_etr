@@ -44,6 +44,7 @@ dependencies:
   gap: ^3.0.1
   get: ^4.6.6
   google_fonts: ^6.2.1
+  google_nav_bar: ^5.0.6
   quickalert: ^1.1.0
 
 dev_dependencies:
@@ -62,6 +63,7 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/images/
     - assets/images/piano/c/
     - assets/images/piano/c#/
     - assets/musics/

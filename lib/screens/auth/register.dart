@@ -24,119 +24,135 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final confirmPassword = TextEditingController();
   bool showPassword = true;
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('REGISTER'),
-        titleTextStyle: TextStyle(
-            fontWeight: FontWeight.w700, color: Colors.amber, fontSize: 23),
-        centerTitle: true,
-      ),
-      body: Container(
-        height: double.infinity,
-        padding: EdgeInsets.all(16),
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/images/blue.jpg'),
-                fit: BoxFit.cover,
-                alignment: Alignment.center,
-                opacity: 0.5)),
-        child: Form(
-          key: formKey,
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const Text('Please fill in the information needed.'),
-                const Gap(12),
-                TextFormField(
-                  decoration: setTextDecoration('Name'),
-                  controller: name,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Required. Please enter your firstname';
-                    }
-                  },
-                ),
-                const Gap(12),
-                TextFormField(
-                  decoration: setTextDecoration('Address'),
-                  controller: address,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Required. Please enter your address';
-                    }
-                  },
-                ),
-                const Gap(12),
-                TextFormField(
-                  decoration: setTextDecoration('Birthdate'),
-                  controller: birthdate,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Required. Please enter your Birthdate';
-                    }
-                  },
-                ),
-                const Gap(12),
-                TextFormField(
-                  decoration: setTextDecoration('Email Address'),
-                  controller: email,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Required. Please enter your Email Address';
-                    }
-                    if (!EmailValidator.validate(value)) {
-                      return 'Invalid Email';
-                    }
-                  },
-                ),
-                const Gap(12),
-                TextFormField(
-                  obscureText: showPassword,
-                  decoration: setTextDecoration('Password', isPassword: true),
-                  controller: password,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Required. Please enter your password';
-                    }
-                    if (value.length <= 5) {
-                      return 'Please enter atleast 6 characters';
-                    }
-                  },
-                ),
-                const Gap(12),
-                TextFormField(
-                  obscureText: showPassword,
-                  decoration: setTextDecoration('Confirm Password'),
-                  controller: confirmPassword,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Required. Please enter your password again';
-                    }
-                    if (value != password.text) {
-                      return 'Passowrd do not match';
-                    }
-                  },
-                ),
-                const Gap(12),
-                ElevatedButton(
-                  onPressed: register,
-                  child: const Text(
-                    'Register',
-                    style: TextStyle(color: Colors.black),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('REGISTER'),
+      titleTextStyle: TextStyle(
+          fontWeight: FontWeight.w700, color: Colors.black, fontSize: 23),
+      centerTitle: true,
+    ),
+    body: SafeArea(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/musika.png',
+                width: 100,
+                height: 100,
+              ),
+              const SizedBox(height: 20),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      const Text('Please fill in the information needed.'),
+                      const SizedBox(height: 12),
+                      TextFormField(
+                        decoration: setTextDecoration('Name'),
+                        controller: name,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Required. Please enter your firstname';
+                          }
+                          return null;
+                        },
+                      ),
+                      const SizedBox(height: 12),
+                      TextFormField(
+                        decoration: setTextDecoration('Address'),
+                        controller: address,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Required. Please enter your address';
+                          }
+                          return null;
+                        },
+                      ),
+                      const SizedBox(height: 12),
+                      TextFormField(
+                        decoration: setTextDecoration('Birthdate'),
+                        controller: birthdate,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Required. Please enter your Birthdate';
+                          }
+                          return null;
+                        },
+                      ),
+                      const SizedBox(height: 12),
+                      TextFormField(
+                        decoration: setTextDecoration('Email Address'),
+                        controller: email,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Required. Please enter your Email Address';
+                          }
+                          if (!EmailValidator.validate(value)) {
+                            return 'Invalid Email';
+                          }
+                          return null;
+                        },
+                      ),
+                      const SizedBox(height: 12),
+                      TextFormField(
+                        obscureText: showPassword,
+                        decoration: setTextDecoration('Password', isPassword: true),
+                        controller: password,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Required. Please enter your password';
+                          }
+                          if (value.length <= 5) {
+                            return 'Please enter at least 6 characters';
+                          }
+                          return null;
+                        },
+                      ),
+                      const SizedBox(height: 12),
+                      TextFormField(
+                        obscureText: showPassword,
+                        decoration: setTextDecoration('Confirm Password'),
+                        controller: confirmPassword,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Required. Please enter your password again';
+                          }
+                          if (value != password.text) {
+                            return 'Password do not match';
+                          }
+                          return null;
+                        },
+                      ),
+                      const SizedBox(height: 12),
+                      ElevatedButton(
+                        onPressed: register,
+                        child: const Text(
+                          'Register',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:  Color.fromARGB(49, 16, 199, 249),
+                        ),
+                      )
+                    ],
                   ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.yellow,
-                  ),
-                )
-              ],
-            ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
+
+
 
   InputDecoration setTextDecoration(String text, {bool isPassword = false}) {
     return InputDecoration(

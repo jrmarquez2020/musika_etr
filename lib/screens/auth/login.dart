@@ -53,93 +53,108 @@ void login() async {
       });
     }
   }
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Musika'),
-        titleTextStyle:
-            TextStyle(fontWeight: FontWeight.w700, color: Colors.amber, fontSize: 23),
-        centerTitle: true,
-      ),
-      body: Container(
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/blue.jpg'),
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
-            opacity: 0.5
-          ),
-        ),
-        constraints: BoxConstraints.expand(),
+ @override
+Widget build(BuildContext context) {
+  return Scaffold(
+    backgroundColor: Colors.white,
+    body: SafeArea(
+      child: Center(
         child: SingleChildScrollView(
-          child: Form(
-            key: formKey,
+          child: Container(
+            padding: EdgeInsets.all(20),
+            height: MediaQuery.of(context).size.height * 0.8, // Adjust the height as needed
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Gap(32),
-                const Text('Please Login your account.'),
-                const Gap(10),
-                TextFormField(
-                  controller: emailCon,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Email',
-                  ),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Required.';
-                    }
-                    if (!EmailValidator.validate(value)) {
-                      return 'Invalid Email';
-                    }
-                    return null;
-                  },
+                Image.asset(
+                  'assets/images/musika.png',
+                  width: 100,
+                  height: 100,
                 ),
-                const Gap(12),
-                TextFormField(
-                  controller: passCon,
-                  obscureText: hidePass,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Password',
-                    suffixIcon: IconButton(
-                      onPressed: togglePassword,
-                      icon: Icon(
-                        hidePass ? Icons.visibility : Icons.visibility_off,
+                Gap(20),
+                Form(
+                  key: formKey,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                         const Text("Welcome Back you've been missed"),
+                      ],
+                     ),
+                      Gap(10),
+                      const SizedBox(height: 10),
+                      TextFormField(
+                        controller: emailCon,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Email',
+                        ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Email is required.';
+                          }
+                          if (!EmailValidator.validate(value)) {
+                            return 'Invalid Email';
+                          }
+                          return null;
+                        },
                       ),
-                    ),
+                      const SizedBox(height: 12),
+                      TextFormField(
+                        controller: passCon,
+                        obscureText: hidePass,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Password',
+                          suffixIcon: IconButton(
+                            onPressed: togglePassword,
+                            icon: Icon(
+                              hidePass ? Icons.visibility : Icons.visibility_off,
+                            ),
+                          ),
+                        ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Password is required.';
+                          }
+                          return null;
+                        },
+                      ),
+                      const SizedBox(height: 12),
+                      ElevatedButton(
+                        onPressed: login,
+                        child: Text(
+                          'Sign in',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(49, 16, 199, 249),
+                        ),
+                      ),
+                      Gap(20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Not a member?'),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(context, CupertinoPageRoute(builder: (_) => RegisterScreen()));
+                            },
+                            child: const Text('Register now'),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Required.';
-                    }
-                    return null;
-                  },
                 ),
-                const Gap(12),
-                Row(
-                  children: [Text('No account?'),
-                TextButton(onPressed: (){Navigator.push(context, CupertinoPageRoute(builder: (_)=> RegisterScreen()));}, child: const Text('register')),],
-                ),
-                const Gap(12),
-                ElevatedButton(
-                  onPressed: login,
-                  child: Text(
-                    'Login',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.yellow,
-                  ),
-                )
               ],
             ),
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 }
