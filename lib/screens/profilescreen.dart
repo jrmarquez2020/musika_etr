@@ -50,10 +50,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Profile'),
-      ),
-      body: Center(
+    body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -64,25 +76,40 @@ class _ProfileScreenState extends State<ProfileScreen> {
             SizedBox(height: 20),
             Text(
               _username,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,
+              color: Colors.white),
             ),
             SizedBox(height: 20),
             ElevatedButton(
+              
               onPressed: () {
                 
               },
-              child: Text('Edit Profile'),
+              child: Text('Edit Profile',style: TextStyle(
+                color: Colors.white,
+              ),),
+              style: ElevatedButton.styleFrom(
+                          backgroundColor:Color.fromRGBO(244, 55, 109, 1),
+                        ),
+              
             ),
             SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
               _signOut(context);
               },
-              child: Text('Sign Out'),
+              child: Text('Sign Out',style: TextStyle(
+                color: Colors.red,
+              ),),
+               style: ElevatedButton.styleFrom(
+                          backgroundColor:Colors.white,
+                        ),
             ),
           ],
         ),
       ),
+      ),
+       
     );
   }
 }

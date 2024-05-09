@@ -28,12 +28,29 @@ class _RegisterScreenState extends State<RegisterScreen> {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
+      backgroundColor: Color.fromRGBO(32, 40, 55, 1),
       title: const Text('REGISTER'),
       titleTextStyle: TextStyle(
-          fontWeight: FontWeight.w700, color: Colors.black, fontSize: 23),
-      centerTitle: true,
+          fontWeight: FontWeight.w700, color: Colors.white, fontSize: 23),
+      centerTitle: true,iconTheme: IconThemeData(color: Colors.white),
+      
     ),
-    body: SafeArea(
+     body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+     child: SafeArea(
       child: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -51,9 +68,10 @@ Widget build(BuildContext context) {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      const Text('Please fill in the information needed.'),
+                      const Text('Please fill in the information needed.',style: TextStyle(color: Colors.white),),
                       const SizedBox(height: 12),
                       TextFormField(
+                        style: TextStyle(color: Colors.white),
                         decoration: setTextDecoration('Name'),
                         controller: name,
                         validator: (value) {
@@ -65,6 +83,7 @@ Widget build(BuildContext context) {
                       ),
                       const SizedBox(height: 12),
                       TextFormField(
+                        style: TextStyle(color: Colors.white),
                         decoration: setTextDecoration('Address'),
                         controller: address,
                         validator: (value) {
@@ -76,6 +95,7 @@ Widget build(BuildContext context) {
                       ),
                       const SizedBox(height: 12),
                       TextFormField(
+                        style: TextStyle(color: Colors.white),
                         decoration: setTextDecoration('Birthdate'),
                         controller: birthdate,
                         validator: (value) {
@@ -87,6 +107,7 @@ Widget build(BuildContext context) {
                       ),
                       const SizedBox(height: 12),
                       TextFormField(
+                        style: TextStyle(color: Colors.white),
                         decoration: setTextDecoration('Email Address'),
                         controller: email,
                         validator: (value) {
@@ -101,6 +122,7 @@ Widget build(BuildContext context) {
                       ),
                       const SizedBox(height: 12),
                       TextFormField(
+                        style: TextStyle(color: Colors.white),
                         obscureText: showPassword,
                         decoration: setTextDecoration('Password', isPassword: true),
                         controller: password,
@@ -116,6 +138,7 @@ Widget build(BuildContext context) {
                       ),
                       const SizedBox(height: 12),
                       TextFormField(
+                        style: TextStyle(color: Colors.white),
                         obscureText: showPassword,
                         decoration: setTextDecoration('Confirm Password'),
                         controller: confirmPassword,
@@ -131,13 +154,14 @@ Widget build(BuildContext context) {
                       ),
                       const SizedBox(height: 12),
                       ElevatedButton(
+                        
                         onPressed: register,
                         child: const Text(
                           'Register',
                           style: TextStyle(color: Colors.black),
                         ),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor:  Color.fromARGB(49, 16, 199, 249),
+                          backgroundColor: Color.fromRGBO(244, 55, 109, 1),
                         ),
                       )
                     ],
@@ -149,6 +173,8 @@ Widget build(BuildContext context) {
         ),
       ),
     ),
+      ),
+     
   );
 }
 
@@ -156,17 +182,20 @@ Widget build(BuildContext context) {
 
   InputDecoration setTextDecoration(String text, {bool isPassword = false}) {
     return InputDecoration(
+      labelStyle: TextStyle(color: Colors.white),
       border: const OutlineInputBorder(),
       labelText: text,
       suffixIcon: isPassword
-          ? IconButton(
+          ? IconButton(color: Colors.pink,
               onPressed: toggleShowPassword,
               icon: Icon(
                 showPassword ? Icons.visibility : Icons.visibility_off,
               ),
             )
           : null,
+          
     );
+    
   }
 
   void toggleShowPassword() {

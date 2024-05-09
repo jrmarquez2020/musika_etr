@@ -57,7 +57,22 @@ void login() async {
 Widget build(BuildContext context) {
   return Scaffold(
     backgroundColor: Colors.white,
-    body: SafeArea(
+     body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child:SafeArea(
       child: Center(
         child: SingleChildScrollView(
           child: Container(
@@ -80,34 +95,43 @@ Widget build(BuildContext context) {
                      Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                         const Text("Welcome Back you've been missed"),
+                         const Text("Welcome Back you've been missed",
+                         style: TextStyle(
+                          color: Colors.white
+                         ),),
                       ],
                      ),
                       Gap(10),
                       const SizedBox(height: 10),
                       TextFormField(
-                        controller: emailCon,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Email',
-                        ),
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Email is required.';
-                          }
-                          if (!EmailValidator.validate(value)) {
-                            return 'Invalid Email';
-                          }
-                          return null;
-                        },
-                      ),
+  controller: emailCon,
+  decoration: InputDecoration(
+    border: OutlineInputBorder(),
+    labelText: 'Email',
+    labelStyle: TextStyle(color: Colors.white), // Set label font color to white
+  ),
+  style: TextStyle(color: Colors.white), // Set input text font color to white
+  validator: (value) {
+    if (value == null || value.isEmpty) {
+      return 'Email is required.';
+    }
+    if (!EmailValidator.validate(value)) {
+      return 'Invalid Email';
+    }
+    return null;
+  },
+),
+
                       const SizedBox(height: 12),
                       TextFormField(
                         controller: passCon,
                         obscureText: hidePass,
                         decoration: InputDecoration(
+                          
                           border: OutlineInputBorder(),
+                          labelStyle: TextStyle(color: Colors.white),
                           labelText: 'Password',
+                          
                           suffixIcon: IconButton(
                             onPressed: togglePassword,
                             icon: Icon(
@@ -115,6 +139,7 @@ Widget build(BuildContext context) {
                             ),
                           ),
                         ),
+                         style: TextStyle(color: Colors.white),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Password is required.';
@@ -130,14 +155,14 @@ Widget build(BuildContext context) {
                           style: TextStyle(color: Colors.black),
                         ),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(49, 16, 199, 249),
+                          backgroundColor: Color.fromRGBO(244, 55, 109, 1),
                         ),
                       ),
                       Gap(20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Not a member?'),
+                          Text('Not a member?',style: TextStyle(color: Colors.white),),
                           TextButton(
                             onPressed: () {
                               Navigator.push(context, CupertinoPageRoute(builder: (_) => RegisterScreen()));
@@ -154,7 +179,9 @@ Widget build(BuildContext context) {
           ),
         ),
       ),
-    ),
+    ) , // Replace YourBodyContent() with your actual content
+      ),
+ 
   );
 }
 }

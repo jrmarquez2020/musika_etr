@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:musika/screens/drum/mysongs.dart';
 import 'package:musika/screens/electric_guitar/mysongs.dart';
 import 'package:musika/screens/guitar/mainscreen.dart';
-import 'package:musika/screens/guitar/mysongs.dart';
 import 'package:musika/screens/piano/mainscreen.dart';
-import 'package:musika/screens/piano/mysongs.dart';
 
 class InstrumentScreen extends StatelessWidget {
   const InstrumentScreen({Key? key}) : super(key: key);
@@ -13,47 +11,70 @@ class InstrumentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Musika Instruments'),
+        backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
+        title: Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: const Text('MUSIKA'),
+        ),
+        centerTitle: true,
+        titleTextStyle: TextStyle(color: Color.fromRGBO(244, 55, 109, 1), fontSize: 30,fontWeight: FontWeight.bold),
       ),
-      body: Center(
-        child: GridView.count(
-          crossAxisCount: 2,
-          children: List.generate(4, (index) {
-            return GestureDetector(
-              onTap: () {
-                switch (index) {
-                  case 0:
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => MainScreenGuitar()),
-                    );
-                    break;
-                  case 1:
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => MainScreenPiano()),
-                    );
-                    break;
-                  case 2:
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => DrumScreen()),
-                    );
-                    break;
-                  case 3:
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => ElectricGuitarScreen()),
-                    );
-                    break;
-                }
-              },
-              child: SquareCard(
-                label: _getCardLabel(index),
-                color: _getCardColor(index),
-                icon: _getCardIcon(index),
-              ),
-            );
-          }),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+              Color.fromRGBO(24, 29, 40, 1)
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
+          padding: EdgeInsets.only(top: 100),
+          child: Center(
+            child: GridView.count(
+              crossAxisCount: 2,
+              children: List.generate(4, (index) {
+                return GestureDetector(
+                  onTap: () {
+                    switch (index) {
+                      case 0:
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => MainScreenGuitar()),
+                        );
+                        break;
+                      case 1:
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => MainScreenPiano()),
+                        );
+                        break;
+                      case 2:
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => DrumScreen()),
+                        );
+                        break;
+                      case 3:
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => ElectricGuitarScreen()),
+                        );
+                        break;
+                    }
+                  },
+                  child: SquareCard(
+                    label: _getCardLabel(index),
+                    color: _getCardColor(index),
+                    image: _getCardImage(index),
+                  ),
+                );
+              }),
+            ),
+          ),
         ),
       ),
     );
@@ -68,7 +89,7 @@ class InstrumentScreen extends StatelessWidget {
       case 2:
         return 'Drum';
       case 3:
-        return 'Electric Guitar';
+        return 'Ukelele';
       default:
         return '';
     }
@@ -77,30 +98,30 @@ class InstrumentScreen extends StatelessWidget {
   Color _getCardColor(int index) {
     switch (index) {
       case 0:
-        return Colors.blue;
+        return Colors.white;
       case 1:
-        return Colors.green;
+        return Colors.white;
       case 2:
-        return Colors.orange;
+        return Colors.white;
       case 3:
-        return Colors.red;
+        return Colors.white;
       default:
-        return Colors.grey;
+        return Colors.white;
     }
   }
 
-  IconData _getCardIcon(int index) {
+  String _getCardImage(int index) {
     switch (index) {
       case 0:
-        return Icons.music_note;
+        return 'assets/images/guitar.png';
       case 1:
-        return Icons.keyboard;
+        return 'assets/images/piano1.jpg';
       case 2:
-        return Icons.keyboard;
+        return 'assets/images/drum.jpeg';
       case 3:
-        return Icons.music_note;
+        return 'assets/images/ukelele.png';
       default:
-        return Icons.error;
+        return '';
     }
   }
 }
@@ -108,32 +129,37 @@ class InstrumentScreen extends StatelessWidget {
 class SquareCard extends StatelessWidget {
   final String label;
   final Color color;
-  final IconData icon;
+  final String image;
 
-  const SquareCard({Key? key, required this.label, required this.color, required this.icon}) : super(key: key);
+  const SquareCard({Key? key, required this.label, required this.color, required this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: color,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              icon,
-              size: 48,
-              color: Colors.white,
-            ),
-            SizedBox(height: 10),
-            Text(
-              label,
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.white,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Card(
+        elevation: 4,
+        color: color,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                image,
+                width: 48,
+                height: 48,
+               
               ),
-            ),
-          ],
+              SizedBox(height: 10),
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.black,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -44,20 +44,20 @@ class _MusikaScreenState extends State<MusikaScreen> {
       ),
       
       bottomNavigationBar: Container(
-       color: Colors.white,
+       color: Color.fromRGBO(24, 29, 40, 1),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0,
           vertical: 20),
           child: GNav(
              duration: Duration(milliseconds: 300),
-                backgroundColor: Colors.white,
-                color: Colors.black,
-                activeColor: Colors.black,
-                tabBackgroundColor:  Color.fromARGB(88, 16, 198, 249),
+                backgroundColor: Color.fromRGBO(24, 29, 40, 1),
+                color: Color.fromRGBO(244, 55, 109, 1),
+                activeColor: Color.fromRGBO(0, 255, 188, 1),
+                tabBackgroundColor:  Color.fromRGBO(255, 255, 255, 0.07),
                 padding: EdgeInsets.all(16),
                 gap: 8,
                 haptic: true,
-                 tabBorderRadius: 15, 
+                //  tabBorderRadius: 15, 
             tabs: [
               GButton(
                 icon: Icons.home,

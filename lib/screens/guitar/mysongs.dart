@@ -36,8 +36,10 @@ class _GuitarScreenState extends State<GuitarScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          titleTextStyle: TextStyle(color: Colors.white),
+          iconTheme: IconThemeData(color: Colors.white),
+          backgroundColor: Color.fromRGBO(32, 40, 55, 1) ,
           centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 179, 145, 24),
           automaticallyImplyLeading: false, 
           title: _isSearching
               ? TextField(
@@ -78,6 +80,7 @@ class _GuitarScreenState extends State<GuitarScreen> {
               tooltip: 'Add song',
               icon: Icon(Icons.add),
             ),
+            
           ],
         ),
         body: Row(
@@ -103,7 +106,9 @@ class _GuitarScreenState extends State<GuitarScreen> {
                         builder: (context, snapshot) {
                           if (snapshot.connectionState ==
                               ConnectionState.waiting) {
-                            return CircularProgressIndicator();
+                            return Center(
+                              child: CircularProgressIndicator(),
+                            );
                           }
                           if (!snapshot.hasData) {
                             return const Text('No data found');
