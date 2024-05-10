@@ -17,7 +17,22 @@ class _ViewLyricsState extends State<ViewLyrics> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+       child: SafeArea(
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
@@ -65,6 +80,7 @@ class _ViewLyricsState extends State<ViewLyrics> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 IconButton(
+                                  color: Colors.white,
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
@@ -76,6 +92,7 @@ class _ViewLyricsState extends State<ViewLyrics> {
                                     Text(
                                       title,
                                       style: TextStyle(
+                                        color: Colors.white,
                                           fontSize: 38,
                                           fontWeight: FontWeight.w500),
                                     ),
@@ -84,12 +101,12 @@ class _ViewLyricsState extends State<ViewLyrics> {
                                 SizedBox(height: 20),
                                 Text(
                                   'Artist: ' + name,
-                                  style: GoogleFonts.aBeeZee(fontSize: 18),
+                                  style: GoogleFonts.aBeeZee(fontSize: 18,color:Color.fromRGBO(244, 55, 109, 1),),
                                 ),
                                 SizedBox(height: 40),
                                 Text(
                                   lyrics,
-                                  style: GoogleFonts.aBeeZee(fontSize: 18),
+                                  style: GoogleFonts.aBeeZee(fontSize: 18, color:Colors.white),
                                 ),
                               ],
                             ),
@@ -104,6 +121,8 @@ class _ViewLyricsState extends State<ViewLyrics> {
           ),
         ),
       ),
+      ),
+      
     );
   }
 }

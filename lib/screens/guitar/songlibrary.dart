@@ -45,14 +45,32 @@ class SongListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
         title: Text('Song List'),
+        titleTextStyle: TextStyle(color: Colors.white),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: ListView.builder(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child:  ListView.builder(
         itemCount: songs.length,
         itemBuilder: (context, index) {
           return ListTile(
-            title: Text(songs[index].title),
-            subtitle: Text(songs[index].artist),
+            title: Text(songs[index].title, style: TextStyle(color: Colors.white),),
+            subtitle: Text(songs[index].artist,style: TextStyle(color: Colors.white),),
             onTap: () {
               Navigator.push(
                 context,
@@ -64,6 +82,8 @@ class SongListScreen extends StatelessWidget {
           );
         },
       ),
+      ), 
+      
     );
   }
 }
@@ -91,7 +111,7 @@ class SongDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(song.title),
       ),
-      body: Padding(
+        body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,6 +132,7 @@ class SongDetailScreen extends StatelessWidget {
           ],
         ),
       ),
+ 
     );
   }
 }

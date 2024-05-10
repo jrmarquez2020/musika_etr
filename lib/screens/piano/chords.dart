@@ -171,12 +171,13 @@ class _PianoChordsState extends State<PianoChords> {
       child: Scaffold(
 
         appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
           centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 179, 145, 24),
+          backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
           automaticallyImplyLeading: false,
           title: Text(
             'Chords',
-            style: GoogleFonts.alice(fontWeight: FontWeight.w700, fontSize: 22),
+            style: GoogleFonts.alice(fontWeight: FontWeight.w700, fontSize: 22, color:Colors.white),
           ),
            leading: IconButton(
             icon: Icon(Icons.arrow_back),
@@ -185,7 +186,22 @@ class _PianoChordsState extends State<PianoChords> {
             },
           ),
         ),
-        body: Row(
+          body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+       child:  Row(
           children: [
             Expanded(
               child: Container(
@@ -206,7 +222,7 @@ class _PianoChordsState extends State<PianoChords> {
                             title: Text(
                               chordTitle,
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 22, color:Color.fromRGBO(244, 55, 109, 1),
                               ),
                             ),
                             onTap: () => _onChordSelected(context, chordTitle),
@@ -220,6 +236,7 @@ class _PianoChordsState extends State<PianoChords> {
             ),
           ],
         ),
+      ),
       ),
     );
   }
@@ -262,12 +279,29 @@ class CChordsList extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -278,7 +312,7 @@ class CChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -294,7 +328,9 @@ class CChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
+                     
   }
 }
 class ChordTypeDetailsScreen extends StatelessWidget {
@@ -467,6 +503,9 @@ class ChordUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -536,10 +575,27 @@ class CsharpChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -550,7 +606,7 @@ class CsharpChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -566,6 +622,7 @@ class CsharpChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -737,7 +794,10 @@ class CsharpChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -807,10 +867,27 @@ class DbChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -821,7 +898,7 @@ class DbChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -837,6 +914,7 @@ class DbChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -1008,21 +1086,36 @@ class DbChordUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          chordName,
-          style: TextStyle(fontSize: 20),
+    return  Scaffold(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
+        title: Text(chordName),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        SizedBox(height: 20),
-        Image.network(
-          imagePath,
-         
-          width: 200,
-          height: 200,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              chordName,
+              style: TextStyle(fontSize: 24.0),
+            ),
+           Gap(20),
+            Image.network(
+            imagePath,
+           width: 200,
+            height: 200,
+          ),
+          ],
         ),
-       
-      ],
+      ),
     );
   }
 }
@@ -1068,10 +1161,27 @@ class DChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -1082,7 +1192,7 @@ class DChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -1098,6 +1208,7 @@ class DChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -1271,6 +1382,9 @@ class DChordUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -1339,10 +1453,27 @@ class DsharpChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -1353,7 +1484,7 @@ class DsharpChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -1369,6 +1500,7 @@ class DsharpChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -1541,7 +1673,10 @@ class DSharpChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -1612,10 +1747,27 @@ class EbChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -1626,7 +1778,7 @@ class EbChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -1642,6 +1794,7 @@ class EbChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -1814,7 +1967,10 @@ class EbChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -1885,10 +2041,27 @@ class EChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -1899,7 +2072,7 @@ class EChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -1915,6 +2088,7 @@ class EChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -2088,6 +2262,9 @@ class EChordUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -2158,10 +2335,27 @@ class FChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -2172,7 +2366,7 @@ class FChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -2188,6 +2382,7 @@ class FChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -2360,7 +2555,10 @@ class FChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -2431,10 +2629,27 @@ class FsharpChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -2445,7 +2660,7 @@ class FsharpChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -2461,6 +2676,7 @@ class FsharpChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -2633,7 +2849,10 @@ class FSharpChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -2704,10 +2923,27 @@ class GbChordList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -2718,7 +2954,7 @@ class GbChordList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -2734,6 +2970,7 @@ class GbChordList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -2906,7 +3143,10 @@ class GbChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -2976,10 +3216,27 @@ class GChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -2990,7 +3247,7 @@ class GChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -3006,6 +3263,7 @@ class GChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -3178,7 +3436,10 @@ class GChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -3248,10 +3509,27 @@ class GsharpChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -3262,7 +3540,7 @@ class GsharpChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -3278,6 +3556,7 @@ class GsharpChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -3451,6 +3730,9 @@ class GSharpChordUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -3520,10 +3802,27 @@ class AbChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -3534,7 +3833,7 @@ class AbChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -3550,6 +3849,7 @@ class AbChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -3723,6 +4023,9 @@ class AbChordUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -3792,10 +4095,27 @@ class AChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -3806,7 +4126,7 @@ class AChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -3822,6 +4142,7 @@ class AChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -3994,7 +4315,10 @@ class AChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -4064,10 +4388,27 @@ class AsharpChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -4078,7 +4419,7 @@ class AsharpChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -4094,6 +4435,7 @@ class AsharpChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -4266,7 +4608,10 @@ class ASharpChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -4336,10 +4681,27 @@ class BbChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -4350,7 +4712,7 @@ class BbChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -4366,6 +4728,7 @@ class BbChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -4538,7 +4901,10 @@ class BbChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -4608,10 +4974,27 @@ class BChordsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
+        titleTextStyle: TextStyle(color: Colors.white,fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
+       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -4622,7 +5005,7 @@ class BChordsList extends StatelessWidget {
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(chordTypesC[index]),
+              title: Text(chordTypesC[index], style: TextStyle(color: Colors.white),),
               onTap: () {
                 Navigator.push(
                   context,
@@ -4638,6 +5021,7 @@ class BChordsList extends StatelessWidget {
           },
         ),
       ),
+      ),   
     );
   }
 }
@@ -4810,7 +5194,10 @@ class BChordUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(chordName),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),

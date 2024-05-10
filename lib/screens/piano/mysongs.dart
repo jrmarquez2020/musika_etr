@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:musika/screens/piano/addsongs.dart';
 import 'package:musika/screens/piano/viewylyrics.dart';
+import 'package:quickalert/quickalert.dart';
 
 class PianoScreen extends StatefulWidget {
   const PianoScreen({Key? key}) : super(key: key);
@@ -31,13 +32,30 @@ class _PianoScreenState extends State<PianoScreen> {
     });
   }
 
+  void _showDeleteConfirmationDialog(
+    BuildContext context, String documentId) {
+  QuickAlert.show(
+    context: context,
+    type: QuickAlertType.confirm,
+    title: 'Confirm',
+    text: 'Are you sure you want to delete this song?',
+    confirmBtnText: 'Delete',
+    cancelBtnText: 'Cancel',
+    onConfirmBtnTap: () {
+      songsDatabase.collection('songsList').doc(documentId).delete();
+      Navigator.of(context).pop();
+    },
+  );
+}
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
           centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 179, 145, 24),
+          backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
           automaticallyImplyLeading: false, 
           title: _isSearching
               ? TextField(
@@ -53,7 +71,7 @@ class _PianoScreenState extends State<PianoScreen> {
               : Text(
                   'Piano',
                   style: GoogleFonts.alice(
-                      fontWeight: FontWeight.w700, fontSize: 22),
+                      fontWeight: FontWeight.w700, fontSize: 22 ,color:Colors.white),
                 ),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
@@ -80,7 +98,22 @@ class _PianoScreenState extends State<PianoScreen> {
             ),
           ],
         ),
-        body: Row(
+         body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+       child:  Row(
           children: [
             Expanded(
               child: Container(
@@ -130,7 +163,7 @@ class _PianoScreenState extends State<PianoScreen> {
                                     Text(
                                       snapshot.data!.docs[index]['title'],
                                       style: TextStyle(
-                                        color: Colors.brown,
+                                        color: Colors.white,
                                         fontWeight: FontWeight.w700,
                                         fontSize: 21,
                                       ),
@@ -140,23 +173,21 @@ class _PianoScreenState extends State<PianoScreen> {
                                 subtitle: Text(
                                   snapshot.data!.docs[index]['name'],
                                   style: TextStyle(
-                                    color: Colors.brown,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.w700,
                                     fontSize: 12,
                                   ),
                                 ),
-                                trailing: IconButton(
+                               trailing: IconButton(
                                   onPressed: () {
                                     final documentId =
                                         snapshot.data!.docs[index].id;
-                                    songsDatabase
-                                        .collection('songsList')
-                                        .doc(documentId)
-                                        .delete();
+                                    _showDeleteConfirmationDialog(
+                                        context, documentId);
                                   },
                                   icon: Icon(
                                     Icons.delete,
-                                    color: Colors.black,
+                                    color: Color.fromRGBO(244, 55, 109, 1),
                                   ),
                                 ),
                               );
@@ -172,6 +203,10 @@ class _PianoScreenState extends State<PianoScreen> {
           ],
         ),
       ),
+     
+      ),
     );
   }
 }
+
+

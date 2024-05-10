@@ -70,6 +70,7 @@ class InstrumentScreen extends StatelessWidget {
                     label: _getCardLabel(index),
                     color: _getCardColor(index),
                     image: _getCardImage(index),
+                    borderColor: Color.fromRGBO(0, 255, 188, 1),
                   ),
                 );
               }),
@@ -130,35 +131,46 @@ class SquareCard extends StatelessWidget {
   final String label;
   final Color color;
   final String image;
+  final Color borderColor;
+  
 
-  const SquareCard({Key? key, required this.label, required this.color, required this.image}) : super(key: key);
+  const SquareCard({Key? key, required this.label, required this.color, required this.image, required this.borderColor,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Card(
-        elevation: 4,
-        color: color,
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                image,
-                width: 48,
-                height: 48,
-               
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: borderColor),
+          borderRadius: BorderRadius.circular(21), 
+        ),
+        child: Card(
+          elevation: 4,
+          color: color,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    image,
+                    width: 50,
+                    height: 50,
+                   
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    label,
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
               ),
-              SizedBox(height: 10),
-              Text(
-                label,
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.black,
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),
