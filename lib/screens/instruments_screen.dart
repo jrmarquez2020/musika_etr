@@ -10,15 +10,31 @@ class InstrumentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
-        title: Padding(
-          padding: const EdgeInsets.only(top: 30),
-          child: const Text('MUSIKA'),
+     appBar: AppBar(
+  backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+  title: Padding(
+    padding: const EdgeInsets.only(top: 30),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset(
+          'assets/images/musika.png', 
+          width: 40, 
+          height: 40, 
         ),
-        centerTitle: true,
-        titleTextStyle: TextStyle(color: Color.fromRGBO(244, 55, 109, 1), fontSize: 30,fontWeight: FontWeight.bold),
-      ),
+        const SizedBox(width: 15), 
+        const Text('MUSIKA'),
+      ],
+    ),
+  ),
+  centerTitle: true,
+  titleTextStyle: const TextStyle(
+    color: Color.fromRGBO(244, 55, 109, 1),
+    fontSize: 30,
+    fontWeight: FontWeight.bold,
+  ),
+),
+
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
