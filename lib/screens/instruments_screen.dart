@@ -71,13 +71,13 @@ class InstrumentScreen extends StatelessWidget {
                       case 2:
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (_) => DrumScreen()),
+                          MaterialPageRoute(builder: (_) => MainScreenPiano()),
                         );
                         break;
                       case 3:
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (_) => ElectricGuitarScreen()),
+                          MaterialPageRoute(builder: (_) => MainScreenPiano()),
                         );
                         break;
                     }

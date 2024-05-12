@@ -119,15 +119,14 @@ class _AddSongsPianoState extends State<AddSongsPiano> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          backgroundColor: Color.fromARGB(255, 220, 194, 145),
+          backgroundColor: Colors.white,
           title: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color.fromARGB(255, 220, 194, 145),
-                  Color.fromARGB(255, 220, 194, 145),
-                  Color.fromARGB(255, 220, 194, 145),
-                  Color.fromARGB(255, 216, 194, 145),
+                 Colors.white,
+                 Colors.white,
+                 Colors.white
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -154,14 +153,8 @@ class _AddSongsPianoState extends State<AddSongsPiano> {
                 gradient: LinearGradient(
                   colors: [
                     Colors.white,
-                    Color.fromARGB(255, 220, 194, 145),
-                    Color.fromARGB(255, 220, 194, 145),
-                    Color.fromARGB(255, 220, 194, 145),
-                    Color.fromARGB(255, 220, 194, 145),
-                    Color.fromARGB(255, 220, 194, 145),
-                    Color.fromARGB(255, 220, 194, 145),
-                    Color.fromARGB(255, 220, 194, 145),
-                    Color.fromARGB(255, 216, 194, 145),
+                 
+                  Color.fromRGBO(244, 55, 109, 1),
                   ],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -191,12 +184,15 @@ class _AddSongsPianoState extends State<AddSongsPiano> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 179, 145, 24),
+     appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white),
+        backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
         automaticallyImplyLeading: false,
         title: Text(
           'Musika',
           style: GoogleFonts.alice(fontWeight: FontWeight.w700, fontSize: 22),
+          
         ),
         centerTitle: true,
         leading: IconButton(
@@ -206,6 +202,19 @@ class _AddSongsPianoState extends State<AddSongsPiano> {
             icon: Icon(Icons.arrow_back_ios_new_rounded)),
       ),
       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+              Color.fromRGBO(24, 29, 40, 1),
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
+        child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bgmain.jpg'),
@@ -307,10 +316,10 @@ class _AddSongsPianoState extends State<AddSongsPiano> {
                                 }
                               },
                               child: Text('Add Song',
-                                  style: TextStyle(fontSize: 18)),
+                                  style: TextStyle(fontSize: 18, color:Colors.white)),
                               style: ButtonStyle(
                                   backgroundColor: MaterialStateProperty.all(
-                                Color.fromARGB(255, 179, 145, 24),
+                                Color.fromRGBO(244, 55, 109, 1),
                               )),
                             ),
                           ],
@@ -324,6 +333,6 @@ class _AddSongsPianoState extends State<AddSongsPiano> {
           ],
         ),
       ),
-    );
+    ));
   }
 }
