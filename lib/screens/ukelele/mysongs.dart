@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:musika/screens/guitar/addsongs.dart';
-import 'package:musika/screens/guitar/viewlyrics.dart';
+import 'package:musika/screens/piano/addsongs.dart';
+import 'package:musika/screens/piano/viewylyrics.dart';
+import 'package:musika/screens/ukelele/viewylyrics.dart';
 import 'package:quickalert/quickalert.dart';
 
-class GuitarScreen extends StatefulWidget {
-  const GuitarScreen({Key? key}) : super(key: key);
+class UkeleleScreen extends StatefulWidget {
+  const UkeleleScreen({Key? key}) : super(key: key);
 
   @override
-  State<GuitarScreen> createState() => _GuitarScreenState();
+  State<UkeleleScreen> createState() => _UkeleleScreenState();
 }
 
-class _GuitarScreenState extends State<GuitarScreen> {
+class _UkeleleScreenState extends State<UkeleleScreen> {
   int _selectedIndex = 0;
   final _formKey = GlobalKey<FormState>();
   bool _isSearching = false;
@@ -32,16 +33,31 @@ class _GuitarScreenState extends State<GuitarScreen> {
     });
   }
 
+  void _showDeleteConfirmationDialog(
+    BuildContext context, String documentId) {
+  QuickAlert.show(
+    context: context,
+    type: QuickAlertType.confirm,
+    title: 'Confirm',
+    text: 'Are you sure you want to delete this song?',
+    confirmBtnText: 'Delete',
+    cancelBtnText: 'Cancel',
+    onConfirmBtnTap: () {
+      songsDatabase.collection('songsList').doc(documentId).delete();
+      Navigator.of(context).pop();
+    },
+  );
+}
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          titleTextStyle: TextStyle(color: Colors.white),
           iconTheme: IconThemeData(color: Colors.white),
-          backgroundColor: Color.fromRGBO(32, 40, 55, 1),
           centerTitle: true,
-          automaticallyImplyLeading: false,
+          backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
+          automaticallyImplyLeading: false, 
           title: _isSearching
               ? TextField(
                   controller: titleController,
@@ -54,9 +70,9 @@ class _GuitarScreenState extends State<GuitarScreen> {
                   onChanged: (value) {},
                 )
               : Text(
-                  'Guitar',
+                  'Ukelele',
                   style: GoogleFonts.alice(
-                      fontWeight: FontWeight.w700, fontSize: 22),
+                      fontWeight: FontWeight.w700, fontSize: 22 ,color:Colors.white),
                 ),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
@@ -74,7 +90,7 @@ class _GuitarScreenState extends State<GuitarScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AddSongs(),
+                    builder: (context) => AddSongsPiano(),
                   ),
                 );
               },
@@ -83,22 +99,31 @@ class _GuitarScreenState extends State<GuitarScreen> {
             ),
           ],
         ),
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Color.fromRGBO(32, 40, 55, 1),
-                Color.fromRGBO(24, 29, 40, 1),
-              ],
-              stops: [0.0, 1.0],
-              tileMode: TileMode.clamp,
-            ),
+         body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(32, 40, 55, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
+            ],
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
           ),
-          child: Row(
-            children: [
-              Expanded(
+        ),
+       child:  Row(
+          children: [
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/bgmain.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
                 child: Column(
                   children: [
                     Expanded(
@@ -106,16 +131,13 @@ class _GuitarScreenState extends State<GuitarScreen> {
                         stream: songsDatabase
                             .collection('songsList')
                             .where('user',
-                                isEqualTo: FirebaseAuth
-                                    .instance.currentUser?.uid)
-                            .where('type', isEqualTo: 'guitar')
+                                isEqualTo:
+                                    FirebaseAuth.instance.currentUser?.uid).where('type', isEqualTo: 'ukelele')
                             .snapshots(),
                         builder: (context, snapshot) {
                           if (snapshot.connectionState ==
                               ConnectionState.waiting) {
-                            return Center(
-                              child: CircularProgressIndicator(),
-                            );
+                            return CircularProgressIndicator();
                           }
                           if (!snapshot.hasData) {
                             return const Text('No data found');
@@ -124,8 +146,7 @@ class _GuitarScreenState extends State<GuitarScreen> {
                             itemCount: snapshot.data!.docs.length,
                             itemBuilder: (context, index) {
                               final id = snapshot.data!.docs[index].id;
-                              final title =
-                                  snapshot.data!.docs[index]['title'];
+                              final title = snapshot.data!.docs[index]['title'];
                               final name = snapshot.data!.docs[index];
                               return Card(
                                 color: index % 2 == 0
@@ -138,7 +159,7 @@ class _GuitarScreenState extends State<GuitarScreen> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => ViewLyrics(
+                                        builder: (context) => UkeleleViewLyrics(
                                           id: id,
                                         ),
                                       ),
@@ -186,27 +207,14 @@ class _GuitarScreenState extends State<GuitarScreen> {
                   ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
+      ),
+     
       ),
     );
   }
-
-  void _showDeleteConfirmationDialog(
-      BuildContext context, String documentId) {
-    QuickAlert.show(
-      confirmBtnColor: Colors.red,
-      context: context,
-      type: QuickAlertType.confirm,
-      title: 'Confirm',
-      text: 'Are you sure you want to delete this song?',
-      confirmBtnText: 'Delete',
-      cancelBtnText: 'Cancel',
-      onConfirmBtnTap: () {
-        songsDatabase.collection('songsList').doc(documentId).delete();
-        Navigator.of(context).pop();
-      },
-    );
-  }
 }
+
+

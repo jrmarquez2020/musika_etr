@@ -1,67 +1,71 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:musika/screens/guitar/chords.dart';
-import 'package:musika/screens/guitar/mysongs.dart';
-import 'package:musika/screens/guitar/songlibrary.dart';
+import 'package:musika/screens/ukelele/chords.dart';
+import 'package:musika/screens/ukelele/mysongs.dart';
+import 'package:musika/screens/ukelele/songlibrary.dart';
 
-class MainScreenGuitar extends StatelessWidget {
-  const MainScreenGuitar({super.key});
+class MainScreenUkelele extends StatelessWidget {
+  const MainScreenUkelele({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
-        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
-        title: Text('Guitar'),
-        titleTextStyle: TextStyle(color: Color.fromRGBO(244, 55, 109, 1), fontSize: 25, fontWeight: FontWeight.bold),
-      ),
-      body: Container(
+    return  Scaffold(
+        appBar: AppBar(
+          backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
+          title: Text('Ukelele'),
+          titleTextStyle: TextStyle(color: Color.fromRGBO(244, 55, 109, 1), fontSize: 25),
+          iconTheme: IconThemeData(color: Colors.white),
+        ),
+        body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
               Color.fromRGBO(32, 40, 55, 1),
-              Color.fromRGBO(24, 29, 40, 1),
+               Color.fromRGBO(24, 29, 40, 1)
+             
+             
             ],
             stops: [0.0, 1.0],
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Center(
+       child:   Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              NavigationCard(
+               NavigationCard(
                 title: 'My Songs',
                 icon: CupertinoIcons.music_note_list,
                 onTap: () {
-                  Navigator.push(context, CupertinoPageRoute(builder: (_) => GuitarScreen()));
+                  Navigator.push(context, CupertinoPageRoute(builder: (_)=> UkeleleScreen()));
                 },
               ),
              const Gap(20),
-              NavigationCard(
+               NavigationCard(
                 title: 'Chords',
                 icon: CupertinoIcons.music_note_2,
                 onTap: () {
-                  Navigator.push(context, CupertinoPageRoute(builder: (_) => Chords()));
+                Navigator.push(context, CupertinoPageRoute(builder: (_)=> Ukelelehords()));
                 },
               ),
-             const Gap(20),
-              NavigationCard(
+              const Gap(20),
+               NavigationCard(
                 title: 'Songlist',
                 icon: CupertinoIcons.music_albums_fill,
                 onTap: () {
-                  Navigator.push(context, CupertinoPageRoute(builder: (_) => SongListScreen()));
+                 Navigator.push(context, CupertinoPageRoute(builder: (_)=> UkeleleSongListScreen()));
                 },
               ),
+             
             ],
           ),
         ),
       ),
-    );
+       
+      ); 
   }
 }
 
@@ -83,12 +87,9 @@ class NavigationCard extends StatelessWidget {
           padding: EdgeInsets.all(20),
           child: Row(
             children: [
-              Icon(icon, color: Color.fromRGBO(244, 55, 109, 1)),
+             Icon(icon, color: Color.fromRGBO(244, 55, 109, 1)),
               const Gap(20),
-              Text(
-                title,
-                style: TextStyle(fontSize: 20, color: Colors.black),
-              ),
+              Text(title, style: TextStyle(fontSize: 20)),
             ],
           ),
         ),

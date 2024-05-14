@@ -2,15 +2,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ViewLyrics extends StatefulWidget {
+class UkeleleViewLyrics extends StatefulWidget {
   final String id;
-  const ViewLyrics({required this.id});
+  const UkeleleViewLyrics({required this.id});
 
   @override
-  State<ViewLyrics> createState() => _ViewLyricsState();
+  State<UkeleleViewLyrics> createState() => _UkeleleViewLyricsState();
 }
 
-class _ViewLyricsState extends State<ViewLyrics> {
+class _UkeleleViewLyricsState extends State<UkeleleViewLyrics> {
   final songsDatabase = FirebaseFirestore.instance;
   double _scale = 1.0;
 
@@ -92,7 +92,7 @@ class _ViewLyricsState extends State<ViewLyrics> {
                                     Text(
                                       title,
                                       style: TextStyle(
-                                        color: Color.fromRGBO(244, 55, 109, 1),
+                                        color: Colors.pink,
                                           fontSize: 38,
                                           fontWeight: FontWeight.w500),
                                     ),
@@ -101,7 +101,7 @@ class _ViewLyricsState extends State<ViewLyrics> {
                                 SizedBox(height: 20),
                                 Text(
                                   'Artist: ' + name,
-                                  style: GoogleFonts.aBeeZee(fontSize: 18,color:Color.fromRGBO(244, 55, 109, 1),),
+                                  style: GoogleFonts.aBeeZee(fontSize: 18,color:Colors.white),
                                 ),
                                 SizedBox(height: 40),
                                 Text(
@@ -126,3 +126,5 @@ class _ViewLyricsState extends State<ViewLyrics> {
     );
   }
 }
+
+

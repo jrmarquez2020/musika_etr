@@ -147,47 +147,54 @@ class _PianoScreenState extends State<PianoScreen> {
                               final id = snapshot.data!.docs[index].id;
                               final title = snapshot.data!.docs[index]['title'];
                               final name = snapshot.data!.docs[index];
-                              return ListTile(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => PianoViewLyrics(
-                                        id: id,
+                              return Card(
+                                color: index % 2 == 0
+                                    ? Color.fromRGBO(34, 45, 54, 1)
+                                    : Color.fromRGBO(42, 55, 66, 1),
+                                margin: EdgeInsets.symmetric(
+                                    vertical: 8.0, horizontal: 16.0),
+                                child: ListTile(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => PianoViewLyrics(
+                                          id: id,
+                                        ),
                                       ),
-                                    ),
-                                  );
-                                },
-                                title: Row(
-                                  children: [
-                                    Text(
-                                      snapshot.data!.docs[index]['title'],
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 21,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                subtitle: Text(
-                                  snapshot.data!.docs[index]['name'],
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 12,
-                                  ),
-                                ),
-                               trailing: IconButton(
-                                  onPressed: () {
-                                    final documentId =
-                                        snapshot.data!.docs[index].id;
-                                    _showDeleteConfirmationDialog(
-                                        context, documentId);
+                                    );
                                   },
-                                  icon: Icon(
-                                    Icons.delete,
-                                    color: Color.fromRGBO(244, 55, 109, 1),
+                                  title: Row(
+                                    children: [
+                                      Text(
+                                        snapshot.data!.docs[index]['title'],
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 21,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  subtitle: Text(
+                                    snapshot.data!.docs[index]['name'],
+                                    style: TextStyle(
+                                      color: Color.fromRGBO(244, 55, 109, 1),
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                  trailing: IconButton(
+                                    onPressed: () {
+                                      final documentId =
+                                          snapshot.data!.docs[index].id;
+                                      _showDeleteConfirmationDialog(
+                                          context, documentId);
+                                    },
+                                    icon: Icon(
+                                      Icons.delete,
+                                      color: Color.fromRGBO(244, 55, 109, 1),
+                                    ),
                                   ),
                                 ),
                               );

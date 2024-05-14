@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
   
 void login() async {
     if (formKey.currentState!.validate()) {
-      EasyLoading.show(status: 'Processing...');
+      EasyLoading.show(status: 'Logging in...');
       await FirebaseAuth.instance
           .signInWithEmailAndPassword(
               email: emailCon.text, password: passCon.text)
@@ -48,7 +48,7 @@ void login() async {
           ),
         );
       }).catchError((error) {
-        print('ERROR $error');
+       
         EasyLoading.showError('Wrong Email and/or Password');
       });
     }
@@ -135,6 +135,7 @@ Widget build(BuildContext context) {
                           suffixIcon: IconButton(
                             onPressed: togglePassword,
                             icon: Icon(
+                               color: Color.fromRGBO(244, 55, 109, 1),
                               hidePass ? Icons.visibility : Icons.visibility_off,
                             ),
                           ),

@@ -92,7 +92,7 @@ class _PianoViewLyricsState extends State<PianoViewLyrics> {
                                     Text(
                                       title,
                                       style: TextStyle(
-                                        color: Colors.white,
+                                        color: Colors.pink,
                                           fontSize: 38,
                                           fontWeight: FontWeight.w500),
                                     ),
@@ -101,7 +101,7 @@ class _PianoViewLyricsState extends State<PianoViewLyrics> {
                                 SizedBox(height: 20),
                                 Text(
                                   'Artist: ' + name,
-                                  style: GoogleFonts.aBeeZee(fontSize: 18,color:Colors.pink),
+                                  style: GoogleFonts.aBeeZee(fontSize: 18,color:Colors.white),
                                 ),
                                 SizedBox(height: 40),
                                 Text(

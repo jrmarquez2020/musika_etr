@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:musika/screens/piano/chords.dart';
 import 'package:musika/screens/piano/mysongs.dart';
 import 'package:musika/screens/piano/songlibrary.dart';
@@ -13,7 +14,7 @@ class MainScreenPiano extends StatelessWidget {
         appBar: AppBar(
           backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
           title: Text('Piano'),
-          titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
+          titleTextStyle: TextStyle(color: Color.fromRGBO(244, 55, 109, 1), fontSize: 25),
           iconTheme: IconThemeData(color: Colors.white),
         ),
         body: Container(
@@ -35,37 +36,30 @@ class MainScreenPiano extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              NavigationCard(
+               NavigationCard(
                 title: 'My Songs',
-                icon: Icons.my_library_music_outlined ,
+                icon: CupertinoIcons.music_note_list,
                 onTap: () {
                   Navigator.push(context, CupertinoPageRoute(builder: (_)=> PianoScreen()));
                 },
               ),
-              SizedBox(height: 20),
-              NavigationCard(
+             const Gap(20),
+               NavigationCard(
                 title: 'Chords',
-                icon: Icons.music_note,
+                icon: CupertinoIcons.music_note_2,
                 onTap: () {
                 Navigator.push(context, CupertinoPageRoute(builder: (_)=> PianoChords()));
                 },
               ),
-              SizedBox(height: 20),
-              NavigationCard(
-                title: 'Settings',
-                icon: Icons.settings,
+              const Gap(20),
+               NavigationCard(
+                title: 'Songlist',
+                icon: CupertinoIcons.music_albums_fill,
                 onTap: () {
                  Navigator.push(context, CupertinoPageRoute(builder: (_)=> PianoSongListScreen()));
                 },
               ),
-              SizedBox(height: 20),
-              NavigationCard(
-                title: 'Profile',
-                icon: Icons.account_circle,
-                onTap: () {
-                  Navigator.push(context, CupertinoPageRoute(builder: (_)=> PianoScreen()));
-                },
-              ),
+             
             ],
           ),
         ),
@@ -93,8 +87,8 @@ class NavigationCard extends StatelessWidget {
           padding: EdgeInsets.all(20),
           child: Row(
             children: [
-              Icon(icon),
-              SizedBox(width: 20),
+             Icon(icon, color: Color.fromRGBO(244, 55, 109, 1)),
+              const Gap(20),
               Text(title, style: TextStyle(fontSize: 20)),
             ],
           ),

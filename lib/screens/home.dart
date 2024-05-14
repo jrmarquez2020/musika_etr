@@ -124,7 +124,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: Text(
-                  'Explore the music world',
+                  'Learn Music',
                   style: TextStyle(
                     color: Colors.grey[350],
                     fontSize: 15.0,

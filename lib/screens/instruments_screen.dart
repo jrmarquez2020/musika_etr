@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:musika/screens/drum/mysongs.dart';
-import 'package:musika/screens/electric_guitar/mysongs.dart';
 import 'package:musika/screens/guitar/mainscreen.dart';
 import 'package:musika/screens/piano/mainscreen.dart';
+import 'package:musika/screens/ukelele/mainscreen.dart';
 
 class InstrumentScreen extends StatelessWidget {
   const InstrumentScreen({Key? key}) : super(key: key);
@@ -53,7 +52,7 @@ class InstrumentScreen extends StatelessWidget {
           child: Center(
             child: GridView.count(
               crossAxisCount: 2,
-              children: List.generate(4, (index) {
+              children: List.generate(3, (index) {
                 return GestureDetector(
                   onTap: () {
                     switch (index) {
@@ -71,13 +70,7 @@ class InstrumentScreen extends StatelessWidget {
                       case 2:
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (_) => MainScreenPiano()),
-                        );
-                        break;
-                      case 3:
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (_) => MainScreenPiano()),
+                          MaterialPageRoute(builder: (_) => MainScreenUkelele()),
                         );
                         break;
                     }
@@ -104,8 +97,6 @@ class InstrumentScreen extends StatelessWidget {
       case 1:
         return 'Piano';
       case 2:
-        return 'Drum';
-      case 3:
         return 'Ukelele';
       default:
         return '';
@@ -120,8 +111,6 @@ class InstrumentScreen extends StatelessWidget {
         return Colors.white;
       case 2:
         return Colors.white;
-      case 3:
-        return Colors.white;
       default:
         return Colors.white;
     }
@@ -134,8 +123,6 @@ class InstrumentScreen extends StatelessWidget {
       case 1:
         return 'assets/images/piano1.jpg';
       case 2:
-        return 'assets/images/drum.jpeg';
-      case 3:
         return 'assets/images/ukelele.png';
       default:
         return '';
