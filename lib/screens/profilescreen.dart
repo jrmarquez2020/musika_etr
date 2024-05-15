@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:musika/screens/auth/edit.dart';
 import 'package:musika/screens/auth/login.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -80,31 +81,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
               color: Colors.white),
             ),
             SizedBox(height: 20),
-            ElevatedButton(
-              
-              onPressed: () {
-                
-              },
-              child: Text('Edit Profile',style: TextStyle(
-                color: Colors.white,
+           ElevatedButton.icon(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => UserProfileScreen(),
+      ),
+    );
+  },
+  icon: Icon(Icons.person,
+  color: Colors.white,),
+  label: Text(
+    'My Profile',
+    style: TextStyle(color: Colors.white),
+  ),
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Color.fromRGBO(244, 55, 109, 1),
+  ),
+),
+
+            SizedBox(height: 10),
+            ElevatedButton.icon(onPressed: () {
+              _signOut(context);
+              }, icon: Icon(Icons.exit_to_app, color: Color.fromRGBO(244, 55, 109, 1)), label: Text('Sign Out',style: TextStyle(
+                color: Color.fromRGBO(244, 55, 109, 1),
               ),),
               style: ElevatedButton.styleFrom(
-                          backgroundColor:Color.fromRGBO(244, 55, 109, 1),
-                        ),
-              
-            ),
-            SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-              _signOut(context);
-              },
-              child: Text('Sign Out',style: TextStyle(
-                color: Colors.red,
-              ),),
-               style: ElevatedButton.styleFrom(
                           backgroundColor:Colors.white,
                         ),
-            ),
+              )
+               
           ],
         ),
       ),

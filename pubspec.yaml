@@ -31,10 +31,12 @@ dependencies:
   another_flutter_splash_screen: ^1.2.0
   chord: ^0.0.1
   cloud_firestore: ^4.17.2
+  connectivity_plus: ^6.0.3
   cupertino_icons: ^1.0.6
   email_validator: ^2.1.17
   firebase_auth: ^4.19.4
   firebase_core: ^2.30.1
+  firebase_storage: ^11.7.5
   flutter:
     sdk: flutter
   flutter_chord: ^0.1.2
@@ -46,6 +48,7 @@ dependencies:
   get: ^4.6.6
   google_fonts: ^6.2.1
   google_nav_bar: ^5.0.6
+  image_picker: ^1.1.1
   quickalert: ^1.1.0
 
 dev_dependencies:

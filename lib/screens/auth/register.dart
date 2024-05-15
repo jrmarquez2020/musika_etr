@@ -1,8 +1,11 @@
+import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:musika/screens/auth/login.dart';
 import 'package:quickalert/models/quickalert_type.dart';
 import 'package:quickalert/widgets/quickalert_dialog.dart';
@@ -23,6 +26,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final birthdate = TextEditingController();
   final confirmPassword = TextEditingController();
   bool showPassword = true;
+  File? _image;
+
+  Future<void> _pickImage(ImageSource source) async {
+   final pickedImage = await ImagePicker().pickImage(source: source);
+
+    setState(() {
+      if (pickedImage != null) {
+        _image = File(pickedImage.path);
+      } else {
+        print('No image selected.');
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +48,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
         title: const Text('REGISTRATION'),
         titleTextStyle: TextStyle(
             fontWeight: FontWeight.w700, color: Colors.white, fontSize: 23),
-        centerTitle: true, iconTheme: IconThemeData(color: Colors.white),
+        centerTitle: true,
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -54,10 +71,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    'assets/images/musika.png',
-                    width: 100,
-                    height: 100,
+                  InkWell(
+                    onTap: () async {
+                      await _pickImage(ImageSource.gallery);
+                    },
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundColor: Colors.transparent,
+                      backgroundImage: _image != null
+                          ? FileImage(_image!)
+                          : AssetImage('assets/images/default_profile.png') as ImageProvider,
+                      child: _image == null
+                          ? Icon(
+                              Icons.camera_alt,
+                              size: 40,
+                              color: Colors.white,
+                            )
+                          : null,
+                    ),
                   ),
                   Gap(12),
                   Expanded(
@@ -225,7 +256,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
         context: context,
         type: QuickAlertType.loading,
         title: 'Loading',
-        text: 'Registering your account',
+        text:
+      'Registering your account',
       );
       UserCredential userCredential = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(
@@ -237,6 +269,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
           'address': address.text,
           'birthdate': birthdate.text,
           'email': email.text,
+          // Add the profile picture URL to the user data if available
+          'profile_picture': _image != null ? await uploadProfilePicture(userId) : null,
         });
         Navigator.of(context).pop();
         Navigator.of(context)
@@ -272,4 +306,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
       );
     }
   }
+
+  Future<String> uploadProfilePicture(String userId) async {
+    try {
+      final firebaseStorageRef = FirebaseStorage.instance.ref().child('profile_pictures/$userId.jpg');
+      await firebaseStorageRef.putFile(_image!);
+      final downloadUrl = await firebaseStorageRef.getDownloadURL();
+      return downloadUrl;
+    } catch (e) {
+      print('Error uploading profile picture: $e');
+      return '';
+    }
+}
 }
