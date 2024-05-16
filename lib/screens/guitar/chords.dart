@@ -114,35 +114,27 @@ class _ChordsState extends State<Chords> {
         child:  Row(
           children: [
             Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/bgmain.jpg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: ListView.builder(
-                        itemCount: chordTitles.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          final chordTitle = chordTitles[index];
-                          return ListTile(
-                            title: Text(
-                              chordTitle,
-                              style: TextStyle(
-                                color:Color.fromRGBO(244, 55, 109, 1) ,
-                                fontSize: 22,
-                              ),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: chordTitles.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        final chordTitle = chordTitles[index];
+                        return ListTile(
+                          title: Text(
+                            chordTitle,
+                            style: TextStyle(
+                              color:Color.fromRGBO(244, 55, 109, 1) ,
+                              fontSize: 22,
                             ),
-                            onTap: () => _onChordSelected(context, chordTitle),
-                          );
-                        },
-                      ),
+                          ),
+                          onTap: () => _onChordSelected(context, chordTitle),
+                        );
+                      },
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ],
@@ -198,7 +190,7 @@ class CChordsList extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
        body: Container(
@@ -214,13 +206,6 @@ class CChordsList extends StatelessWidget {
             ],
             stops: [0.0, 1.0],
             tileMode: TileMode.clamp,
-          ),
-        ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
           ),
         ),
         child: ListView.builder(
@@ -242,7 +227,6 @@ class CChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),
        
     );
@@ -425,33 +409,25 @@ class ChordTypeDetailsScreen extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.white),
       ),
        body: Center(
-       child: Container(
-         decoration: BoxDecoration(
-           image: DecorationImage(
-             image: AssetImage('assets/images/bgmain.jpg'),
-             fit: BoxFit.cover,
+       child: Column(
+         children: [
+           SizedBox(
+             height: 21,
            ),
-         ),
-         child: Column(
-           children: [
-             SizedBox(
-               height: 21,
+           Text(
+             '$chordType of $chordTitle chords',
+             style: TextStyle(fontSize: 30),
+           ),
+           SizedBox(height: 20),
+           Expanded(
+             child: ListView(
+               children: [
+                 tabWidget,
+                 
+               ],
              ),
-             Text(
-               '$chordType of $chordTitle chords',
-               style: TextStyle(fontSize: 30),
-             ),
-             SizedBox(height: 20),
-             Expanded(
-               child: ListView(
-                 children: [
-                   tabWidget,
-                   
-                 ],
-               ),
-             ),
-           ],
-         ),
+           ),
+         ],
        ),
              ),
       
@@ -493,7 +469,7 @@ class DChordsList extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
@@ -511,14 +487,7 @@ class DChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child:Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: ListView.builder(
+        child:ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
@@ -536,8 +505,7 @@ class DChordsList extends StatelessWidget {
               },
             );
           },
-        ),
-      ), 
+        ), 
       )
       
     );
@@ -736,7 +704,7 @@ class EChordsList extends StatelessWidget {
       appBar: AppBar(
         backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
@@ -754,14 +722,7 @@ class EChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child:  Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: ListView.builder(
+        child:  ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
@@ -780,7 +741,6 @@ class EChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),
       
     );
@@ -932,33 +892,25 @@ class EChordsTypesDetails extends StatelessWidget {
      appBar: AppBar(
         backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordType),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/bgmain.jpg'),
-              fit: BoxFit.cover,
+        child: Column(
+          children: [
+            Text(
+              '$chordType of $chordTitle chords',
+              style: TextStyle(fontSize: 20),
             ),
-          ),
-          child: Column(
-            children: [
-              Text(
-                '$chordType of $chordTitle chords',
-                style: TextStyle(fontSize: 20),
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView(
+                children: [
+                  tabWidget,
+                ],
               ),
-              SizedBox(height: 20),
-              Expanded(
-                child: ListView(
-                  children: [
-                    tabWidget,
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -990,7 +942,7 @@ class FChordsList extends StatelessWidget {
       appBar: AppBar(
         backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
@@ -1008,14 +960,7 @@ class FChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child:  Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: ListView.builder(
+        child:  ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
@@ -1034,7 +979,6 @@ class FChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),
       
     );
@@ -1173,7 +1117,7 @@ class GChordsList extends StatelessWidget {
       appBar: AppBar(
         backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
@@ -1191,14 +1135,7 @@ class GChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child:  Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: ListView.builder(
+        child:  ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
@@ -1217,7 +1154,6 @@ class GChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),
       
     );
@@ -1294,33 +1230,25 @@ class GChordsTypesDetails extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordType),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/bgmain.jpg'),
-              fit: BoxFit.cover,
+        child: Column(
+          children: [
+            Text(
+              '$chordType of $chordTitle chords',
+              style: TextStyle(fontSize: 20),
             ),
-          ),
-          child: Column(
-            children: [
-              Text(
-                '$chordType of $chordTitle chords',
-                style: TextStyle(fontSize: 20),
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView(
+                children: [
+                  tabWidget,
+                ],
               ),
-              SizedBox(height: 20),
-              Expanded(
-                child: ListView(
-                  children: [
-                    tabWidget,
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -1358,7 +1286,7 @@ class AChordsList extends StatelessWidget {
       appBar: AppBar(
         backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
@@ -1376,14 +1304,7 @@ class AChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child:  Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: ListView.builder(
+        child:  ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
@@ -1402,7 +1323,6 @@ class AChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),
       
     );
@@ -1514,33 +1434,25 @@ class AChordsTypesDetails extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordType),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/bgmain.jpg'),
-              fit: BoxFit.cover,
+        child: Column(
+          children: [
+            Text(
+              '$chordType of $chordTitle chords',
+              style: TextStyle(fontSize: 20),
             ),
-          ),
-          child: Column(
-            children: [
-              Text(
-                '$chordType of $chordTitle chords',
-                style: TextStyle(fontSize: 20),
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView(
+                children: [
+                  tabWidget,
+                ],
               ),
-              SizedBox(height: 20),
-              Expanded(
-                child: ListView(
-                  children: [
-                    tabWidget,
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -1610,7 +1522,7 @@ class BChordsList extends StatelessWidget {
       appBar: AppBar(
         backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordTitle),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
@@ -1628,14 +1540,7 @@ class BChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child:  Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: ListView.builder(
+        child:  ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
@@ -1654,7 +1559,6 @@ class BChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),
       
     );
@@ -1926,33 +1830,25 @@ class BChordsTypesDetails extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         title: Text(chordType),
-        titleTextStyle: TextStyle(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/bgmain.jpg'),
-              fit: BoxFit.cover,
+        child: Column(
+          children: [
+            Text(
+              '$chordType of $chordTitle chords',
+              style: TextStyle(fontSize: 20),
             ),
-          ),
-          child: Column(
-            children: [
-              Text(
-                '$chordType of $chordTitle chords',
-                style: TextStyle(fontSize: 20),
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView(
+                children: [
+                  tabWidget,
+                ],
               ),
-              SizedBox(height: 20),
-              Expanded(
-                child: ListView(
-                  children: [
-                    tabWidget,
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

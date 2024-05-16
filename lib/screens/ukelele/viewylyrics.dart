@@ -80,7 +80,7 @@ class _UkeleleViewLyricsState extends State<UkeleleViewLyrics> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 IconButton(
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
@@ -101,12 +101,12 @@ class _UkeleleViewLyricsState extends State<UkeleleViewLyrics> {
                                 SizedBox(height: 20),
                                 Text(
                                   'Artist: ' + name,
-                                  style: GoogleFonts.aBeeZee(fontSize: 18,color:Colors.white),
+                                  style: GoogleFonts.aBeeZee(fontSize: 18,color:Colors.pink,),
                                 ),
                                 SizedBox(height: 40),
                                 Text(
                                   lyrics,
-                                  style: GoogleFonts.aBeeZee(fontSize: 18, color:Colors.white),
+                                  style: GoogleFonts.aBeeZee(fontSize: 18, color:Colors.black),
                                 ),
                               ],
                             ),

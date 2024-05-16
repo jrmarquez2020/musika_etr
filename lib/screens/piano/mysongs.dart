@@ -119,7 +119,7 @@ class _PianoScreenState extends State<PianoScreen> {
               child: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/images/bgmain.jpg'),
+                    image: AssetImage('assets/images/bg-main.png'),
                     fit: BoxFit.cover,
                   ),
                 ),

@@ -7,7 +7,7 @@ import 'package:musika/screens/guitar/viewlyrics.dart';
 import 'package:quickalert/quickalert.dart';
 
 class GuitarScreen extends StatefulWidget {
-  const GuitarScreen({Key? key}) : super(key: key);
+  const GuitarScreen({Key? key}) : super(key : key);
 
   @override
   State<GuitarScreen> createState() => _GuitarScreenState();
@@ -39,7 +39,7 @@ class _GuitarScreenState extends State<GuitarScreen> {
         appBar: AppBar(
           titleTextStyle: TextStyle(color: Colors.white),
           iconTheme: IconThemeData(color: Colors.white),
-          backgroundColor: Color.fromRGBO(32, 40, 55, 1),
+          backgroundColor:Color.fromRGBO(32, 40, 55, 1),
           centerTitle: true,
           automaticallyImplyLeading: false,
           title: _isSearching
@@ -85,15 +85,9 @@ class _GuitarScreenState extends State<GuitarScreen> {
         ),
         body: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Color.fromRGBO(32, 40, 55, 1),
-                Color.fromRGBO(24, 29, 40, 1),
-              ],
-              stops: [0.0, 1.0],
-              tileMode: TileMode.clamp,
+            image: DecorationImage(
+              image: AssetImage('assets/images/bg-main.png'),
+              fit: BoxFit.cover,
             ),
           ),
           child: Row(

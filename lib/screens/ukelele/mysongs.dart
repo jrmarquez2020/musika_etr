@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:musika/screens/piano/addsongs.dart';
-import 'package:musika/screens/piano/viewylyrics.dart';
+import 'package:musika/screens/ukelele/addsongs.dart';
 import 'package:musika/screens/ukelele/viewylyrics.dart';
 import 'package:quickalert/quickalert.dart';
 
@@ -90,7 +89,7 @@ class _UkeleleScreenState extends State<UkeleleScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AddSongsPiano(),
+                    builder: (context) => AddSongsUkelele(),
                   ),
                 );
               },
@@ -120,7 +119,7 @@ class _UkeleleScreenState extends State<UkeleleScreen> {
               child: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/images/bgmain.jpg'),
+                    image: AssetImage('assets/images/bg-main.png'),
                     fit: BoxFit.cover,
                   ),
                 ),

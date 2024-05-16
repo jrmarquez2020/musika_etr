@@ -204,34 +204,26 @@ class _PianoChordsState extends State<PianoChords> {
        child:  Row(
           children: [
             Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/bgmain.jpg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: ListView.builder(
-                        itemCount: chordTitles.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          final chordTitle = chordTitles[index];
-                          return ListTile(
-                            title: Text(
-                              chordTitle,
-                              style: TextStyle(
-                                fontSize: 22, color:Color.fromRGBO(244, 55, 109, 1),
-                              ),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: chordTitles.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        final chordTitle = chordTitles[index];
+                        return ListTile(
+                          title: Text(
+                            chordTitle,
+                            style: TextStyle(
+                              fontSize: 22, color:Color.fromRGBO(244, 55, 109, 1),
                             ),
-                            onTap: () => _onChordSelected(context, chordTitle),
-                          );
-                        },
-                      ),
+                          ),
+                          onTap: () => _onChordSelected(context, chordTitle),
+                        );
+                      },
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ],
@@ -301,13 +293,6 @@ class CChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -327,7 +312,6 @@ class CChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
                      
@@ -595,13 +579,6 @@ class CsharpChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -621,7 +598,6 @@ class CsharpChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -887,13 +863,6 @@ class DbChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -913,7 +882,6 @@ class DbChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -1181,13 +1149,6 @@ class DChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -1207,7 +1168,6 @@ class DChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -1473,13 +1433,6 @@ class DsharpChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -1499,7 +1452,6 @@ class DsharpChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -1767,13 +1719,6 @@ class EbChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -1793,7 +1738,6 @@ class EbChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -2061,13 +2005,6 @@ class EChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -2087,7 +2024,6 @@ class EChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -2355,13 +2291,6 @@ class FChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -2381,7 +2310,6 @@ class FChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -2649,13 +2577,6 @@ class FsharpChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -2675,7 +2596,6 @@ class FsharpChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -2943,13 +2863,6 @@ class GbChordList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -2969,7 +2882,6 @@ class GbChordList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -3236,13 +3148,6 @@ class GChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -3262,7 +3167,6 @@ class GChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -3529,13 +3433,6 @@ class GsharpChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -3555,7 +3452,6 @@ class GsharpChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -3822,13 +3718,6 @@ class AbChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -3848,7 +3737,6 @@ class AbChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -4115,13 +4003,6 @@ class AChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -4141,7 +4022,6 @@ class AChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -4408,13 +4288,6 @@ class AsharpChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -4434,7 +4307,6 @@ class AsharpChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -4701,13 +4573,6 @@ class BbChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -4727,7 +4592,6 @@ class BbChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }
@@ -4994,13 +4858,6 @@ class BChordsList extends StatelessWidget {
             tileMode: TileMode.clamp,
           ),
         ),
-        child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bgmain.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: ListView.builder(
           itemCount: chordTypesC.length,
           itemBuilder: (BuildContext context, int index) {
@@ -5020,7 +4877,6 @@ class BChordsList extends StatelessWidget {
             );
           },
         ),
-      ),
       ),   
     );
   }

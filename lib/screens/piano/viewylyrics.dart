@@ -80,7 +80,7 @@ class _PianoViewLyricsState extends State<PianoViewLyrics> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 IconButton(
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
@@ -92,7 +92,7 @@ class _PianoViewLyricsState extends State<PianoViewLyrics> {
                                     Text(
                                       title,
                                       style: TextStyle(
-                                        color: Colors.pink,
+                                        color: Color.fromRGBO(244, 55, 109, 1),
                                           fontSize: 38,
                                           fontWeight: FontWeight.w500),
                                     ),
@@ -101,12 +101,12 @@ class _PianoViewLyricsState extends State<PianoViewLyrics> {
                                 SizedBox(height: 20),
                                 Text(
                                   'Artist: ' + name,
-                                  style: GoogleFonts.aBeeZee(fontSize: 18,color:Colors.white),
+                                  style: GoogleFonts.aBeeZee(fontSize: 18,color:Color.fromRGBO(244, 55, 109, 1),),
                                 ),
                                 SizedBox(height: 40),
                                 Text(
                                   lyrics,
-                                  style: GoogleFonts.aBeeZee(fontSize: 18, color:Colors.white),
+                                  style: GoogleFonts.aBeeZee(fontSize: 18, color:Colors.black),
                                 ),
                               ],
                             ),

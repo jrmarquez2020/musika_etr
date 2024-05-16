@@ -250,44 +250,56 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  void registerClient() async {
-    try {
+void registerClient() async {
+  try {
+    QuickAlert.show(
+      context: context,
+      type: QuickAlertType.loading,
+      title: 'Loading',
+      text: 'Registering your account',
+    );
+
+    UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: email.text,
+      password: password.text,
+    );
+
+    String? userId = userCredential.user?.uid;
+
+    if (userId != null) {
+      String? profilePictureUrl;
+
+      if (_image != null) {
+      
+        profilePictureUrl = await uploadProfilePicture(userId);
+      }
+
+   
+      await FirebaseFirestore.instance.collection('users').doc(userId).set({
+        'name': name.text,
+        'address': address.text,
+        'birthdate': birthdate.text,
+        'email': email.text,
+        'profile_picture': profilePictureUrl, 
+      });
+
+      Navigator.of(context).pop(); 
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => LoginScreen()));
+    } else {
+      Navigator.of(context).pop(); 
       QuickAlert.show(
         context: context,
-        type: QuickAlertType.loading,
-        title: 'Loading',
-        text:
-      'Registering your account',
+        type: QuickAlertType.error,
+        title: 'Error',
+        text: 'User ID is null. Please try again.',
       );
-      UserCredential userCredential = await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(
-              email: email.text, password: password.text);
-      String? userId = userCredential.user?.uid;
-      if (userId != null) {
-        await FirebaseFirestore.instance.collection('users').doc(userId).set({
-          'name': name.text,
-          'address': address.text,
-          'birthdate': birthdate.text,
-          'email': email.text,
-          // Add the profile picture URL to the user data if available
-          'profile_picture': _image != null ? await uploadProfilePicture(userId) : null,
-        });
-        Navigator.of(context).pop();
-        Navigator.of(context)
-            .pushReplacement(MaterialPageRoute(builder: (_) => LoginScreen()));
-      } else {
-        Navigator.of(context).pop();
-        QuickAlert.show(
-          context: context,
-          type: QuickAlertType.error,
-          title: 'Error',
-          text: 'User ID is null. Please try again.',
-        );
-      }
-    } on FirebaseAuthException catch (ex) {
-      Navigator.of(context).pop();
-      var errorTitle = '';
-      var errorText = '';
+    }
+  } catch (ex) {
+    Navigator.of(context).pop();
+    var errorTitle = 'Error';
+    var errorText = 'An unknown error occurred';
+
+    if (ex is FirebaseAuthException) {
       if (ex.code == 'weak-password') {
         errorText = 'Please enter a password with more than 6 characters';
         errorTitle = 'Weak Password';
@@ -295,17 +307,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
         errorText = 'This email is already registered';
         errorTitle = 'Email Already in Use';
       } else {
-        errorTitle = 'Error';
         errorText = ex.message ?? 'An unknown error occurred';
       }
-      QuickAlert.show(
-        context: context,
-        type: QuickAlertType.error,
-        title: errorTitle,
-        text: errorText,
-      );
     }
+
+    QuickAlert.show(
+      context: context,
+      type: QuickAlertType.error,
+      title: errorTitle,
+      text: errorText,
+    );
   }
+}
 
   Future<String> uploadProfilePicture(String userId) async {
     try {

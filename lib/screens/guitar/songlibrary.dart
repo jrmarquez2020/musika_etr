@@ -96,28 +96,48 @@ class SongDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(song.title),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Artist: ${song.artist}',
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold,),
-            ),
-            Gap(16),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Text(
-                  'Lyrics:\n${song.lyrics}',
-                  style: TextStyle(fontSize: 16.0),
-                ),
+      extendBodyBehindAppBar: true,
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/bg-lyrics.jpg'),
+                fit: BoxFit.cover,
               ),
             ),
-          ],
-        ),
+          ),
+         
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Gap(kToolbarHeight + 16),
+                Text(
+                  'Artist: ${song.artist}',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+                Gap(16),
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Text(
+                      'Lyrics:\n${song.lyrics}',
+                      style: TextStyle(fontSize: 16.0, color: Colors.black),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

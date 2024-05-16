@@ -1,8 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
+import 'package:musika/screens/info_video.dart';
+import 'package:video_player/video_player.dart';
+import 'package:chewie/chewie.dart';
 
 class HomePageScreen extends StatefulWidget {
   HomePageScreen({super.key});
@@ -15,11 +17,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
   PageController _pageController = PageController(initialPage: 0);
   late String _username;
   int _currentPage = 0;
+  String _profilePictureUrl = '';
 
   List<String> images = [
     'assets/images/poster1.png',
-    'assets/images/poster1.png',
-
+    'assets/images/poster2.png',
+    'assets/images/poster3.png',
+    'assets/images/poster4.png',
   ];
 
   @override
@@ -45,6 +49,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
         if (mounted) {
           setState(() {
             _username = snapshot.data()?['name'] ?? 'Unknown User';
+            _profilePictureUrl = snapshot.data()?['profile_picture'] ?? '';
           });
         }
       } catch (error) {
@@ -55,6 +60,15 @@ class _HomePageScreenState extends State<HomePageScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final chewieController = ChewieController(
+      videoPlayerController: VideoPlayerController.asset(
+        'assets/videos/musika.mp4',
+      ),
+      autoPlay: true,
+      looping: true,
+      // You can customize other ChewieController properties here
+    );
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -70,55 +84,54 @@ class _HomePageScreenState extends State<HomePageScreen> {
           ),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Padding(
-  padding: const EdgeInsets.only(left: 20.0, right: 20, top: 20),
-  child: Row(
-    children: <Widget>[
-      Expanded(
-        child: Row(
-          children: [
-            Text(
-              'Hi, ',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 25,
+              padding: const EdgeInsets.only(left: 20.0, right: 20, top: 30),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Text(
+                          'Hi, ',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                          ),
+                        ),
+                        Text(
+                          _username,
+                          style: TextStyle(
+                            color: Color.fromRGBO(244, 55, 109, 1),
+                            fontSize: 25,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Image.asset(
+                          'assets/images/musika.png',
+                          width: 40,
+                          height: 40,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: CircleAvatar(
+                        radius: 30.0,
+                        backgroundImage: _profilePictureUrl.isNotEmpty
+                            ? NetworkImage(_profilePictureUrl)
+                            : null,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-            Text(
-              _username,
-              style: TextStyle(
-                color: Color.fromRGBO(244, 55, 109, 1),
-                fontSize: 25,
-              ),
-            ),
-            SizedBox(width: 10), // Add spacing between the username and the image
-            Image.asset(
-              'assets/images/musika.png', 
-              width: 40, 
-              height: 40, 
-            ),
-          ],
-        ),
-      ),
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: GestureDetector(
-          onTap: () {
-            // Add functionality to handle tap on avatar
-          },
-          child: CircleAvatar(
-            radius: 30.0,
-            backgroundImage: AssetImage('assets/images/profile.jpg'),
-          ),
-        ),
-      ),
-    ],
-  ),
-),
-
+            SizedBox(height: 20.0),
             Align(
               alignment: Alignment.centerLeft,
               child: Padding(
@@ -132,57 +145,23 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 ),
               ),
             ),
-            Gap(20),
-            Expanded(
-  child: PageView.builder(
-    controller: _pageController,
-    onPageChanged: (int page) {
-      setState(() {
-        _currentPage = page;
-      });
-    },
-    itemCount: images.length,
-    itemBuilder: (context, index) {
-      return Center(
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(15), // Adjust border radius as needed
-          child: Image.asset(
-            images[index],
-            fit: BoxFit.contain,
+          ]
           ),
-        ),
-      );
-    },
-  ),
-),
-            SizedBox(height: 20.0),
-          Padding(
-  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-  child: Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: <Widget>[
-      for (int i = 0; i < images.length; i++)
-        Container(
-          width: 8,
-          height: 8,
-          margin: EdgeInsets.symmetric(horizontal: 2.0),
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: _currentPage == i ? Colors.white : Colors.grey,
-          ),
-        ),
-    ],
-  ),
-),
-            SizedBox(height: 20.0),
-            // ElevatedButton(
-            //   onPressed: () {
-            //     // Navigate to another screen
-            //   },
-            //   child: Text('Navigate'),
-            // ),
-          ],
-        ),
+      ),
+    );
+  }
+}
+
+class InfoVideoScreen extends StatelessWidget {
+  final ChewieController chewieController;
+
+  const InfoVideoScreen({Key? key, required this.chewieController}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Chewie(controller: chewieController),
       ),
     );
   }

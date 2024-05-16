@@ -55,6 +55,7 @@ class UserDetail extends StatelessWidget {
           }
 
           var data = snapshot.data!.data() as Map<String, dynamic>;
+          String profilePictureUrl = data['profile_picture'] ?? '';
 
           return SingleChildScrollView(
             padding: EdgeInsets.all(16.0),
@@ -64,7 +65,9 @@ class UserDetail extends StatelessWidget {
                 Center(
                   child: CircleAvatar(
                     radius: 50,
-                    backgroundImage: AssetImage('assets/images/profile.jpg'), // Provide the path to your profile picture
+                    backgroundImage: profilePictureUrl.isNotEmpty
+                        ? NetworkImage(profilePictureUrl)
+                        : null,
                   ),
                 ),
                 SizedBox(height: 20),
@@ -95,6 +98,7 @@ class UserDetail extends StatelessWidget {
     );
   }
 }
+
 
 
 class UserProfileItem extends StatelessWidget {
