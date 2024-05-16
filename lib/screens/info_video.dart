@@ -1,80 +1,60 @@
 import 'package:flutter/material.dart';
-import 'package:chewie/chewie.dart';
 import 'package:video_player/video_player.dart';
+import 'package:chewie/chewie.dart';
 
-class VideoPlayerScreen extends StatefulWidget {
-  final VideoPlayerController videoPlayerController;
-
-  const VideoPlayerScreen({Key? key, required this.videoPlayerController})
-      : super(key: key);
+class MyVideoPlayer extends StatefulWidget {
+  const MyVideoPlayer({Key? key}) : super(key: key);
 
   @override
-  _VideoPlayerScreenState createState() => _VideoPlayerScreenState();
+  State<MyVideoPlayer> createState() => _MyVideoPlayerState();
 }
 
-class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
-  late ChewieController _chewieController;
+class _MyVideoPlayerState extends State<MyVideoPlayer> {
+  late VideoPlayerController videoPlayerController;
+  ChewieController? chewieController;
 
   @override
   void initState() {
     super.initState();
-    _initializeChewieController();
+    _initPlayer();
   }
 
-  void _initializeChewieController() {
-    _chewieController = ChewieController(
-      videoPlayerController: widget.videoPlayerController,
+  void _initPlayer() async {
+    videoPlayerController = VideoPlayerController.asset(
+        'assets/videos/musika.mp4');
+    await videoPlayerController.initialize();
+
+    chewieController = ChewieController(
+      
+      videoPlayerController: videoPlayerController,
       autoPlay: true,
       looping: true,
-      allowedScreenSleep: false,
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: AspectRatio(
-          aspectRatio: widget.videoPlayerController.value.aspectRatio,
-          child: Chewie(controller: _chewieController),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          if (widget.videoPlayerController.value.isPlaying) {
-            widget.videoPlayerController.pause();
-          } else {
-            widget.videoPlayerController.play();
-          }
-          setState(() {});
-        },
-        child: Icon(
-          widget.videoPlayerController.value.isPlaying
-              ? Icons.pause
-              : Icons.play_arrow,
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-      persistentFooterButtons: [
-        ElevatedButton(
-          onPressed: () {
-            widget.videoPlayerController.pause();
-            widget.videoPlayerController.dispose();
-            _chewieController.dispose();
-            Navigator.pop(context); // Exit the screen
-          },
-          child: Text('Exit'),
-        ),
-      ],
+      
+      
     );
   }
 
   @override
   void dispose() {
+    videoPlayerController.dispose();
+    chewieController?.dispose();
     super.dispose();
-    widget.videoPlayerController.pause(); // Pause the video before disposing
-    widget.videoPlayerController.dispose();
-    _chewieController.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Musika"),
+      ),
+      body: chewieController!=null? Padding(
+        padding: EdgeInsets.symmetric(vertical: 20),
+        child: Chewie(
+          controller: chewieController!,
+        ),
+      ) : Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
   }
 }

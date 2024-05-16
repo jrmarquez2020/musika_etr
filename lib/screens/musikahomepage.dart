@@ -17,7 +17,7 @@ class _MusikaScreenState extends State<MusikaScreen> {
     HomePageScreen(),
     InstrumentScreen(),
     ProfileScreen(),
-    Text('Settings'),
+   
   ];
   void _onItemTapped(int index) {
     setState(() {
@@ -28,17 +28,7 @@ class _MusikaScreenState extends State<MusikaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text(
-      //     'Musika',
-      //     style: TextStyle(color: Colors.amber, fontWeight: FontWeight.w700),
-      //   ),
-      //   centerTitle: true,
-      //   leading: Container(
-      //     height: double.infinity,
-      //   ),
-      // ),
-      
+  
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -46,7 +36,7 @@ class _MusikaScreenState extends State<MusikaScreen> {
       bottomNavigationBar: Container(
        color: Color.fromRGBO(24, 29, 40, 1),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0,
+          padding: const EdgeInsets.symmetric(horizontal: 40.0,
           vertical: 20),
           child: GNav(
              duration: Duration(milliseconds: 300),
@@ -57,7 +47,7 @@ class _MusikaScreenState extends State<MusikaScreen> {
                 padding: EdgeInsets.all(16),
                 gap: 8,
                 haptic: true,
-                //  tabBorderRadius: 15, 
+               
             tabs: [
               GButton(
                 icon: Icons.home,
@@ -71,10 +61,7 @@ class _MusikaScreenState extends State<MusikaScreen> {
                 icon: Icons.person,
                 text: 'Profile',
               ),
-              GButton(
-                icon: Icons.settings,
-                text: 'Settings',
-              ),
+           
             ],
             onTabChange: _onItemTapped,
           ),
