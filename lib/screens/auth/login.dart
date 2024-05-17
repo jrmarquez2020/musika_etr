@@ -8,6 +8,8 @@ import 'package:gap/gap.dart';
 import 'package:musika/screens/musikahomepage.dart';
 import 'package:musika/screens/auth/register.dart';
 
+import '../guest_screens/instruments_screen.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -108,9 +110,9 @@ Widget build(BuildContext context) {
   decoration: InputDecoration(
     border: OutlineInputBorder(),
     labelText: 'Email',
-    labelStyle: TextStyle(color: Colors.white), // Set label font color to white
+    labelStyle: TextStyle(color: Colors.white),
   ),
-  style: TextStyle(color: Colors.white), // Set input text font color to white
+  style: TextStyle(color: Colors.white),
   validator: (value) {
     if (value == null || value.isEmpty) {
       return 'Email is required.';
@@ -149,14 +151,38 @@ Widget build(BuildContext context) {
                         },
                       ),
                       const SizedBox(height: 12),
-                      ElevatedButton(
+                      ElevatedButton.icon(
+                        
                         onPressed: login,
-                        child: Text(
+                        label: Text(
                           'Sign in',
                           style: TextStyle(color: Colors.black),
                         ),
+                        icon: Icon(Icons.login, color: Colors.black,),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromRGBO(244, 55, 109, 1),
+                        ),
+                      ),
+                      Gap(5),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('or' , style: TextStyle(color: Colors.white),),
+                        ],
+                      ),
+                      Gap(5),
+                       ElevatedButton.icon(
+                        icon: Icon(Icons.person, 
+                        color: Colors.black,),
+                        onPressed: (){
+                          Navigator.of(context).push(CupertinoPageRoute(builder: (_)=> GuestInstrumentScreen()));
+                        },
+                        label: Text(
+                          'Continue as a Guest',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
                         ),
                       ),
                       Gap(20),
@@ -180,7 +206,7 @@ Widget build(BuildContext context) {
           ),
         ),
       ),
-    ) , // Replace YourBodyContent() with your actual content
+    ) ,
       ),
  
   );

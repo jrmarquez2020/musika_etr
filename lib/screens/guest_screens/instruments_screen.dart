@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:musika/screens/guitar/mainscreen.dart';
-import 'package:musika/screens/piano/mainscreen.dart';
-import 'package:musika/screens/ukelele/mainscreen.dart';
+import 'package:musika/screens/guest_screens/guitar/mainscreen.dart';
+import 'package:musika/screens/guest_screens/piano/mainscreen.dart';
+import 'package:musika/screens/guest_screens/ukelele/mainscreen.dart';
 
-class InstrumentScreen extends StatelessWidget {
-  const InstrumentScreen({Key? key}) : super(key: key);
+
+class GuestInstrumentScreen extends StatelessWidget {
+  const GuestInstrumentScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
      appBar: AppBar(
-      iconTheme:IconThemeData(color: Colors.white) ,
+      iconTheme: IconThemeData(color: Colors.white),
   backgroundColor: Color.fromRGBO(32, 40, 55, 1),
   title: Padding(
     padding: const EdgeInsets.only(top: 30),
@@ -59,19 +60,19 @@ class InstrumentScreen extends StatelessWidget {
                     switch (index) {
                       case 0:
                         Navigator.of(context).push(
-                          MaterialPageRoute(builder: (_) => MainScreenGuitar()),
+                          MaterialPageRoute(builder: (_) => GuestMainScreenGuitar()),
                         );
                         break;
                       case 1:
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (_) => MainScreenPiano()),
+                          MaterialPageRoute(builder: (_) => GuestMainScreenPiano()),
                         );
                         break;
                       case 2:
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (_) => MainScreenUkelele()),
+                          MaterialPageRoute(builder: (_) => GuestMainScreenUkelele()),
                         );
                         break;
                     }

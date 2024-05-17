@@ -1,13 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:gap/gap.dart';
 import 'package:musika/screens/info_video.dart';
 import 'package:musika/screens/instruments_screen.dart';
-// import 'package:musika/screens/info_video.dart';
-// import 'package:video_player/video_player.dart';
-// import 'package:chewie/chewie.dart';
+
 class HomePageScreen extends StatefulWidget {
   HomePageScreen({Key? key}) : super(key: key);
 
@@ -39,13 +36,11 @@ class _HomePageScreenState extends State<HomePageScreen> {
     'Tiny strings strum happy tunes.',
   ];
 
-  // New set of images, titles, and descriptions
   List<String> images2 = [
     'assets/images/poster1.png',
     'assets/images/poster2.png',
     'assets/images/poster3.png',
     'assets/images/poster4.png',
-
   ];
 
   List<String> title2 = [
@@ -162,7 +157,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: Text(
-                  'Learn Music',
+                  'Learn Instruments with Musika',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 15.0,
@@ -192,7 +187,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                             return Padding(
                               padding: EdgeInsets.symmetric(horizontal: 10.0),
                               child: SizedBox(
-                                width: 300, // Set the width of the card
+                                width: 300,
                                 child: CardWidget(
                                   image: images[index],
                                   title: title[index],
@@ -205,70 +200,85 @@ class _HomePageScreenState extends State<HomePageScreen> {
                       ),
                     ),
                     SizedBox(height: 20.0),
-                   Expanded(
-  flex: 1,
-  child: ListView(
-    children: [
-      // Text widget for instructions
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0, ),
-        child: Text(
-          'Instructions',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-      ),
-      // Add spacing between Text and images
-      SizedBox(height: 10),
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: images2.map((image) {
-            return Padding(
-              padding: EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 120, // Set the height of the image
-                width: 400, // Set the width of the image
-                child: Image.asset(
-                  image,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            );
-          }).toList(),
-        ),
-      ),
-      // Button to navigate to another screen
-      Padding(
-  padding: EdgeInsets.symmetric(horizontal: 8.0),
-  child: Center(
-    child: SizedBox(
-      width: 200, // Set the width of the button
-      child: ElevatedButton(
-        onPressed: () {
-          // Navigate to another screen
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => MyVideoPlayer()),
-          );
-        },
-
-style: ButtonStyle(
-    backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(244, 55, 109, 1)),
-  ),        child: Text('more', style: TextStyle(color: Colors.white),),
-      ),
-    ),
-  ),
-),
-
-    ],
-  ),
-),
-
+                    Expanded(
+                      flex: 1,
+                      child: ListView(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'Guide',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Gap(8),
+                                Icon(Icons.lightbulb_rounded, color: Colors.yellow,)
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: images2.map((image) {
+                                return Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    child: SizedBox(
+                                      height: 120,
+                                      width: 400,
+                                      child: Image.asset(
+                                        image,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ),
+                          Gap(12),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 8.0),
+                            child: Center(
+                              child: SizedBox(
+                                width: 200,
+                                child: ElevatedButton.icon(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              MyVideoPlayer()),
+                                    );
+                                  },
+                                  style: ButtonStyle(
+                                    backgroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Color.fromRGBO(244, 55, 109, 1)),
+                                  ),
+                                  label: Text(
+                                    'Watch video',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  icon: Icon(
+                                    Icons.video_collection,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -280,21 +290,23 @@ style: ButtonStyle(
   }
 }
 
-
-
-
 class CardWidget extends StatelessWidget {
   final String image;
   final String title;
   final String description;
 
-  const CardWidget({Key? key, required this.image, required this.title, required this.description}) : super(key: key);
+  const CardWidget(
+      {Key? key,
+      required this.image,
+      required this.title,
+      required this.description})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200, // Set the height of the card
-      width: 300, // Set the width of the card
+      height: 200,
+      width: 300,
       child: Card(
         elevation: 4.0,
         shape: RoundedRectangleBorder(
@@ -341,23 +353,22 @@ class CardWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ElevatedButton(
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => InstrumentScreen()),
-    );
-  },
-  style: ButtonStyle(
-    backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(244, 55, 109, 1)),
-  ),
-  child: Text(
-    'learn',
-    style: TextStyle(color: Colors.white),
-  ),
-),
-
-
-
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => InstrumentScreen()),
+                          );
+                        },
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Color.fromRGBO(244, 55, 109, 1)),
+                        ),
+                        child: Text(
+                          'learn',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -369,29 +380,3 @@ class CardWidget extends StatelessWidget {
     );
   }
 }
-
-
-
-
-// class InfoVideoScreen extends StatelessWidget {
-//   final ChewieController chewieController;
-
-//   const InfoVideoScreen({Key? key, required this.chewieController}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Center(
-//         child: Chewie(controller: chewieController),
-//       ),
-//     );
-//   }
-// }
-    // final chewieController = ChewieController(
-    //   videoPlayerController: VideoPlayerController.asset(
-    //     'assets/videos/musika.mp4',
-    //   ),
-    //   autoPlay: true,
-    //   looping: true,
-    //   // You can customize other ChewieController properties here
-    // );

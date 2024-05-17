@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 
-class UkeleleSongListScreen extends StatelessWidget {
-   UkeleleSongListScreen({super.key});
+class PianoSongListScreen extends StatelessWidget {
+   PianoSongListScreen({super.key});
  
   final List<Song> songs = [
     Song(
@@ -75,7 +75,7 @@ class UkeleleSongListScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => UkeleleSongDetailScreen(song: songs[index]),
+                      builder: (context) => PianoSongDetailScreen(song: songs[index]),
                     ),
                   );
                 },
@@ -100,10 +100,10 @@ class Song {
   });
 }
 
-class UkeleleSongDetailScreen extends StatelessWidget {
+class PianoSongDetailScreen extends StatelessWidget {
   final Song song;
 
-  UkeleleSongDetailScreen({required this.song});
+  PianoSongDetailScreen({required this.song});
 
   @override
   Widget build(BuildContext context) {
@@ -154,4 +154,10 @@ class UkeleleSongDetailScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: PianoSongListScreen(),
+  ));
 }

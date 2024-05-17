@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -187,19 +188,34 @@ class _AddSongsPianoState extends State<AddSongsPiano> {
      appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.white),
         titleTextStyle: TextStyle(color: Colors.white),
-        backgroundColor:  Color.fromRGBO(32, 40, 55, 1),
+        backgroundColor: Color.fromRGBO(32, 40, 55, 1),
         automaticallyImplyLeading: false,
-        title: Text(
-          'Musika',
-          style: GoogleFonts.alice(fontWeight: FontWeight.w700, fontSize: 22),
-          
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Musika',
+              style: GoogleFonts.alice(
+                fontWeight: FontWeight.w700,
+                fontSize: 30,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(width: 8),
+             Image.asset(
+              'assets/images/musika.png',
+              height: 30,
+            ),
+            
+          ],
         ),
         centerTitle: true,
         leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: Icon(Icons.arrow_back_ios_new_rounded)),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: Icon(Icons.arrow_back_ios_new_rounded),
+        ),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -228,7 +244,11 @@ class _AddSongsPianoState extends State<AddSongsPiano> {
                 padding: const EdgeInsets.all(12.0),
                 child: SingleChildScrollView(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Text('Piano', style: GoogleFonts.alice(fontSize: 22,
+                color: Color.fromRGBO(244, 55, 109, 1),),),
+                Gap(30),         
                       Form(
                         key: _formKey,
                         child: Column(
@@ -250,7 +270,7 @@ class _AddSongsPianoState extends State<AddSongsPiano> {
                                 ),
                                 filled: true,
                                 hintStyle: TextStyle(color: Colors.grey[800]),
-                                labelText: 'Song Title',
+                                labelText: 'Your Song Title',
                                 fillColor: Colors.white,
                               ),
                             ),
@@ -271,7 +291,7 @@ class _AddSongsPianoState extends State<AddSongsPiano> {
                                 ),
                                 filled: true,
                                 hintStyle: TextStyle(color: Colors.grey[800]),
-                                labelText: 'Artist',
+                                labelText: 'Your Artist Name',
                                 fillColor: Colors.white,
                               ),
                             ),

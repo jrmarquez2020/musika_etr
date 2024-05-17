@@ -19,19 +19,23 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
     _initPlayer();
   }
 
-  void _initPlayer() async {
-    videoPlayerController = VideoPlayerController.asset(
-        'assets/videos/musika.mp4');
-    await videoPlayerController.initialize();
-
-    chewieController = ChewieController(
+  Future<void> _initPlayer() async {
+    try {
+      videoPlayerController = VideoPlayerController.asset(
+        'assets/videos/musika.mp4',
+      );
+      await videoPlayerController.initialize();
       
-      videoPlayerController: videoPlayerController,
-      autoPlay: true,
-      looping: true,
-      
-      
-    );
+      setState(() {
+        chewieController = ChewieController(
+          videoPlayerController: videoPlayerController,
+          autoPlay: true,
+          looping: true,
+        );
+      });
+    } catch (error) {
+      print('Error initializing video player: $error');
+    }
   }
 
   @override
@@ -45,16 +49,18 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Musika"),
+        title: const Text("Musika Guide"),
       ),
-      body: chewieController!=null? Padding(
-        padding: EdgeInsets.symmetric(vertical: 20),
-        child: Chewie(
-          controller: chewieController!,
-        ),
-      ) : Center(
-        child: CircularProgressIndicator(),
-      ),
+      body: chewieController != null
+          ? Padding(
+              padding: EdgeInsets.symmetric(vertical: 20),
+              child: Chewie(
+                controller: chewieController!,
+              ),
+            )
+          : Center(
+              child: CircularProgressIndicator(),
+            ),
     );
   }
 }

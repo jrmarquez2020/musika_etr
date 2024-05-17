@@ -2,6 +2,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:quickalert/quickalert.dart';
 
 class UserProfileScreen extends StatelessWidget {
   @override
@@ -22,6 +23,7 @@ class UserProfileScreen extends StatelessWidget {
     );
   }
 }
+
 class UserDetail extends StatelessWidget {
   final String userId;
 
@@ -76,7 +78,8 @@ class UserDetail extends StatelessWidget {
                 UserProfileItem(label: 'Birthdate', value: data['birthdate']),
                 UserProfileItem(label: 'Email', value: data['email']),
                 SizedBox(height: 20),
-                ElevatedButton(
+                ElevatedButton.icon(
+                  icon: Icon(Icons.edit, color: Color.fromRGBO(244, 55, 109, 1)),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -85,9 +88,9 @@ class UserDetail extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Text(
+                  label: Text(
                     'Edit',
-                    style: TextStyle(color: Color.fromRGBO(244, 55, 109, 1),),
+                    style: TextStyle(color: Color.fromRGBO(244, 55, 109, 1)),
                   ),
                 ),
               ],
@@ -98,8 +101,6 @@ class UserDetail extends StatelessWidget {
     );
   }
 }
-
-
 
 class UserProfileItem extends StatelessWidget {
   final String label;
@@ -130,7 +131,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   late TextEditingController _addressController;
   late TextEditingController _birthdateController;
   late TextEditingController _emailController;
-  final _formKey = GlobalKey<FormState>(); // Add a GlobalKey for the Form
+  final _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -169,7 +170,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
         child: Form(
-          key: _formKey, // Assign the GlobalKey to the Form
+          key: _formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -188,7 +189,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 controller: _birthdateController,
                 decoration: InputDecoration(labelText: 'Birthdate'),
                 validator: (value) {
-                  // Add validation logic for birthdate if needed
                   return null;
                 },
               ),
@@ -215,19 +215,42 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 },
               ),
               SizedBox(height: 20),
-              ElevatedButton(
+              ElevatedButton.icon(
+                icon: Icon(Icons.save, color: Color.fromRGBO(244, 55, 109, 1)),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    FirebaseFirestore.instance.collection('users').doc(widget.userId).update({
-                      'name': _nameController.text,
-                      'address': _addressController.text,
-                      'birthdate': _birthdateController.text,
-                      'email': _emailController.text,
-                    });
-                    Navigator.pop(context);
+                    QuickAlert.show(
+                      context: context,
+                      type: QuickAlertType.confirm,
+                      title: 'Confirm',
+                      text: 'Do you want to save the changes?',
+                      confirmBtnText: 'Yes',
+                      cancelBtnText: 'No',
+                      onConfirmBtnTap: () {
+                        FirebaseFirestore.instance.collection('users').doc(widget.userId).update({
+                          'name': _nameController.text,
+                          'address': _addressController.text,
+                          'birthdate': _birthdateController.text,
+                          'email': _emailController.text,
+                        }).then((value) {
+                          Navigator.pop(context);
+                          Navigator.pop(context);
+                        }).catchError((error) {
+                          QuickAlert.show(
+                            context: context,
+                            type: QuickAlertType.error,
+                            title: 'Error',
+                            text: 'Failed to save changes. Please try again.',
+                          );
+                        });
+                      },
+                    );
                   }
                 },
-                child: Text('Save',style: TextStyle(color: Color.fromRGBO(244, 55, 109, 1),),),
+                label: Text(
+                  'Save',
+                  style: TextStyle(color: Color.fromRGBO(244, 55, 109, 1)),
+                ),
               ),
             ],
           ),
